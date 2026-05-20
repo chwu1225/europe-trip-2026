@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 中歐家庭旅行 | 4國27晚</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--warm:#F5E6D3;--cream:#FFF8F0;--sand:#E8D5B7;
+--earth:#8B6914;--forest:#2D5016;--sky:#4A90B8;
+--brick:#C45B3A;--plum:#6B3A5E;--night:#1A1A2E;
+--gold:#D4A844;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--night);overflow-x:hidden}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;background:linear-gradient(135deg,#1A1A2E 0%,#16213E 30%,#0F3460 60%,#533483 100%);color:#fff;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L35 25H55L39 35L44 55L30 43L16 55L21 35L5 25H25Z' fill='%23D4A844' fill-opacity='0.06'/%3E%3C/svg%3E");opacity:.5}
+.hero-content{position:relative;z-index:1;padding:2rem}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,7vw,5rem);margin-bottom:1rem;line-height:1.1}
+.hero h1 span{color:var(--gold);display:block;font-style:italic;font-weight:400;font-size:.6em}
+.hero-flags{font-size:3rem;letter-spacing:1rem;margin:1.5rem 0;animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;margin:2rem 0}
+.hero-stat{background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);border-radius:1rem;padding:1.2rem 2rem;min-width:120px}
+.hero-stat strong{display:block;font-size:1.8rem;color:var(--gold);font-family:'Playfair Display',serif}
+.hero-stat span{font-size:.85rem;opacity:.8}
+.scroll-hint{position:absolute;bottom:2rem;animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(12px)}}
+
+/* Section */
+section{padding:4rem 1.5rem;max-width:1100px;margin:0 auto}
+.section-title{font-family:'Playfair Display',serif;font-size:2.2rem;text-align:center;margin-bottom:.5rem;color:var(--night)}
+.section-sub{text-align:center;color:#888;margin-bottom:3rem;font-size:.95rem}
+
+/* Route Map */
+.route{background:var(--warm);padding:4rem 1.5rem;position:relative}
+.route::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--brick),var(--gold),var(--forest),var(--sky),var(--plum))}
+.route-flow{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;max-width:1100px;margin:2rem auto}
+.route-stop{background:#fff;border-radius:1rem;padding:1.5rem;text-align:center;min-width:150px;flex:1;max-width:200px;box-shadow:0 4px 20px rgba(0,0,0,.06);transition:transform .3s;position:relative}
+.route-stop:hover{transform:translateY(-6px)}
+.route-stop .flag{font-size:2.5rem}
+.route-stop .city{font-weight:700;margin:.5rem 0;font-size:1.1rem}
+.route-stop .nights{background:var(--gold);color:#fff;border-radius:2rem;padding:.2rem .8rem;font-size:.8rem;display:inline-block}
+.route-stop .dates{font-size:.75rem;color:#999;margin-top:.5rem}
+.route-arrow{align-self:center;font-size:1.5rem;color:var(--gold);font-weight:bold}
+
+/* Itinerary */
+.itin-city{margin-bottom:3rem}
+.itin-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding:1rem 1.5rem;border-radius:1rem;color:#fff}
+.itin-header.hu{background:linear-gradient(135deg,#C45B3A,#D4724A)}
+.itin-header.cz{background:linear-gradient(135deg,#2D5016,#4A7A2E)}
+.itin-header.pl{background:linear-gradient(135deg,#C45B3A,#8B1A1A)}
+.itin-header.sk{background:linear-gradient(135deg,#4A90B8,#2D6B94)}
+.itin-header .flag{font-size:2.5rem}
+.itin-header h3{font-size:1.4rem}
+.itin-header .meta{font-size:.85rem;opacity:.9}
+.day-card{display:grid;grid-template-columns:60px 1fr;gap:1rem;margin-bottom:.8rem;padding:1rem;background:#fff;border-radius:.8rem;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:transform .2s}
+.day-card:hover{transform:translateX(4px)}
+.day-num{text-align:center}
+.day-num .date{font-weight:700;color:var(--earth);font-size:.95rem}
+.day-num .day{font-size:.7rem;color:#aaa}
+.day-content .activity{font-weight:500;margin-bottom:.3rem}
+.day-content .type{font-size:.75rem;padding:.15rem .5rem;border-radius:1rem;display:inline-block}
+.type-rest{background:#E8F5E9;color:#2E7D32}
+.type-sight{background:#E3F2FD;color:#1565C0}
+.type-move{background:#FFF3E0;color:#E65100}
+.type-nature{background:#F3E5F5;color:#6A1B9A}
+.type-last{background:#FCE4EC;color:#C62828}
+
+/* Food */
+.food-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
+.food-card{background:#fff;border-radius:1rem;padding:1.5rem;box-shadow:0 4px 15px rgba(0,0,0,.05);border-left:4px solid var(--gold)}
+.food-card h4{margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem}
+.food-card .local-name{font-size:.85rem;color:#999;font-style:italic}
+.food-card .price{color:var(--brick);font-weight:700;margin-top:.5rem;font-size:.9rem}
+.food-card .kid{font-size:.75rem;background:#E8F5E9;color:#2E7D32;padding:.1rem .4rem;border-radius:.3rem;display:inline-block;margin-top:.3rem}
+
+/* Accommodation */
+.acc-table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:1rem;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.acc-table th{background:var(--night);color:#fff;padding:1rem;text-align:left;font-weight:500;font-size:.85rem}
+.acc-table td{padding:.8rem 1rem;border-bottom:1px solid #f0f0f0;font-size:.9rem}
+.acc-table tr:last-child td{border-bottom:none;font-weight:700;background:var(--warm)}
+.acc-table a{color:var(--sky);text-decoration:none}
+.acc-table a:hover{text-decoration:underline}
+.score{background:var(--forest);color:#fff;padding:.15rem .5rem;border-radius:.3rem;font-size:.8rem;font-weight:700}
+
+/* Budget */
+.budget{background:var(--night);color:#fff;padding:4rem 1.5rem;position:relative;overflow:hidden}
+.budget::after{content:'NT$';position:absolute;right:-2rem;bottom:-3rem;font-size:15rem;font-family:'Playfair Display',serif;opacity:.03;color:#fff}
+.budget-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;max-width:1100px;margin:2rem auto}
+.budget-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:1rem;padding:1.5rem;display:flex;justify-content:space-between;align-items:center}
+.budget-item .label{font-size:.95rem;opacity:.8}
+.budget-item .amount{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--gold)}
+.budget-total{text-align:center;margin-top:2rem;padding:2rem;background:rgba(212,168,68,.15);border:2px solid var(--gold);border-radius:1.5rem;max-width:500px;margin-left:auto;margin-right:auto}
+.budget-total .big{font-family:'Playfair Display',serif;font-size:3rem;color:var(--gold)}
+.budget-total .per{font-size:1.1rem;opacity:.8;margin-top:.5rem}
+
+/* Tips */
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
+.tip{background:#fff;border-radius:1rem;padding:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+.tip.urgent{border-left:4px solid #C62828}
+.tip.warning{border-left:4px solid #F9A825}
+.tip.info{border-left:4px solid var(--sky)}
+.tip h4{margin-bottom:.5rem;font-size:1rem}
+.tip p{font-size:.88rem;color:#555;line-height:1.6}
+
+/* Links */
+.links-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:2rem}
+.link-btn{display:block;padding:1rem;background:#fff;border-radius:.8rem;text-decoration:none;color:var(--night);box-shadow:0 2px 10px rgba(0,0,0,.06);transition:all .3s;text-align:center;font-weight:500;font-size:.9rem}
+.link-btn:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.link-btn .platform{font-size:.75rem;color:#999;display:block;margin-top:.3rem}
+
+/* Footer */
+footer{text-align:center;padding:3rem;background:var(--warm);font-size:.85rem;color:#999}
+footer strong{color:var(--earth)}
+
+/* Weather */
+.weather-bar{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2rem 0}
+.weather-card{background:#fff;border-radius:1rem;padding:1rem 1.5rem;text-align:center;min-width:140px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.weather-card .temp{font-size:1.8rem;font-weight:700;color:var(--brick)}
+.weather-card .city-name{font-size:.8rem;color:#888;margin-bottom:.3rem}
+.weather-card .desc{font-size:.75rem;color:#aaa}
+
+/* Shanghai */
+.shanghai{background:linear-gradient(135deg,#1a1a2e,#0f3460);color:#fff;padding:4rem 1.5rem;border-radius:2rem;margin:2rem auto;max-width:1100px}
+.timeline{position:relative;padding-left:2rem;border-left:3px solid var(--gold);margin:2rem 0}
+.timeline-item{margin-bottom:1.5rem;position:relative}
+.timeline-item::before{content:'';position:absolute;left:-2.45rem;top:.3rem;width:12px;height:12px;background:var(--gold);border-radius:50%}
+.timeline-item .time{color:var(--gold);font-weight:700;font-size:.9rem}
+.timeline-item .desc{font-size:.9rem;opacity:.9;margin-top:.2rem}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero-stats{gap:1rem}
+  .hero-stat{padding:.8rem 1.2rem;min-width:100px}
+  .route-flow{flex-direction:column;align-items:center}
+  .route-arrow{transform:rotate(90deg)}
+  .day-card{grid-template-columns:50px 1fr}
+  .acc-table{font-size:.8rem}
+  .acc-table th,.acc-table td{padding:.5rem}
+  .budget-total .big{font-size:2.2rem}
+}
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>中歐家庭旅行<span>Central Europe 2026</span></h1>
+    <div class="hero-flags">🇭🇺 🇨🇿 🇵🇱 🇸🇰</div>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>28</strong><span>天</span></div>
+      <div class="hero-stat"><strong>4</strong><span>國</span></div>
+      <div class="hero-stat"><strong>6</strong><span>城市</span></div>
+      <div class="hero-stat"><strong>7</strong><span>人</span></div>
+      <div class="hero-stat"><strong>27</strong><span>晚</span></div>
+    </div>
+    <p style="opacity:.7;font-size:.95rem">5 大人 + 2 小孩 | 慢旅行 | 每 2-3 天休息 1 天</p>
+    <p style="margin-top:1rem;font-size:1.1rem">6/27 出發 → 7/26 回家</p>
+  </div>
+  <div class="scroll-hint" style="font-size:2rem">↓</div>
+</div>
+
+<!-- Route -->
+<div class="route">
+  <h2 class="section-title">路線總覽</h2>
+  <p class="section-sub">一條線走完 4 國，只搬 5 次家</p>
+  <div class="route-flow">
+    <div class="route-stop">
+      <div class="flag">🇭🇺</div>
+      <div class="city">布達佩斯</div>
+      <div class="nights">5 晚</div>
+      <div class="dates">6/28–7/2</div>
+    </div>
+    <div class="route-arrow">→</div>
+    <div class="route-stop">
+      <div class="flag">🇨🇿</div>
+      <div class="city">布拉格</div>
+      <div class="nights">7 晚</div>
+      <div class="dates">7/3–7/9</div>
+    </div>
+    <div class="route-arrow">→</div>
+    <div class="route-stop">
+      <div class="flag">🇵🇱</div>
+      <div class="city">克拉科夫</div>
+      <div class="nights">7 晚</div>
+      <div class="dates">7/10–7/16</div>
+    </div>
+    <div class="route-arrow">→</div>
+    <div class="route-stop">
+      <div class="flag">🇵🇱</div>
+      <div class="city">Zakopane</div>
+      <div class="nights">3 晚</div>
+      <div class="dates">7/17–7/19</div>
+    </div>
+    <div class="route-arrow">→</div>
+    <div class="route-stop">
+      <div class="flag">🇸🇰</div>
+      <div class="city">高塔特拉山</div>
+      <div class="nights">3 晚</div>
+      <div class="dates">7/20–7/22</div>
+    </div>
+    <div class="route-arrow">→</div>
+    <div class="route-stop">
+      <div class="flag">🇭🇺</div>
+      <div class="city">布達佩斯</div>
+      <div class="nights">2 晚</div>
+      <div class="dates">7/23–7/24</div>
+    </div>
+  </div>
+</div>
+
+<!-- Itinerary -->
+<section id="itinerary">
+  <h2 class="section-title">每日行程</h2>
+  <p class="section-sub">帶老人小孩的慢節奏 — 每天只排半天，下午午睡</p>
+
+  <div class="itin-city">
+    <div class="itin-header hu"><span class="flag">🇭🇺</span><div><h3>布達佩斯（前段）</h3><div class="meta">5 晚 · 6/28–7/2 · 城堡、市場、水上樂園</div></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">6/28</div><div class="day">Day 1</div></div><div class="day-content"><div class="activity">🛬 08:05 抵達，入住公寓，附近散步</div><span class="type type-move">到達日</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">6/29</div><div class="day">Day 2</div></div><div class="day-content"><div class="activity">😴 倒時差，超市買菜，公寓煮第一頓飯</div><span class="type type-rest">休息日</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">6/30</div><div class="day">Day 3</div></div><div class="day-content"><div class="activity">🏛️ 纜車上城堡山 → 漁人堡拍照 → 下午午睡</div><span class="type type-sight">半天觀光</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/1</div><div class="day">Day 4</div></div><div class="day-content"><div class="activity">🏛️ 中央市場逛吃 → 聖伊什特萬聖殿登頂</div><span class="type type-sight">輕鬆觀光</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/2</div><div class="day">Day 5</div></div><div class="day-content"><div class="activity">😴 Palatinus 水上樂園（小孩玩水、老人泡池）</div><span class="type type-rest">休息 + 玩水</span></div></div>
+  </div>
+
+  <div class="itin-city">
+    <div class="itin-header cz"><span class="flag">🇨🇿</span><div><h3>布拉格</h3><div class="meta">7 晚 · 7/3–7/9 · 天文鐘、城堡、CK 小鎮</div></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/3</div><div class="day">Day 6</div></div><div class="day-content"><div class="activity">🚂 移動日 → 入住，老城廣場晚餐</div><span class="type type-move">移動日</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/4</div><div class="day">Day 7</div></div><div class="day-content"><div class="activity">🏛️ 天文鐘（整點表演）+ 查理大橋（早上人少）</div><span class="type type-sight">半天觀光</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/5</div><div class="day">Day 8</div></div><div class="day-content"><div class="activity">😴 公寓煮飯、附近公園散步</div><span class="type type-rest">休息日</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/6</div><div class="day">Day 9</div></div><div class="day-content"><div class="activity">🏛️ 搭 22 號電車上城堡 → 聖維特大教堂 → 黃金巷</div><span class="type type-sight">半天觀光</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/7</div><div class="day">Day 10</div></div><div class="day-content"><div class="activity">🚌 CK 小鎮一日遊（巴士 3hr 來回，童話小鎮）</div><span class="type type-move">一日遊</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/8</div><div class="day">Day 11</div></div><div class="day-content"><div class="activity">😴 佩特任山纜車 + 鏡子迷宮（小孩最愛）+ 公園野餐</div><span class="type type-rest">輕鬆日</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/9</div><div class="day">Day 12</div></div><div class="day-content"><div class="activity">😴 完全休息（洗衣、煮飯、整理）</div><span class="type type-rest">大休息</span></div></div>
+  </div>
+
+  <div class="itin-city">
+    <div class="itin-header pl"><span class="flag">🇵🇱</span><div><h3>克拉科夫</h3><div class="meta">7 晚 · 7/10–7/16 · 鹽礦、噴火龍、Ojców 公園</div></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/10</div><div class="day">Day 13</div></div><div class="day-content"><div class="activity">✈️ 廉航飛到 → 主廣場散步 + 看噴火龍 🐉</div><span class="type type-move">移動日</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/11</div><div class="day">Day 14</div></div><div class="day-content"><div class="activity">😴 牛奶吧超便宜午餐 → Planty 公園散步</div><span class="type type-rest">休息日</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/12</div><div class="day">Day 15</div></div><div class="day-content"><div class="activity">⛏️ 維利奇卡鹽礦（預約無障礙路線，地下鹽雕教堂）</div><span class="type type-sight">半天景點</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/13</div><div class="day">Day 16</div></div><div class="day-content"><div class="activity">😴 Kazimierz 猶太區咖啡廳悠閒日</div><span class="type type-rest">休息日</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/14</div><div class="day">Day 17</div></div><div class="day-content"><div class="activity">🏛️ 瓦維爾城堡 → 再看一次噴火龍 → 河邊散步</div><span class="type type-sight">半天觀光</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/15</div><div class="day">Day 18</div></div><div class="day-content"><div class="activity">😴 休息 + 自由活動</div><span class="type type-rest">休息日</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/16</div><div class="day">Day 19</div></div><div class="day-content"><div class="activity">🌿 Ojców 國家公園半日遊（石灰岩峽谷，免門票）</div><span class="type type-nature">自然日</span></div></div>
+  </div>
+
+  <div class="itin-city">
+    <div class="itin-header pl"><span class="flag">🇵🇱</span><div><h3>Zakopane 塔特拉山</h3><div class="meta">3 晚 · 7/17–7/19 · 海洋之眼、纜車、烤起司</div></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/17</div><div class="day">Day 20</div></div><div class="day-content"><div class="activity">🚌 巴士 2hr 到達 → Krupówki 主街烤起司 Oscypek</div><span class="type type-move">移動日</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/18</div><div class="day">Day 21</div></div><div class="day-content"><div class="activity">😴 Gubałówka 纜車 2 分鐘上山 → 山頂遊樂場 + 全景</div><span class="type type-rest">輕鬆日</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/19</div><div class="day">Day 22</div></div><div class="day-content"><div class="activity">🏔️ 海洋之眼 Morskie Oko（分組：大人走 / 老人小孩留鎮上）</div><span class="type type-nature">活動日</span></div></div>
+  </div>
+
+  <div class="itin-city">
+    <div class="itin-header sk"><span class="flag">🇸🇰</span><div><h3>高塔特拉山</h3><div class="meta">3 晚 · 7/20–7/22 · 齒軌列車、高山湖、溫泉水上樂園</div></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/20</div><div class="day">Day 23</div></div><div class="day-content"><div class="activity">🚌 翻山巴士 1.5hr → 入住 → Štrbské Pleso 湖邊散步</div><span class="type type-move">移動日</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/21</div><div class="day">Day 24</div></div><div class="day-content"><div class="activity">🚂 搭齒軌列車 → Hrebienok 瀑布步道 → AquaCity 溫泉水上樂園</div><span class="type type-nature">自然 + 玩水</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/22</div><div class="day">Day 25</div></div><div class="day-content"><div class="activity">😴 湖邊野餐、紀念品、享受山區寧靜</div><span class="type type-rest">休息日</span></div></div>
+  </div>
+
+  <div class="itin-city">
+    <div class="itin-header hu"><span class="flag">🇭🇺</span><div><h3>布達佩斯（後段）</h3><div class="meta">2 晚 · 7/23–7/24 · 溫泉收尾、遊船晚餐</div></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/23</div><div class="day">Day 26</div></div><div class="day-content"><div class="activity">♨️ 大人：塞切尼溫泉 / 小孩：Aquaworld 水上樂園</div><span class="type type-rest">泡溫泉</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/24</div><div class="day">Day 27</div></div><div class="day-content"><div class="activity">🛍️ 買伴手禮 → 打包 → 多瑙河遊船晚餐（完美收尾）</div><span class="type type-last">最後一天</span></div></div>
+    <div class="day-card"><div class="day-num"><div class="date">7/25</div><div class="day">回家</div></div><div class="day-content"><div class="activity">✈️ 06:30 出門 → 12:30 BUD 起飛 → 上海轉機逛外灘 → 7/26 回台北</div><span class="type type-move">回家！</span></div></div>
+  </div>
+</section>
+
+<!-- Weather -->
+<section>
+  <h2 class="section-title">7 月天氣預報</h2>
+  <p class="section-sub">城市溫暖舒適，山區涼爽避暑</p>
+  <div class="weather-bar">
+    <div class="weather-card"><div class="city-name">🇭🇺 布達佩斯</div><div class="temp">29°C</div><div class="desc">最熱 ☀️ 下午避戶外</div></div>
+    <div class="weather-card"><div class="city-name">🇨🇿 布拉格</div><div class="temp">25°C</div><div class="desc">舒適 🌤️ 像秋天</div></div>
+    <div class="weather-card"><div class="city-name">🇵🇱 克拉科夫</div><div class="temp">26°C</div><div class="desc">舒適 🌤️</div></div>
+    <div class="weather-card"><div class="city-name">🇵🇱 Zakopane</div><div class="temp">21°C</div><div class="desc">涼爽 🌧️ 帶雨衣</div></div>
+    <div class="weather-card"><div class="city-name">🇸🇰 高塔特拉</div><div class="temp">19°C</div><div class="desc">涼爽 🏔️ 帶外套</div></div>
+  </div>
+</section>
+
+<!-- Food -->
+<section id="food">
+  <h2 class="section-title">必吃美食</h2>
+  <p class="section-sub">每個國家的靈魂料理 — 小孩零踩雷</p>
+  <div class="food-grid">
+    <div class="food-card"><h4>🇭🇺 Gulyás 牛肉湯</h4><div class="local-name">匈牙利國菜，紅椒燉牛肉湯配小麵疙瘩</div><div class="price">NT$250–450/人</div><div class="kid">小孩適合</div></div>
+    <div class="food-card"><h4>🇭🇺 Lángos 炸麵餅</h4><div class="local-name">外酥內軟炸餅，配酸奶油+起司</div><div class="price">NT$100–390/人</div><div class="kid">小孩最愛</div></div>
+    <div class="food-card"><h4>🇨🇿 Svíčková 奶油燉牛肉</h4><div class="local-name">捷克國菜，牛腰肉配奶油醬+麵包餃子</div><div class="price">NT$270–450/人</div><div class="kid">小孩適合</div></div>
+    <div class="food-card"><h4>🇨🇿 Smažený Sýr 炸起司</h4><div class="local-name">厚切起司裹麵衣油炸，配薯條</div><div class="price">NT$230–300/人</div><div class="kid">小孩最愛</div></div>
+    <div class="food-card"><h4>🇵🇱 Pierogi 波蘭餃子</h4><div class="local-name">馬鈴薯起司/肉/藍莓，十幾種口味</div><div class="price">NT$105–305/人</div><div class="kid">小孩最愛</div></div>
+    <div class="food-card"><h4>🇵🇱 Żurek 酸麥湯</h4><div class="local-name">發酵裸麥湯配白香腸+水煮蛋，裝在麵包碗裡</div><div class="price">NT$80–130/人</div><div class="kid">小孩適合</div></div>
+    <div class="food-card"><h4>🇵🇱 Oscypek 烤煙燻起司</h4><div class="local-name">Zakopane 靈魂食物，配蔓越莓醬</div><div class="price">NT$35–90/人</div><div class="kid">小孩適合</div></div>
+    <div class="food-card"><h4>🇸🇰 Bryndzové Halušky</h4><div class="local-name">斯洛伐克國菜，羊奶起司馬鈴薯麵疙瘩+培根</div><div class="price">NT$250–400/人</div><div class="kid">小孩適合</div></div>
+    <div class="food-card"><h4>🌍 煙囪蛋糕 Kürtőskalács</h4><div class="local-name">捲筒甜麵包，焦糖脆皮，邊走邊吃</div><div class="price">NT$120–280/人</div><div class="kid">小孩最愛</div></div>
+  </div>
+</section>
+
+<!-- Accommodation -->
+<section id="accommodation">
+  <h2 class="section-title">住宿方案</h2>
+  <p class="section-sub">2 間房 · 有廚房 · Booking.com 即時價</p>
+  <div style="overflow-x:auto">
+  <table class="acc-table">
+    <tr><th>城市</th><th>晚</th><th>推薦住宿</th><th>評分</th><th>每晚</th><th>訂房</th></tr>
+    <tr><td>🇭🇺 布達佩斯前段</td><td>5</td><td>Central AC home</td><td><span class="score">8.0</span></td><td>NT$2,796</td><td><a href="https://www.booking.com/searchresults.html?ss=Budapest&checkin=2026-06-28&checkout=2026-07-03&group_adults=5&group_children=2&age=2&age=6&no_rooms=2&selected_currency=TWD&order=price" target="_blank">Booking</a> · <a href="https://www.airbnb.com/s/Budapest--Hungary/homes?checkin=2026-06-28&checkout=2026-07-03&adults=5&children=2" target="_blank">Airbnb</a></td></tr>
+    <tr><td>🇨🇿 布拉格</td><td>7</td><td>Modern Luxury Apt</td><td><span class="score">8.7</span></td><td>NT$3,200</td><td><a href="https://www.booking.com/searchresults.html?ss=Prague&checkin=2026-07-03&checkout=2026-07-09&group_adults=5&group_children=2&age=2&age=6&no_rooms=2&selected_currency=TWD&order=price" target="_blank">Booking</a> · <a href="https://www.airbnb.com/s/Prague--Czech-Republic/homes?checkin=2026-07-03&checkout=2026-07-09&adults=5&children=2" target="_blank">Airbnb</a></td></tr>
+    <tr><td>🇵🇱 克拉科夫</td><td>7</td><td>Aparthotel Na Kasztanowej</td><td><span class="score">8.3</span></td><td>NT$3,098</td><td><a href="https://www.booking.com/searchresults.html?ss=Krakow&checkin=2026-07-09&checkout=2026-07-15&group_adults=5&group_children=2&age=2&age=6&no_rooms=2&selected_currency=TWD&order=price" target="_blank">Booking</a> · <a href="https://www.airbnb.com/s/Krakow--Poland/homes?checkin=2026-07-09&checkout=2026-07-15&adults=5&children=2" target="_blank">Airbnb</a></td></tr>
+    <tr><td>🇵🇱 Zakopane</td><td>3</td><td>U Cudzicha</td><td><span class="score">9.4</span></td><td>NT$3,458</td><td><a href="https://www.booking.com/searchresults.html?ss=Zakopane&checkin=2026-07-17&checkout=2026-07-20&group_adults=5&group_children=2&age=2&age=6&no_rooms=2&selected_currency=TWD&order=price" target="_blank">Booking</a> · <a href="https://www.airbnb.com/s/Zakopane--Poland/homes?checkin=2026-07-17&checkout=2026-07-20&adults=5&children=2" target="_blank">Airbnb</a></td></tr>
+    <tr><td>🇸🇰 高塔特拉</td><td>3</td><td>Penzion Fantazia</td><td><span class="score">8.8</span></td><td>NT$4,456</td><td><a href="https://www.booking.com/searchresults.html?ss=Poprad&checkin=2026-07-20&checkout=2026-07-23&group_adults=5&group_children=2&age=2&age=6&no_rooms=2&selected_currency=TWD&order=price" target="_blank">Booking</a> · <a href="https://www.airbnb.com/s/Poprad--Slovakia/homes?checkin=2026-07-20&checkout=2026-07-23&adults=5&children=2" target="_blank">Airbnb</a></td></tr>
+    <tr><td>🇭🇺 布達佩斯後段</td><td>2</td><td>FREE PARKING+BREAKFAST</td><td><span class="score">8.0</span></td><td>NT$5,058</td><td><a href="https://www.booking.com/searchresults.html?ss=Budapest&checkin=2026-07-23&checkout=2026-07-25&group_adults=5&group_children=2&age=2&age=6&no_rooms=2&selected_currency=TWD&order=price" target="_blank">Booking</a> · <a href="https://www.airbnb.com/s/Budapest--Hungary/homes?checkin=2026-07-23&checkout=2026-07-25&adults=5&children=2" target="_blank">Airbnb</a></td></tr>
+    <tr><td><strong>合計</strong></td><td><strong>27</strong></td><td></td><td></td><td></td><td><strong>~NT$83,000–105,000</strong></td></tr>
+  </table>
+  </div>
+  <p style="text-align:center;margin-top:1.5rem;color:#888;font-size:.85rem">用 <a href="https://www.cozycozy.com" target="_blank" style="color:var(--sky)">CozyCozy.com</a> 同時比價 Airbnb + Booking + Vrbo，通常 Airbnb 便宜 20-40%</p>
+</section>
+
+<!-- Budget -->
+<div class="budget" id="budget">
+  <h2 class="section-title" style="color:#fff">費用總表</h2>
+  <p class="section-sub" style="color:rgba(255,255,255,.5)">全部用台幣計算，自煮為主的省錢版</p>
+  <div class="budget-grid">
+    <div class="budget-item"><span class="label">✈️ 機票 6 人</span><span class="amount">NT$137,580</span></div>
+    <div class="budget-item"><span class="label">✈️ 內陸廉航</span><span class="amount">NT$16,000</span></div>
+    <div class="budget-item"><span class="label">🏠 住宿 27 晚</span><span class="amount">NT$83,000</span></div>
+    <div class="budget-item"><span class="label">🚂 城際交通</span><span class="amount">NT$18,000</span></div>
+    <div class="budget-item"><span class="label">🚇 市區交通</span><span class="amount">NT$12,000</span></div>
+    <div class="budget-item"><span class="label">🍽️ 餐飲 28 天</span><span class="amount">NT$65,000</span></div>
+    <div class="budget-item"><span class="label">🎫 門票景點</span><span class="amount">NT$40,000</span></div>
+    <div class="budget-item"><span class="label">📱 雜費+保險</span><span class="amount">NT$10,000</span></div>
+  </div>
+  <div class="budget-total">
+    <div style="font-size:.9rem;opacity:.7;margin-bottom:.5rem">全家總費用</div>
+    <div class="big">~NT$382,000</div>
+    <div class="per">每位大人 ~NT$69,000 · 每人每天 ~NT$2,050</div>
+    <div style="margin-top:.8rem;font-size:.8rem;opacity:.6">比旅行社 10 天團便宜一半，天數多 3 倍</div>
+  </div>
+</div>
+
+<!-- Shanghai Layover -->
+<section>
+  <div class="shanghai">
+    <h2 class="section-title" style="color:#fff">回程彩蛋：上海外灘 3 小時</h2>
+    <p style="text-align:center;opacity:.7;margin-bottom:2rem">回程上海轉機 6hr45m，用台胞證出去逛一圈</p>
+    <div class="timeline">
+      <div class="timeline-item"><div class="time">05:35</div><div class="desc">抵達上海浦東，台胞證過海關</div></div>
+      <div class="timeline-item"><div class="time">06:30</div><div class="desc">寄放行李，搭地鐵 2 號線</div></div>
+      <div class="timeline-item"><div class="time">07:30</div><div class="desc">到外灘 → 拍黃浦江兩岸晨景 🌅</div></div>
+      <div class="timeline-item"><div class="time">08:00</div><div class="desc">走到豫園 → 吃小籠包當早餐 🥟</div></div>
+      <div class="timeline-item"><div class="time">09:15</div><div class="desc">搭地鐵回浦東機場</div></div>
+      <div class="timeline-item"><div class="time">10:05</div><div class="desc">回到機場 → 東航貴賓室免費吃喝</div></div>
+      <div class="timeline-item"><div class="time">12:20</div><div class="desc">登機 → 14:25 回到台北！🏠</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Tips -->
+<section id="tips">
+  <h2 class="section-title">重要提醒</h2>
+  <p class="section-sub">帶 2.5 歲和 67 歲出門必看</p>
+  <div class="tips-grid">
+    <div class="tip urgent"><h4>🔴 台胞證</h4><p>上海轉機必備，確認效期 3 個月以上。沒有台胞證可能被拒登機。</p></div>
+    <div class="tip urgent"><h4>🔴 塞切尼溫泉 14 歲以下禁入</h4><p>2025 年起全面禁止。小孩改去 Palatinus 水上樂園（有兒童池）或 Aquaworld。</p></div>
+    <div class="tip warning"><h4>🟡 鹽礦預約無障礙路線</h4><p>標準路線要走 800 階！Email 預約無障礙路線（有電梯）：rezerwacja@kopalnia.pl</p></div>
+    <div class="tip warning"><h4>🟡 波蘭超市週日不營業</h4><p>法律規定大部分超市週日休息。週六先買好食材！Żabka 便利店週日有開。</p></div>
+    <div class="tip info"><h4>ℹ️ 2.5 歲午睡</h4><p>每天 13:00–15:00 回住處或推車上睡。行程只排上午半天。</p></div>
+    <div class="tip info"><h4>ℹ️ 山區帶雨衣</h4><p>Zakopane 和高塔特拉 7 月多午後雷雨。上午出門、下午回來避雨。</p></div>
+    <div class="tip info"><h4>ℹ️ 東航貴賓室</h4><p>經濟艙轉機旅客可免費用 3 小時。東航 APP 領取 QR Code。有現煮麵條、小籠包、飲料。</p></div>
+    <div class="tip info"><h4>ℹ️ 叫車用 Bolt</h4><p>東歐版 Uber，比台灣計程車便宜一半。搬行李到車站/機場都用它，門到門服務。</p></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>🇭🇺🇨🇿🇵🇱🇸🇰 <strong>2026 中歐家庭旅行</strong> — 28 天 4 國 6 城</p>
+  <p style="margin-top:.5rem">5 大人 + 2 小孩 · 慢旅行 · 每人 ~NT$69,000</p>
+  <p style="margin-top:1rem;font-size:.75rem;opacity:.5">Made with Claude Code · Last updated 2026-05-21</p>
+</footer>
+
+</body>
+</html>
