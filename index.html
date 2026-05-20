@@ -106,6 +106,41 @@ section{padding:4rem 1.5rem;max-width:1100px;margin:0 auto}
 .castle-card-body p{font-size:.88rem;opacity:.85;line-height:1.6}
 .castle-card-body .castle-tip{font-size:.8rem;background:rgba(212,168,68,.15);color:var(--gold);padding:.3rem .8rem;border-radius:.5rem;display:inline-block;margin-top:.6rem}
 
+/* ===== CITY GUIDE (Prague etc.) ===== */
+.city-guide{padding:4rem 1.5rem;max-width:1100px;margin:0 auto}
+.city-intro{background:#fff;border-radius:var(--card-radius);padding:2.5rem;box-shadow:var(--soft-shadow);margin-bottom:2.5rem;position:relative;overflow:hidden}
+.city-intro::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#2D5016,#fff,#C45B3A)}
+.city-intro h3{font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:1rem;color:var(--night)}
+.city-intro p{font-size:1rem;line-height:1.8;color:#444}
+.attraction-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;margin:2rem 0}
+.attraction-card{background:#fff;border-radius:var(--card-radius);overflow:hidden;box-shadow:var(--soft-shadow);transition:transform .3s,box-shadow .3s}
+.attraction-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.12)}
+.attraction-card img{width:100%;height:210px;object-fit:cover}
+.attraction-card-body{padding:1.2rem 1.5rem 1.5rem}
+.attraction-card-body h4{font-size:1.05rem;margin-bottom:.2rem;color:var(--night)}
+.attraction-card-body .attr-en{font-size:.8rem;color:#999;font-style:italic;margin-bottom:.6rem}
+.attraction-card-body p{font-size:.88rem;color:#555;line-height:1.7;margin-bottom:.7rem}
+.attraction-card-body .attr-meta{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.attr-price{background:var(--warm);color:var(--earth);font-size:.8rem;font-weight:700;padding:.25rem .7rem;border-radius:2rem}
+.attr-rating{font-size:.75rem;padding:.2rem .6rem;border-radius:2rem;display:inline-block}
+.attr-rating.elder{background:#E8F5E9;color:#2E7D32}
+.attr-rating.kid{background:#E3F2FD;color:#1565C0}
+.attr-rating.warn{background:#FFF3E0;color:#E65100}
+.souvenir-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.2rem;margin:1.5rem 0}
+.souvenir-card{background:#fff;border-radius:var(--card-radius);padding:1.3rem;box-shadow:var(--soft-shadow);border-left:4px solid var(--forest);transition:transform .3s}
+.souvenir-card:hover{transform:translateY(-3px)}
+.souvenir-card h4{margin-bottom:.4rem;font-size:1rem}
+.souvenir-card p{font-size:.85rem;color:#555;line-height:1.6}
+.souvenir-card .souvenir-price{font-size:.85rem;color:var(--brick);font-weight:700;margin-top:.4rem}
+.city-transport{background:var(--warm);border-radius:var(--card-radius);padding:2rem;margin-top:2rem}
+.city-transport h3{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:1rem;color:var(--night)}
+.city-transport p{font-size:.9rem;color:#555;line-height:1.7;margin-bottom:.5rem}
+@media(max-width:768px){
+  .attraction-grid{grid-template-columns:1fr}
+  .souvenir-grid{grid-template-columns:1fr}
+  .attraction-card img{height:180px}
+}
+
 /* ===== FOOD ===== */
 .food-country{margin-bottom:2.5rem}
 .food-country-header{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
@@ -189,6 +224,75 @@ section{padding:4rem 1.5rem;max-width:1100px;margin:0 auto}
 .link-btn:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.12)}
 .link-btn .platform{font-size:.75rem;color:#999;display:block;margin-top:.3rem}
 
+/* ===== KIDS SECTION ===== */
+.kids-section{padding:4rem 1.5rem;max-width:1100px;margin:0 auto}
+.kids-subsection{margin-bottom:3rem}
+.kids-subsection h3{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:1.2rem;color:var(--night);display:flex;align-items:center;gap:.5rem}
+
+/* Warning cards for 2.5yo */
+.kids-warn-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem}
+.kids-warn-card{background:#fff;border-radius:var(--card-radius);padding:1.2rem 1.4rem;box-shadow:var(--soft-shadow);border-left:5px solid #F9A825;transition:transform .3s;line-height:1.7}
+.kids-warn-card:hover{transform:translateY(-3px)}
+.kids-warn-card .kw-icon{font-size:1.3rem;margin-right:.4rem}
+.kids-warn-card .kw-title{font-weight:700;font-size:.95rem;color:var(--night)}
+.kids-warn-card .kw-desc{font-size:.85rem;color:#555;margin-top:.3rem}
+
+/* Fun cards for 6yo */
+.kids-fun-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem}
+.kids-fun-card{background:#fff;border-radius:var(--card-radius);padding:1.3rem 1.5rem;box-shadow:var(--soft-shadow);border-left:5px solid var(--sky);transition:transform .3s;position:relative;overflow:hidden}
+.kids-fun-card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,.12)}
+.kids-fun-card .kf-rank{position:absolute;top:.8rem;right:.8rem;background:var(--gold);color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700}
+.kids-fun-card .kf-emoji{font-size:2rem;margin-bottom:.5rem}
+.kids-fun-card h4{font-size:1.05rem;color:var(--night);margin-bottom:.2rem}
+.kids-fun-card .kf-loc{font-size:.8rem;color:#999;font-style:italic;margin-bottom:.4rem}
+.kids-fun-card p{font-size:.88rem;color:#555;line-height:1.7}
+
+/* Suitability table */
+.kids-table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:var(--card-radius);overflow:hidden;box-shadow:var(--soft-shadow);margin:1rem 0}
+.kids-table th{background:var(--night);color:#fff;padding:.7rem .6rem;text-align:center;font-weight:500;font-size:.82rem}
+.kids-table th:first-child{text-align:left;padding-left:1rem}
+.kids-table td{padding:.55rem .6rem;border-bottom:1px solid #f0f0f0;font-size:.85rem;text-align:center}
+.kids-table td:first-child{text-align:left;padding-left:1rem;font-weight:500}
+.kids-table tr:nth-child(even) td{background:rgba(245,230,211,.3)}
+.kids-table tr:hover td{background:rgba(212,168,68,.08)}
+
+/* Checklist */
+.kids-checklist{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.6rem}
+.kids-check-item{display:flex;align-items:center;gap:.6rem;background:#fff;border-radius:.8rem;padding:.7rem 1rem;box-shadow:var(--soft-shadow);font-size:.88rem;transition:transform .2s}
+.kids-check-item:hover{transform:translateX(4px)}
+.kids-check-item .kc-icon{font-size:1.2rem;flex-shrink:0}
+.kids-check-item .kc-check{color:var(--forest);font-weight:700;flex-shrink:0}
+
+/* Daily timeline */
+.kids-timeline{max-width:600px;margin:0 auto;position:relative;padding-left:2.5rem;border-left:4px solid var(--gold)}
+.kids-tl-item{margin-bottom:1rem;position:relative}
+.kids-tl-item::before{content:'';position:absolute;left:-2.75rem;top:.35rem;width:14px;height:14px;background:var(--gold);border-radius:50%;border:3px solid var(--cream)}
+.kids-tl-item .kt-time{font-family:'Playfair Display',serif;font-weight:700;color:var(--earth);font-size:1rem}
+.kids-tl-item .kt-desc{font-size:.9rem;color:#444;margin-top:.1rem}
+.kids-tl-item.kt-free{opacity:1}
+.kids-tl-item.kt-free .kt-time{color:var(--brick)}
+.kids-tl-item.kt-free .kt-desc{color:var(--brick);font-weight:600}
+
+/* Check-in tip */
+.kids-checkin-box{background:linear-gradient(135deg,#E3F2FD,#E8F5E9);border-radius:var(--card-radius);padding:2rem;box-shadow:var(--soft-shadow);margin-top:1rem}
+.kids-checkin-box h4{font-size:1.1rem;margin-bottom:.8rem;color:var(--forest)}
+.kids-checkin-box p{font-size:.9rem;color:#444;line-height:1.7;margin-bottom:.5rem}
+.kids-checkin-box .email-template{background:#fff;border-radius:.8rem;padding:1rem 1.2rem;font-size:.82rem;color:#555;line-height:1.7;border-left:4px solid var(--sky);margin-top:.8rem;font-family:monospace,monospace}
+
+/* Mindset quote */
+.kids-quote{background:linear-gradient(135deg,#FFF8F0,#F5E6D3);border-radius:2rem;padding:2.5rem 2rem;text-align:center;box-shadow:var(--soft-shadow);border:2px solid var(--gold);margin-top:1rem}
+.kids-quote p{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--earth);line-height:2;font-style:italic}
+.kids-quote .kq-emoji{font-size:2.5rem;margin-bottom:.8rem;display:block}
+
+@media(max-width:768px){
+  .kids-warn-grid,.kids-fun-grid{grid-template-columns:1fr}
+  .kids-checklist{grid-template-columns:1fr}
+  .kids-table{font-size:.78rem}
+  .kids-table th,.kids-table td{padding:.4rem .35rem}
+  .kids-quote{padding:1.5rem 1.2rem}
+  .kids-quote p{font-size:1rem}
+}
+
 /* ===== FOOTER ===== */
 footer{text-align:center;padding:3rem;background:var(--warm);font-size:.85rem;color:#999}
 footer strong{color:var(--earth)}
@@ -198,6 +302,80 @@ footer strong{color:var(--earth)}
 .stamp{border:3px solid var(--brick);border-radius:.3rem;padding:.3rem .8rem;display:inline-block;color:var(--brick);font-weight:700;font-size:.85rem;transform:rotate(3deg);opacity:.7;letter-spacing:.1em}
 .postcard{background:#fff;border-radius:var(--card-radius);padding:2rem;box-shadow:var(--soft-shadow);border:1px dashed #ddd;position:relative}
 .postcard::before{content:'';position:absolute;top:1rem;right:1rem;width:50px;height:50px;border:2px solid var(--gold);border-radius:.3rem;opacity:.3}
+
+/* ===== MOUNTAIN DESTINATION SECTIONS ===== */
+.mountain-section{position:relative;overflow:hidden;padding:0 0 3rem}
+.mountain-hero-banner{width:100%;height:400px;object-fit:cover;position:relative;z-index:1}
+.mountain-overlay{position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(to top,rgba(0,0,0,.6),transparent);z-index:2}
+.mountain-banner-text{position:absolute;bottom:2rem;left:2rem;z-index:3;color:#fff}
+.mountain-banner-text h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);text-shadow:0 3px 20px rgba(0,0,0,.5);margin-bottom:.3rem}
+.mountain-banner-text .banner-sub{font-size:1rem;opacity:.9;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+.mountain-intro{max-width:1100px;margin:-3rem auto 0;position:relative;z-index:4;background:#fff;border-radius:var(--card-radius);padding:2.5rem;box-shadow:0 8px 40px rgba(0,0,0,.1)}
+.mountain-intro .subtitle{color:var(--forest);font-weight:600;font-size:1.05rem;margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
+.mountain-intro p{font-size:1rem;line-height:1.85;color:#444}
+.mountain-intro .highlight-box{background:linear-gradient(135deg,#E8F5E9,#F1F8E9);border-left:4px solid var(--forest);padding:1rem 1.5rem;border-radius:0 .8rem .8rem 0;margin-top:1.2rem;font-size:.92rem;color:#2D5016;line-height:1.7}
+.mountain-intro .highlight-box.blue{background:linear-gradient(135deg,#E3F2FD,#E8EAF6);border-left-color:var(--sky)}
+.mountain-intro .highlight-box.blue{color:#1A237E}
+
+.attraction-section-title{max-width:1100px;margin:2.5rem auto 0;padding:0 1.5rem}
+.attraction-section-title h3{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--night);display:flex;align-items:center;gap:.6rem}
+.attraction-section-title p{font-size:.9rem;color:#888;margin-top:.3rem}
+.attraction-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.8rem;max-width:1100px;margin:1.2rem auto 0;padding:0 1.5rem}
+.attraction-card{background:#fff;border-radius:var(--card-radius);overflow:hidden;box-shadow:var(--soft-shadow);transition:transform .35s,box-shadow .35s;position:relative}
+.attraction-card:hover{transform:translateY(-8px);box-shadow:0 16px 50px rgba(0,0,0,.12)}
+.attraction-card .card-img-wrap{overflow:hidden;position:relative}
+.attraction-card .card-img{width:100%;height:200px;object-fit:cover;transition:transform .5s}
+.attraction-card:hover .card-img{transform:scale(1.05)}
+.attraction-card .card-badge{position:absolute;top:.8rem;right:.8rem;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);padding:.25rem .7rem;border-radius:2rem;font-size:.73rem;font-weight:600;color:var(--forest);z-index:1;letter-spacing:.02em}
+.attraction-card .card-badge.blue{color:var(--sky)}
+.attraction-card .card-number{position:absolute;top:.8rem;left:.8rem;background:var(--forest);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;z-index:1}
+.attraction-card .card-number.blue{background:var(--sky)}
+.attraction-card .card-body{padding:1.3rem 1.5rem 1.5rem}
+.attraction-card .card-body h4{font-size:1.08rem;margin-bottom:.15rem;color:var(--night)}
+.attraction-card .card-body .card-local{font-size:.8rem;color:#aaa;font-style:italic;margin-bottom:.6rem}
+.attraction-card .card-body p{font-size:.9rem;color:#555;line-height:1.7}
+.attraction-card .card-tip{display:flex;align-items:flex-start;gap:.5rem;margin-top:.8rem;padding:.6rem .8rem;background:var(--cream);border-radius:.6rem;font-size:.82rem;color:var(--earth)}
+.attraction-card .card-tip .tip-icon{flex-shrink:0}
+.attraction-card .card-elder{display:inline-flex;align-items:center;gap:.3rem;margin-top:.5rem;margin-right:.4rem;padding:.2rem .6rem;border-radius:1rem;font-size:.73rem;font-weight:600}
+.elder-easy{background:#E8F5E9;color:#2E7D32}
+.elder-moderate{background:#FFF3E0;color:#E65100}
+.elder-hard{background:#FCE4EC;color:#C62828}
+.elder-kids{background:#E3F2FD;color:#1565C0}
+
+/* Mountain food & souvenir subsections */
+.mountain-subsection{max-width:1100px;margin:2.5rem auto 0;padding:0 1.5rem}
+.mountain-subsection h3{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem;color:var(--night)}
+.mountain-food-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem}
+.mountain-food-card{background:#fff;border-radius:var(--card-radius);padding:1.3rem 1.5rem;box-shadow:var(--soft-shadow);transition:transform .3s;border-left:4px solid var(--forest)}
+.mountain-food-card.sk{border-left-color:var(--sky)}
+.mountain-food-card:hover{transform:translateY(-3px)}
+.mountain-food-card h4{font-size:1rem;margin-bottom:.3rem}
+.mountain-food-card .food-desc{font-size:.88rem;color:#555;line-height:1.6;margin-bottom:.3rem}
+.mountain-food-card .food-price{font-size:.85rem;color:var(--brick);font-weight:600}
+.mountain-food-card .food-tag{font-size:.72rem;padding:.15rem .5rem;border-radius:1rem;display:inline-block;margin-top:.4rem}
+.tag-must-try{background:#FFF3E0;color:#E65100;font-weight:600}
+.tag-local{background:#E8F5E9;color:#2E7D32}
+.tag-kids{background:#E3F2FD;color:#1565C0}
+
+.souvenir-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-top:.5rem}
+.souvenir-card{background:#fff;border-radius:.8rem;padding:1.2rem;box-shadow:var(--soft-shadow);text-align:center;transition:transform .3s}
+.souvenir-card:hover{transform:translateY(-3px)}
+.souvenir-card .souvenir-emoji{font-size:2.2rem;margin-bottom:.5rem}
+.souvenir-card h5{font-size:.95rem;margin-bottom:.3rem}
+.souvenir-card p{font-size:.82rem;color:#666;line-height:1.5}
+
+/* Weather callout box */
+.weather-callout{max-width:1100px;margin:2.5rem auto 0;padding:0 1.5rem}
+.weather-callout-inner{display:flex;align-items:center;gap:1.5rem;background:linear-gradient(135deg,#E3F2FD,#E8F5E9);border-radius:var(--card-radius);padding:1.8rem 2rem;box-shadow:var(--soft-shadow)}
+.weather-callout-inner .weather-icon{font-size:3.5rem;flex-shrink:0}
+.weather-callout-inner .weather-info h4{font-size:1.1rem;margin-bottom:.3rem;color:var(--forest)}
+.weather-callout-inner .weather-info p{font-size:.9rem;color:#555;line-height:1.6}
+.weather-callout-inner .weather-temp{font-family:'Playfair Display',serif;font-size:2.8rem;color:var(--forest);flex-shrink:0;margin-left:auto}
+
+/* Mountain divider */
+.mountain-divider{max-width:1100px;margin:3rem auto 1rem;padding:0 1.5rem;text-align:center}
+.mountain-divider hr{border:none;height:2px;background:linear-gradient(90deg,transparent,var(--forest),var(--gold),var(--forest),transparent)}
+.mountain-divider .divider-text{font-size:.82rem;color:#bbb;letter-spacing:.15em;margin-top:.8rem}
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:768px){
@@ -218,11 +396,150 @@ footer strong{color:var(--earth)}
   .castle-grid{grid-template-columns:1fr}
   .market-grid{grid-template-columns:1fr}
   .itin-body{padding:1rem}
+  .mountain-hero-banner{height:260px}
+  .mountain-intro{margin-top:-2rem;padding:1.5rem}
+  .mountain-banner-text{left:1.2rem;bottom:1.2rem}
+  .attraction-grid{grid-template-columns:1fr}
+  .attraction-card .card-img{height:180px}
+  .weather-callout-inner{flex-direction:column;text-align:center}
+  .weather-callout-inner .weather-temp{margin-left:0;margin-top:.5rem}
+  .souvenir-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:480px){
   .photo-strip{grid-template-columns:1fr}
   .hero h1{font-size:2rem}
   .section-title{font-size:1.6rem}
+}
+
+/* ===== BUDGET BAR CHART ===== */
+.budget-chart{max-width:850px;margin:2.5rem auto 0}
+.bar-row{display:flex;align-items:center;margin-bottom:.55rem;gap:.5rem}
+.bar-label{min-width:115px;font-size:.8rem;text-align:right;opacity:.85;flex-shrink:0}
+.bar-track{flex:1;height:28px;background:rgba(255,255,255,.06);border-radius:.4rem;overflow:hidden}
+.bar-fill{height:100%;border-radius:.4rem;display:flex;align-items:center;justify-content:flex-end;padding:0 .5rem;font-size:.72rem;font-weight:600;color:#fff;white-space:nowrap}
+.bar-fill.b1{background:linear-gradient(90deg,#C45B3A,#e8764a)}
+.bar-fill.b2{background:linear-gradient(90deg,#4A90B8,#6bb3d9)}
+.bar-fill.b3{background:linear-gradient(90deg,#2D5016,#4a8a2a)}
+.bar-fill.b4{background:linear-gradient(90deg,#D4A844,#e8c36a)}
+.bar-fill.b5{background:linear-gradient(90deg,#6B3A5E,#9a5e8a)}
+.bar-fill.b6{background:linear-gradient(90deg,#1565C0,#42A5F5)}
+.bar-fill.b7{background:linear-gradient(90deg,#8B6914,#b8922a)}
+.bar-fill.b8{background:linear-gradient(90deg,#555,#888)}
+.budget-per-person{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;max-width:700px;margin:2rem auto 0}
+.budget-pp-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--card-radius);padding:1.2rem;text-align:center}
+.budget-pp-card .pp-label{font-size:.82rem;opacity:.6;margin-bottom:.3rem}
+.budget-pp-card .pp-amount{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--gold)}
+.budget-pp-card .pp-note{font-size:.75rem;opacity:.5;margin-top:.2rem}
+
+/* ===== TRANSPORT TABLE ===== */
+.transport-section{padding:4rem 1.5rem;max-width:1100px;margin:0 auto}
+.transport-table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:var(--card-radius);overflow:hidden;box-shadow:var(--soft-shadow);margin:1.5rem 0}
+.transport-table th{background:var(--forest);color:#fff;padding:.65rem .7rem;text-align:left;font-weight:500;font-size:.78rem}
+.transport-table td{padding:.55rem .7rem;border-bottom:1px solid #f0f0f0;font-size:.83rem;vertical-align:middle}
+.transport-table tr:nth-child(even) td{background:rgba(45,80,22,.02)}
+.transport-table tr:hover td{background:rgba(45,80,22,.05)}
+.t-tag{display:inline-block;padding:.12rem .45rem;border-radius:1rem;font-size:.68rem;font-weight:600}
+.t-train{background:#E3F2FD;color:#1565C0}
+.t-bus{background:#FFF3E0;color:#E65100}
+.t-flight{background:#F3E5F5;color:#6A1B9A}
+.transport-tips{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;margin-top:2rem}
+.tt-card{background:#fff;border-radius:var(--card-radius);padding:1.2rem 1.5rem;box-shadow:var(--soft-shadow);border-left:4px solid var(--forest)}
+.tt-card h4{margin-bottom:.4rem;color:var(--forest);font-size:.92rem}
+.tt-card p,.tt-card li{font-size:.83rem;color:#555;line-height:1.6}
+.tt-card ul{margin:.3rem 0 0 1.2rem}
+
+/* ===== TICKETS ===== */
+.ticket-section{margin-bottom:2rem}
+.ticket-hdr{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem;padding:.6rem 1rem;border-radius:.7rem;color:#fff;font-size:1rem;font-weight:700}
+.ticket-hdr.hu{background:linear-gradient(135deg,#C45B3A,#D4724A)}
+.ticket-hdr.cz{background:linear-gradient(135deg,#2D5016,#4A7A2E)}
+.ticket-hdr.pl{background:linear-gradient(135deg,#C45B3A,#8B1A1A)}
+.ticket-hdr.sk{background:linear-gradient(135deg,#4A90B8,#2D6B94)}
+.ticket-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem;margin-bottom:1.5rem}
+.tk-card{background:#fff;border-radius:var(--card-radius);padding:1.1rem;box-shadow:var(--soft-shadow);transition:transform .3s}
+.tk-card:hover{transform:translateY(-3px)}
+.tk-card h4{font-size:.92rem;margin-bottom:.2rem}
+.tk-price{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--brick);font-weight:700;margin:.3rem 0}
+.tk-badge{font-size:.7rem;padding:.12rem .4rem;border-radius:.3rem;display:inline-block;margin:.12rem .1rem;font-weight:600}
+.bfree{background:#E8F5E9;color:#2E7D32}
+.bdisc{background:#FFF3E0;color:#E65100}
+.baccess{background:#E3F2FD;color:#1565C0}
+.bwarn{background:#FCE4EC;color:#C62828}
+.tk-note{font-size:.78rem;color:#888;margin-top:.4rem;line-height:1.5}
+
+/* ===== SOUVENIRS ===== */
+.sv-section{background:linear-gradient(135deg,#FFF8F0,#F5E6D3);padding:4rem 1.5rem}
+.sv-country{margin-bottom:2.5rem;max-width:1100px;margin-left:auto;margin-right:auto}
+.sv-country-title{display:flex;align-items:center;gap:.8rem;font-family:'Playfair Display',serif;font-size:1.35rem;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--gold)}
+.sv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+.sv-card{background:#fff;border-radius:var(--card-radius);padding:1.1rem;box-shadow:var(--soft-shadow);transition:transform .3s;border-top:3px solid var(--gold)}
+.sv-card:hover{transform:translateY(-3px)}
+.sv-card h4{font-size:.92rem;margin-bottom:.2rem}
+.sv-card .sv-en{font-size:.78rem;color:#999;font-style:italic;margin-bottom:.3rem}
+.sv-card .sv-price{color:var(--brick);font-weight:700;font-size:.85rem}
+.sv-card .sv-where{font-size:.75rem;color:#666;margin-top:.35rem;background:var(--cream);padding:.2rem .5rem;border-radius:.4rem;display:inline-block}
+.sv-card .sv-desc{font-size:.8rem;color:#555;margin-top:.3rem;line-height:1.5}
+
+/* ===== SUNDAY WARNING ===== */
+.sunday-warn{background:#C62828;color:#fff;padding:1.5rem 2rem;border-radius:var(--card-radius);text-align:center;max-width:800px;margin:2rem auto;font-weight:700;box-shadow:0 4px 20px rgba(198,40,40,.3);animation:pulse-w 2s ease-in-out infinite}
+@keyframes pulse-w{0%,100%{transform:scale(1)}50%{transform:scale(1.01)}}
+.sunday-warn .sw-icon{font-size:2.5rem;display:block;margin-bottom:.3rem}
+.sunday-warn .sw-title{font-size:1.3rem;margin-bottom:.3rem}
+.sunday-warn .sw-desc{font-size:.9rem;font-weight:400;opacity:.9}
+
+/* ===== COOKING TIPS ===== */
+.cook-tips{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem;margin-top:2rem;max-width:1100px;margin-left:auto;margin-right:auto}
+.cook-tip{background:#fff;border-radius:.8rem;padding:.9rem;box-shadow:var(--soft-shadow);display:flex;align-items:flex-start;gap:.5rem}
+.cook-tip .ci{font-size:1.5rem;flex-shrink:0}
+.cook-tip .ct{font-size:.8rem;color:#555}
+.cook-tip .ct strong{color:var(--earth);display:block;margin-bottom:.1rem;font-size:.85rem}
+
+/* ===== REMINDERS V2 ===== */
+.rem-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto}
+.rem-card{background:#fff;border-radius:var(--card-radius);padding:1.5rem;box-shadow:var(--soft-shadow);transition:transform .3s}
+.rem-card:hover{transform:translateY(-3px)}
+.rem-card.rc-crit{border-left:5px solid #C62828;background:linear-gradient(135deg,#fff,#FFF5F5)}
+.rem-card.rc-warn{border-left:5px solid #F9A825;background:linear-gradient(135deg,#fff,#FFFDE7)}
+.rem-card.rc-info{border-left:5px solid var(--sky);background:linear-gradient(135deg,#fff,#F0F8FF)}
+.rem-card.rc-kid{border-left:5px solid #7B1FA2;background:linear-gradient(135deg,#fff,#FDF0FF)}
+.rem-card.rc-app{border-left:5px solid var(--forest);background:linear-gradient(135deg,#fff,#F0FFF0)}
+.rem-card h4{font-size:1.02rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.4rem}
+.rem-card p{font-size:.83rem;color:#555;line-height:1.7}
+.rem-action{margin-top:.7rem;font-size:.78rem;background:var(--cream);padding:.35rem .6rem;border-radius:.4rem;color:var(--earth);font-weight:500;display:inline-block}
+
+/* ===== SHANGHAI V2 ===== */
+.sh-section{padding:4rem 1.5rem;max-width:1100px;margin:0 auto}
+.sh-card{background:linear-gradient(135deg,#1a1a2e,#0f3460);color:#fff;border-radius:2rem;overflow:hidden;position:relative}
+.sh-card::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(212,168,68,.12),transparent);border-radius:50%}
+.sh-inner{padding:2.5rem 2rem;position:relative;z-index:1}
+.sh-tabs{display:flex;gap:.7rem;margin:1.5rem 0;flex-wrap:wrap}
+.sh-tab{padding:.45rem 1.1rem;border-radius:2rem;background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);font-size:.82rem;border:1px solid rgba(255,255,255,.12)}
+.sh-tab.active{background:var(--gold);color:var(--night);font-weight:600;border-color:var(--gold)}
+.sh-block{margin-top:1.5rem}
+.sh-block h3{color:var(--gold);margin-bottom:1rem;font-size:1.1rem}
+.tl2{position:relative;padding-left:2.3rem;border-left:3px solid var(--gold);margin:1rem 0}
+.tl2 .ti{margin-bottom:1.1rem;position:relative}
+.tl2 .ti::before{content:'';position:absolute;left:-2.65rem;top:.35rem;width:12px;height:12px;background:var(--gold);border-radius:50%;border:3px solid #1a1a2e}
+.tl2 .tt{color:var(--gold);font-weight:700;font-size:.9rem;font-family:'Playfair Display',serif}
+.tl2 .td{font-size:.85rem;opacity:.9;margin-top:.12rem;line-height:1.6}
+.tl2 .tp{font-size:.72rem;opacity:.5;margin-top:.1rem;font-style:italic}
+.lg-box{background:rgba(212,168,68,.1);border:1px solid rgba(212,168,68,.3);border-radius:var(--card-radius);padding:1.1rem 1.3rem;margin-top:1.5rem}
+.lg-box h4{color:var(--gold);margin-bottom:.4rem;font-size:.9rem}
+.lg-box ul{list-style:none;padding:0}
+.lg-box li{font-size:.8rem;opacity:.85;padding:.2rem 0;padding-left:1.2rem;position:relative}
+.lg-box li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-weight:700}
+
+@media(max-width:768px){
+  .bar-label{min-width:80px;font-size:.7rem}
+  .transport-table{font-size:.75rem}
+  .transport-table th,.transport-table td{padding:.35rem .4rem}
+  .transport-tips{grid-template-columns:1fr}
+  .ticket-grid{grid-template-columns:1fr}
+  .sv-grid{grid-template-columns:1fr}
+  .rem-grid{grid-template-columns:1fr}
+  .sh-inner{padding:1.5rem 1.2rem}
+  .cook-tips{grid-template-columns:1fr}
+  .budget-per-person{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -253,11 +570,19 @@ footer strong{color:var(--earth)}
   <a href="#route">路線</a>
   <a href="#itinerary">行程</a>
   <a href="#castles">城堡</a>
+  <a href="#prague-guide">布拉格</a>
+  <a href="#zakopane-guide">扎科帕內</a>
+  <a href="#tatras-guide">高塔特拉</a>
   <a href="#food">美食</a>
   <a href="#supermarket">超市</a>
   <a href="#accommodation">住宿</a>
   <a href="#budget">費用</a>
+  <a href="#transport">交通</a>
+  <a href="#tickets">門票</a>
+  <a href="#souvenirs">名產</a>
+  <a href="#kids">👶 小孩</a>
   <a href="#tips">提醒</a>
+  <a href="#shanghai">轉機</a>
 </nav>
 
 <!-- ===== ROUTE ===== -->
@@ -729,6 +1054,209 @@ footer strong{color:var(--earth)}
     <div class="tip info"><h4>ℹ️ 東航貴賓室</h4><p>經濟艙轉機旅客可免費用 3 小時。東航 APP 領取 QR Code。有現煮麵條、小籠包、飲料。</p></div>
     <div class="tip info"><h4>ℹ️ 叫車用 Bolt</h4><p>東歐版 Uber，比台灣計程車便宜一半。搬行李到車站/機場都用它，門到門服務。</p></div>
   </div>
+</section>
+
+<!-- ===== KIDS TRAVEL TIPS ===== -->
+<section class="kids-section" id="kids">
+  <h2 class="section-title">👶 帶小孩注意事項</h2>
+  <p class="section-sub">2.5 歲 + 6 歲的中歐 28 天生存指南</p>
+
+  <!-- 1. 2.5 歲特別注意 -->
+  <div class="kids-subsection">
+    <h3>⚠️ 2.5 歲特別注意</h3>
+    <div class="kids-warn-grid">
+      <div class="kids-warn-card">
+        <div><span class="kw-icon">✈️</span><span class="kw-title">飛機 19.5 小時</span></div>
+        <div class="kw-desc">iPad 下載卡通 + 零食 + 新玩具（出發前買，上飛機才拿出來，保持新鮮感）</div>
+      </div>
+      <div class="kids-warn-card">
+        <div><span class="kw-icon">😴</span><span class="kw-title">午睡不能省</span></div>
+        <div class="kw-desc">每天 13:00-15:00 必須回公寓或推車上睡。不午睡 = 崩潰大哭整晚</div>
+      </div>
+      <div class="kids-warn-card">
+        <div><span class="kw-icon">🦷</span><span class="kw-title">時差調整</span></div>
+        <div class="kw-desc">前 2-3 天半夜會醒來哭鬧，第一天別排行程，全家一起慢慢調時差</div>
+      </div>
+      <div class="kids-warn-card">
+        <div><span class="kw-icon">🍼</span><span class="kw-title">食物準備</span></div>
+        <div class="kw-desc">歐洲超市有 Hipp / Gerber 嬰兒食品，牛奶、香蕉、麵包是萬用組合</div>
+      </div>
+      <div class="kids-warn-card">
+        <div><span class="kw-icon">🩱</span><span class="kw-title">尿布策略</span></div>
+        <div class="kw-desc">帶 3 天份就好！到當地超市買 Pampers / Huggies，品質一樣、價格更便宜</div>
+      </div>
+      <div class="kids-warn-card">
+        <div><span class="kw-icon">🌡️</span><span class="kw-title">生病應對</span></div>
+        <div class="kw-desc">帶小兒退燒藥（普拿疼）+ 電解質補充液。每個城市都有 24hr 藥局（Apteka / Lekarna）</div>
+      </div>
+      <div class="kids-warn-card">
+        <div><span class="kw-icon">🚗</span><span class="kw-title">推車 + 背帶</span></div>
+        <div class="kw-desc">帶輕便傘車（大輪比小輪好推石板路）+ 背帶（進城堡 / 鹽礦時用）</div>
+      </div>
+      <div class="kids-warn-card">
+        <div><span class="kw-icon">🌧️</span><span class="kw-title">山區多雨</span></div>
+        <div class="kw-desc">Zakopane / 高塔特拉 7 月多午後雷雨，帶小雨衣，上午出門下午回來</div>
+      </div>
+      <div class="kids-warn-card">
+        <div><span class="kw-icon">♨️</span><span class="kw-title">溫泉禁令</span></div>
+        <div class="kw-desc">布達佩斯塞切尼溫泉 14 歲以下禁入！改去 Palatinus 水上樂園（有幼兒池）</div>
+      </div>
+      <div class="kids-warn-card">
+        <div><span class="kw-icon">🏔️</span><span class="kw-title">海洋之眼不適合</span></div>
+        <div class="kw-desc">來回 16km 不可能帶 2 歲去。留在 Zakopane 鎮上搭 Gubalowka 纜車，一樣開心</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. 6 歲會愛的景點 TOP 5 -->
+  <div class="kids-subsection">
+    <h3>🎉 6 歲會愛的景點 TOP 5</h3>
+    <div class="kids-fun-grid">
+      <div class="kids-fun-card">
+        <div class="kf-rank">1</div>
+        <div class="kf-emoji">🐉</div>
+        <h4>瓦維爾噴火龍</h4>
+        <div class="kf-loc">🇵🇱 克拉科夫 · Day 13 & 17</div>
+        <p>每 5 分鐘噴真的火！免費！小孩可以在河邊等著看龍噴火，百看不膩</p>
+      </div>
+      <div class="kids-fun-card">
+        <div class="kf-rank">2</div>
+        <div class="kf-emoji">🪞</div>
+        <h4>佩特任山鏡子迷宮</h4>
+        <div class="kf-loc">🇨🇿 布拉格 · Day 11</div>
+        <p>哈哈鏡笑到停不下來！搭纜車上山，順便看布拉格全景</p>
+      </div>
+      <div class="kids-fun-card">
+        <div class="kf-rank">3</div>
+        <div class="kf-emoji">🚡</div>
+        <h4>纜車體驗</h4>
+        <div class="kf-loc">🇵🇱🇸🇰 Zakopane / 高塔特拉 · Day 21-24</div>
+        <p>2 分鐘飛上山頂！Gubalowka 纜車 + 高塔特拉齒軌列車，小孩超興奮</p>
+      </div>
+      <div class="kids-fun-card">
+        <div class="kf-rank">4</div>
+        <div class="kf-emoji">🏊</div>
+        <h4>水上樂園</h4>
+        <div class="kf-loc">🇭🇺🇸🇰 布達佩斯 / 高塔特拉 · Day 5 & 24</div>
+        <p>Palatinus 有幼兒池 + 滑水道，AquaCity 溫泉水上樂園也有兒童區</p>
+      </div>
+      <div class="kids-fun-card">
+        <div class="kf-rank">5</div>
+        <div class="kf-emoji">🏰</div>
+        <h4>黃金巷小房子</h4>
+        <div class="kf-loc">🇨🇿 布拉格城堡 · Day 9</div>
+        <p>童話般的彩色迷你屋，每間都可以進去看。卡夫卡故居也在這裡</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. 各景點適合度 -->
+  <div class="kids-subsection">
+    <h3>📋 各景點年齡適合度</h3>
+    <div style="overflow-x:auto">
+    <table class="kids-table">
+      <tr>
+        <th>景點</th>
+        <th>2.5 歲</th>
+        <th>6 歲</th>
+        <th>67-68 歲</th>
+        <th>備註</th>
+      </tr>
+      <tr><td>🇭🇺 漁人堡</td><td>✅</td><td>✅</td><td>✅</td><td>平坦好推車，免費觀景台</td></tr>
+      <tr><td>🇭🇺 布達城堡</td><td>✅</td><td>✅</td><td>✅</td><td>搭纜車上山，不用走</td></tr>
+      <tr><td>🇭🇺 中央市場</td><td>✅</td><td>✅</td><td>✅</td><td>推車可進，二樓有電扶梯</td></tr>
+      <tr><td>🇭🇺 聖伊什特萬聖殿</td><td>⚠️</td><td>✅</td><td>⚠️</td><td>登頂有電梯但最後一段要走樓梯</td></tr>
+      <tr><td>🇭🇺 Palatinus 水上樂園</td><td>✅</td><td>✅</td><td>✅</td><td>有幼兒池 + 老人泡池</td></tr>
+      <tr><td>🇭🇺 塞切尼溫泉</td><td>❌</td><td>❌</td><td>✅</td><td>14 歲以下禁入</td></tr>
+      <tr><td>🇭🇺 多瑙河遊船</td><td>✅</td><td>✅</td><td>✅</td><td>大人小孩都愛，傍晚夜景最美</td></tr>
+      <tr><td>🇨🇿 天文鐘</td><td>✅</td><td>✅</td><td>✅</td><td>在廣場看整點表演，不用走路</td></tr>
+      <tr><td>🇨🇿 查理大橋</td><td>✅</td><td>✅</td><td>✅</td><td>早上人少好推車，橋塔登頂老人不建議</td></tr>
+      <tr><td>🇨🇿 布拉格城堡</td><td>⚠️</td><td>✅</td><td>⚠️</td><td>搭 22 號電車上去，但城堡內走路多</td></tr>
+      <tr><td>🇨🇿 黃金巷</td><td>✅</td><td>✅</td><td>✅</td><td>小房子很可愛，平坦好走</td></tr>
+      <tr><td>🇨🇿 佩特任山鏡子迷宮</td><td>✅</td><td>✅</td><td>✅</td><td>搭纜車上山，哈哈鏡小孩超愛</td></tr>
+      <tr><td>🇨🇿 CK 小鎮一日遊</td><td>⚠️</td><td>✅</td><td>⚠️</td><td>巴士來回 6hr，2 歲可能坐不住</td></tr>
+      <tr><td>🇵🇱 瓦維爾噴火龍</td><td>✅</td><td>✅</td><td>✅</td><td>河邊看噴火，免費又精彩</td></tr>
+      <tr><td>🇵🇱 瓦維爾城堡</td><td>⚠️</td><td>✅</td><td>⚠️</td><td>城堡丘有坡，推車可到但需體力</td></tr>
+      <tr><td>🇵🇱 維利奇卡鹽礦</td><td>⚠️</td><td>✅</td><td>⚠️</td><td>預約無障礙路線！標準路線 800 階</td></tr>
+      <tr><td>🇵🇱 Ojcow 國家公園</td><td>⚠️</td><td>✅</td><td>⚠️</td><td>需用背帶，部分路段不適合推車</td></tr>
+      <tr><td>🇵🇱 克拉科夫主廣場</td><td>✅</td><td>✅</td><td>✅</td><td>平坦寬敞，有很多鴿子可以追</td></tr>
+      <tr><td>🇵🇱 牛奶吧</td><td>✅</td><td>✅</td><td>✅</td><td>便宜好吃，餃子小孩最愛</td></tr>
+      <tr><td>🇵🇱 Gubalowka 纜車</td><td>✅</td><td>✅</td><td>✅</td><td>2 分鐘上山，山頂有遊樂場</td></tr>
+      <tr><td>🇵🇱 海洋之眼</td><td>❌</td><td>⚠️</td><td>❌</td><td>來回 16km，大人分組去</td></tr>
+      <tr><td>🇸🇰 Strbske Pleso 湖</td><td>✅</td><td>✅</td><td>✅</td><td>湖邊平坦步道，推車輕鬆走</td></tr>
+      <tr><td>🇸🇰 齒軌列車</td><td>✅</td><td>✅</td><td>✅</td><td>小火車上山，小孩超興奮</td></tr>
+      <tr><td>🇸🇰 Hrebienok 瀑布步道</td><td>⚠️</td><td>✅</td><td>⚠️</td><td>用背帶，步道有些陡坡</td></tr>
+      <tr><td>🇸🇰 AquaCity 水上樂園</td><td>✅</td><td>✅</td><td>✅</td><td>溫泉 + 滑水道 + 兒童池</td></tr>
+    </table>
+    </div>
+    <p style="text-align:center;margin-top:.8rem;font-size:.82rem;color:#888">✅ 適合 · ⚠️ 可以但需注意 · ❌ 不建議</p>
+  </div>
+
+  <!-- 4. 必帶清單 -->
+  <div class="kids-subsection">
+    <h3>🎒 必帶清單</h3>
+    <div class="kids-checklist">
+      <div class="kids-check-item"><span class="kc-check">☑</span><span class="kc-icon">🚗</span>輕便推車（傘車）</div>
+      <div class="kids-check-item"><span class="kc-check">☑</span><span class="kc-icon">🎒</span>背帶 / 腰凳</div>
+      <div class="kids-check-item"><span class="kc-check">☑</span><span class="kc-icon">📱</span>iPad + 充電線 + 耳機</div>
+      <div class="kids-check-item"><span class="kc-check">☑</span><span class="kc-icon">💊</span>小兒退燒藥（普拿疼）</div>
+      <div class="kids-check-item"><span class="kc-check">☑</span><span class="kc-icon">🧃</span>電解質補充液</div>
+      <div class="kids-check-item"><span class="kc-check">☑</span><span class="kc-icon">🧴</span>防曬乳 SPF50</div>
+      <div class="kids-check-item"><span class="kc-check">☑</span><span class="kc-icon">🌧️</span>小雨衣</div>
+      <div class="kids-check-item"><span class="kc-check">☑</span><span class="kc-icon">🩱</span>3 天份尿布（到當地買）</div>
+      <div class="kids-check-item"><span class="kc-check">☑</span><span class="kc-icon">🍪</span>零食（餅乾、米餅）</div>
+      <div class="kids-check-item"><span class="kc-check">☑</span><span class="kc-icon">🧸</span>熟悉的小被子 / 玩偶（安全感）</div>
+      <div class="kids-check-item"><span class="kc-check">☑</span><span class="kc-icon">🫗</span>保溫水壺</div>
+    </div>
+  </div>
+
+  <!-- 5. 每天時間安排建議 -->
+  <div class="kids-subsection">
+    <h3>🕐 每天時間安排建議</h3>
+    <p style="text-align:center;color:#888;margin-bottom:1.5rem;font-size:.9rem">帶小孩的黃金節奏 — 上午衝景點，下午全休息</p>
+    <div class="kids-timeline">
+      <div class="kids-tl-item"><div class="kt-time">08:00</div><div class="kt-desc">起床吃早餐（公寓自煮，省錢又從容）</div></div>
+      <div class="kids-tl-item"><div class="kt-time">09:00</div><div class="kt-desc">出門！只排一個景點，不貪心</div></div>
+      <div class="kids-tl-item"><div class="kt-time">12:00</div><div class="kt-desc">午餐（餐廳或帶回公寓吃）</div></div>
+      <div class="kids-tl-item"><div class="kt-time">13:00</div><div class="kt-desc">回公寓午睡 💤 — 2.5 歲的命脈</div></div>
+      <div class="kids-tl-item"><div class="kt-time">15:00</div><div class="kt-desc">起來吃點心，慢慢醒</div></div>
+      <div class="kids-tl-item"><div class="kt-time">16:00</div><div class="kt-desc">輕鬆散步 / 公園放電 / 超市買菜</div></div>
+      <div class="kids-tl-item"><div class="kt-time">18:00</div><div class="kt-desc">公寓煮晚餐（7 口人外食太貴）</div></div>
+      <div class="kids-tl-item"><div class="kt-time">19:30</div><div class="kt-desc">洗澡、刷牙、睡前故事</div></div>
+      <div class="kids-tl-item"><div class="kt-time">20:00</div><div class="kt-desc">小孩入睡 😴</div></div>
+      <div class="kids-tl-item kt-free"><div class="kt-time">20:00+</div><div class="kt-desc">大人自由時間！🍷 陽台喝酒看夜景</div></div>
+    </div>
+  </div>
+
+  <!-- 6. 早到 check-in 問題 -->
+  <div class="kids-subsection">
+    <h3>🏠 第一站 Check-in 問題</h3>
+    <div class="kids-checkin-box">
+      <h4>布達佩斯 08:05 到，公寓 14:00 才能入住</h4>
+      <p>✅ <strong>解法：</strong>先寄行李（車站 / 公寓大廳）→ 中央市場吃早餐 → 附近散步到下午入住</p>
+      <p>💡 很多 Airbnb 房東願意提早入住，訂房後主動問！</p>
+      <div class="email-template">
+        <strong>訂房後傳這段給房東：</strong><br><br>
+        Hi! We're a family of 7 (5 adults + 2 young kids, ages 2 and 6).<br>
+        Our flight arrives at Budapest at 08:05 on June 28.<br>
+        Would it be possible to check in early, around 10:00-11:00?<br>
+        We're happy to pay an extra fee if needed.<br>
+        The kids will be very tired after the long flight. Thank you!
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. 心態提醒 -->
+  <div class="kids-subsection">
+    <h3>💛 心態提醒</h3>
+    <div class="kids-quote">
+      <span class="kq-emoji">🌍✨</span>
+      <p>帶 2 歲出國不是挑戰，是冒險。</p>
+      <p>景點永遠都在，但跟孫子的回憶只有當下。</p>
+      <p>沒去到的地方不生氣，慢下來也是一種旅行。</p>
+    </div>
+  </div>
+
 </section>
 
 <!-- ===== FOOTER ===== -->
