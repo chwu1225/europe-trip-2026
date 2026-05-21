@@ -852,6 +852,50 @@ footer strong{color:var(--earth)}
   .money-warn-card{padding:1.2rem}
   .money-warn-card .warn-title{font-size:1rem}
 }
+
+/* ===== PACKING CHECKLIST ===== */
+.packing-section{padding:4rem 1.5rem;max-width:1100px;margin:0 auto}
+.packing-intro{background:#fff;border-radius:var(--card-radius);padding:2.5rem;box-shadow:var(--soft-shadow);margin-bottom:2.5rem;text-align:center;position:relative;overflow:hidden}
+.packing-intro::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#C62828,var(--sky),var(--forest),#E91E63,var(--plum),#C62828,var(--sky),var(--gold))}
+.packing-intro .pi-emoji{font-size:3rem;margin-bottom:.8rem;display:block}
+.packing-intro h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--night);margin-bottom:.6rem}
+.packing-intro p{font-size:.95rem;color:#666;line-height:1.8}
+.packing-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.8rem;margin-bottom:2rem}
+.pack-cat{background:#fff;border-radius:var(--card-radius);overflow:hidden;box-shadow:var(--soft-shadow);transition:transform .3s}
+.pack-cat:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,.12)}
+.pack-cat-header{padding:1rem 1.3rem;color:#fff;display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:1rem}
+.pack-cat-header .pch-icon{font-size:1.4rem}
+.pack-cat-header.cat-doc{background:linear-gradient(135deg,#C62828,#E53935)}
+.pack-cat-header.cat-elec{background:linear-gradient(135deg,#1565C0,#42A5F5)}
+.pack-cat-header.cat-cloth{background:linear-gradient(135deg,#2D5016,#4A7A2E)}
+.pack-cat-header.cat-kids{background:linear-gradient(135deg,#E91E63,#F48FB1)}
+.pack-cat-header.cat-elder{background:linear-gradient(135deg,#6B3A5E,#9a5e8a)}
+.pack-cat-header.cat-med{background:linear-gradient(135deg,#C62828,#E53935)}
+.pack-cat-header.cat-security{background:linear-gradient(135deg,#263238,#455A64)}
+.pack-cat-header.cat-app{background:linear-gradient(135deg,#1565C0,#42A5F5)}
+.pack-cat-header.cat-luggage{background:linear-gradient(135deg,#B8860B,#D4A844)}
+.pack-cat-header.cat-final{background:linear-gradient(135deg,#C45B3A,#D4724A)}
+.pack-cat-body{padding:1rem 1.3rem 1.3rem}
+.pack-item{display:flex;align-items:flex-start;gap:.5rem;padding:.45rem 0;border-bottom:1px solid #f5f0ea;font-size:.88rem;color:#444;line-height:1.6;transition:background .2s}
+.pack-item:last-child{border-bottom:none}
+.pack-item:hover{background:rgba(212,168,68,.06);border-radius:.4rem}
+.pack-item .pi-check{flex-shrink:0;width:18px;height:18px;border:2px solid #ccc;border-radius:4px;margin-top:2px;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:transparent}
+.pack-item .pi-check:hover{border-color:var(--forest)}
+.pack-item .pi-check.checked{background:var(--forest);border-color:var(--forest);color:#fff}
+.pack-item .pi-text{flex:1}
+.pack-item .pi-tag{font-size:.7rem;padding:.1rem .4rem;border-radius:.3rem;display:inline-block;margin-left:.3rem;font-weight:600;vertical-align:middle}
+.pi-tag-urgent{background:#FCE4EC;color:#C62828}
+.pi-tag-tip{background:#FFF3E0;color:#E65100}
+.pi-tag-note{background:#E3F2FD;color:#1565C0}
+.pack-cat-note{background:var(--cream);border-radius:.6rem;padding:.7rem 1rem;margin-top:.5rem;font-size:.82rem;color:var(--earth);line-height:1.6}
+.packing-counter{text-align:center;margin:2rem auto;padding:1.5rem;background:linear-gradient(135deg,#FFF8F0,#F5E6D3);border:2px solid var(--gold);border-radius:1.5rem;max-width:500px;box-shadow:var(--soft-shadow)}
+.packing-counter .pc-num{font-family:'Playfair Display',serif;font-size:2.5rem;color:var(--gold)}
+.packing-counter .pc-label{font-size:.9rem;color:var(--earth);margin-top:.3rem}
+@media(max-width:768px){
+  .packing-grid{grid-template-columns:1fr}
+  .packing-intro{padding:1.5rem}
+  .packing-counter .pc-num{font-size:2rem}
+}
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -899,6 +943,7 @@ footer strong{color:var(--earth)}
   <a href="#money">💱 換匯</a>
   <a href="#tips">提醒</a>
   <a href="#safety">🔒 安全</a>
+  <a href="#packing">🧳 行李</a>
   <a href="#shanghai">轉機</a>
 </nav>
 <!-- ===== ROUTE ===== -->
@@ -3644,6 +3689,257 @@ footer strong{color:var(--earth)}
     </div>
   </div>
 </div>
+
+<!-- ===== PACKING CHECKLIST ===== -->
+<section class="packing-section" id="packing">
+  <h2 class="section-title">🧳 行前準備清單</h2>
+  <p class="section-sub">28天4國旅行，帶齊這些就放心出發！</p>
+
+  <div class="packing-intro">
+    <span class="pi-emoji">🧳✈️🇭🇺🇨🇿🇵🇱🇸🇰</span>
+    <h3>28天歐洲行前準備清單</h3>
+    <p>全家7人（2大人 + 3長輩 + 2小孩）的完整打包指南。<br>
+    點擊每個項目的方框可以打勾，方便出發前逐一確認！<br>
+    <strong style="color:var(--brick)">衣服只帶5-7天份就好，每個公寓都有洗衣機！</strong></p>
+  </div>
+
+  <div class="packing-grid">
+
+    <!-- ===== 1. 證件類 ===== -->
+    <div class="pack-cat">
+      <div class="pack-cat-header cat-doc">
+        <span class="pch-icon">📄</span>
+        1. 證件類（最重要！）
+      </div>
+      <div class="pack-cat-body">
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">護照（效期6個月以上，每人確認）<span class="pi-tag pi-tag-urgent">必帶</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">台胞證（上海轉機必備！效期3個月以上）<span class="pi-tag pi-tag-urgent">必帶</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">ETIAS 電子旅行授權（2026下半年起需申請，18歲以下免費但仍需申請）<span class="pi-tag pi-tag-urgent">必帶</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">護照影本 2份（1份隨身、1份放行李箱備用）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">大頭照 2張（補辦用）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">旅平險保單影本</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">機票電子票（列印1份 + 手機存1份）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">住宿確認信（每個城市的 Booking / Airbnb 確認信）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">國際駕照（如果要租車的話）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">信用卡 2張（Visa + Mastercard 各一）</span></div>
+        <div class="pack-cat-note">⚠️ 護照和台胞證一定要再三確認效期！過期了上不了飛機！</div>
+      </div>
+    </div>
+
+    <!-- ===== 2. 電子設備 ===== -->
+    <div class="pack-cat">
+      <div class="pack-cat-header cat-elec">
+        <span class="pch-icon">🔌</span>
+        2. 電子設備
+      </div>
+      <div class="pack-cat-body">
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">手機 + 充電線 + 充電頭</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">歐規轉接頭 ×3（歐洲圓頭兩孔，台灣扁頭不能用！）<span class="pi-tag pi-tag-urgent">必買</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">行動電源 2個</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">iPad + 充電線（2.5歲救命神器）<span class="pi-tag pi-tag-tip">小孩用</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">iPad 下載好卡通影片（不要靠 WiFi！）<span class="pi-tag pi-tag-tip">出發前做</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">兒童耳機（不吵到別人）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">歐洲 eSIM 或實體 SIM 卡（建議 eSIM 最方便，到了自動連線）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">萬用充電線（USB-C + Lightning）</span></div>
+        <div class="pack-cat-note">💡 歐規轉接頭台灣五金行有賣，一個約50-100元，記得買3個以上！</div>
+      </div>
+    </div>
+
+    <!-- ===== 3. 衣物 ===== -->
+    <div class="pack-cat">
+      <div class="pack-cat-header cat-cloth">
+        <span class="pch-icon">👕</span>
+        3. 衣物（28天只帶5-7天份！）
+      </div>
+      <div class="pack-cat-body">
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">短袖 ×5-7（城市段 25-31°C）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">薄長袖 ×2（山區晚上 15-19°C）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">薄羽絨外套或刷毛外套 ×1（高塔特拉山區夜間 10°C）<span class="pi-tag pi-tag-tip">山區必帶</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">雨衣 / 防水外套 ×1（山區7月多午後雷雨！不要帶傘，帶雨衣）<span class="pi-tag pi-tag-tip">帶雨衣</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">長褲 ×2（進教堂需要）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">短褲 ×3</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">內衣褲 ×5-7天份</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">襪子 ×5-7雙</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">好走的平底鞋 / 運動鞋 ×1（石板路多！不要穿高跟鞋）<span class="pi-tag pi-tag-urgent">重要</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">涼鞋 / 拖鞋 ×1（溫泉 / 公寓用）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">泳衣 ×1（溫泉 + 水上樂園必備）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">帽子（防曬）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">太陽眼鏡</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">洗衣粉 / 洗衣片（小包裝，公寓洗衣機用）</span></div>
+        <div class="pack-cat-note">👚 每個公寓都有洗衣機，帶5-7天份衣服就好，到了再洗！行李輕鬆很多～</div>
+      </div>
+    </div>
+
+    <!-- ===== 4. 小孩專區 ===== -->
+    <div class="pack-cat">
+      <div class="pack-cat-header cat-kids">
+        <span class="pch-icon">👶</span>
+        4. 小孩專區（2.5歲 + 6歲）
+      </div>
+      <div class="pack-cat-body">
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">輕便推車 / 傘車（大輪比小輪好推石板路）<span class="pi-tag pi-tag-urgent">必帶</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">背帶 / 腰凳（進城堡、鹽礦用）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">3天份尿布（到當地超市買 Pampers）<span class="pi-tag pi-tag-note">到了再買</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">小孩零食（米餅、小饅頭、餅乾，飛機火車用）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">保溫水壺（泡奶 / 喝溫水）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">小兒退燒藥（小兒普拿疼 / 依普芬）<span class="pi-tag pi-tag-urgent">必帶</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">電解質補充液（拉肚子用）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">防蚊貼片 / 防蚊液</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">兒童防曬乳 SPF50</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">小雨衣（山區午後雷雨）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">安撫物（熟悉的小被子 / 玩偶，睡覺安全感）<span class="pi-tag pi-tag-tip">別忘了！</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">新玩具 2-3個（出發前買好，上飛機才拿出來！新鮮感撐更久）<span class="pi-tag pi-tag-tip">秘密武器</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">貼紙書 / 畫冊 + 蠟筆（火車上用）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">兒童耳機 + iPad 卡通已下載</span></div>
+        <div class="pack-cat-note">🍼 尿布到歐洲超市買就好（Pampers / Huggies 都有），帶3天份過渡就夠了～</div>
+      </div>
+    </div>
+
+    <!-- ===== 5. 老人專區 ===== -->
+    <div class="pack-cat">
+      <div class="pack-cat-header cat-elder">
+        <span class="pch-icon">👴</span>
+        5. 長輩專區（60-67-68歲）
+      </div>
+      <div class="pack-cat-body">
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">慢性病藥品（帶足28天份 + 備用1週份）<span class="pi-tag pi-tag-urgent">最重要</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">英文處方箋（醫師開的，萬一藥掉了可在歐洲藥局補）<span class="pi-tag pi-tag-urgent">必帶</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">膝蓋護膝（石板路多、鹽礦有階梯）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">壓力襪（飛機 19.5hr 防血栓！超重要）<span class="pi-tag pi-tag-urgent">超重要</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">頸枕（飛機 + 火車睡覺用）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">血壓計（如有高血壓）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">防滑好走的鞋（布拉格石板路！）<span class="pi-tag pi-tag-urgent">重要</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">老花眼鏡（備一副）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">摺疊拐杖（如需要）</span></div>
+        <div class="pack-cat-note">❤️ 長輩的慢性病藥最重要！出發前請醫生多開一週備用量，英文處方箋也記得拿！</div>
+      </div>
+    </div>
+
+    <!-- ===== 6. 醫藥包 ===== -->
+    <div class="pack-cat">
+      <div class="pack-cat-header cat-med">
+        <span class="pch-icon">💊</span>
+        6. 醫藥包
+      </div>
+      <div class="pack-cat-body">
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">小兒退燒藥（普拿疼 / 依普芬）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">成人退燒止痛藥</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">腸胃藥（止瀉 + 胃腸藥）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">OK繃 + 紗布</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">酒精棉片</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">防蚊液</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">防曬乳 SPF50</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">蘆薈凝膠（曬傷用）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">暈車藥（山路巴士用）<span class="pi-tag pi-tag-tip">山路用</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">電解質補充液</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">個人慢性病藥（28天 + 備用）</span></div>
+        <div class="pack-cat-note">🏥 歐洲藥局（Apteka / Lekarna）很普遍，但語言不通不好溝通，常備藥從台灣帶最安心！</div>
+      </div>
+    </div>
+
+    <!-- ===== 7. 防盜裝備 ===== -->
+    <div class="pack-cat">
+      <div class="pack-cat-header cat-security">
+        <span class="pch-icon">🔒</span>
+        7. 防盜裝備
+      </div>
+      <div class="pack-cat-body">
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">隱形腰包（護照 + 大鈔藏衣服裡）<span class="pi-tag pi-tag-urgent">必帶</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">手機掛繩（斜背式）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">行李鋼絲鎖（火車上鎖行李架）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">RFID 防盜護照套</span></div>
+        <div class="pack-cat-note">🛡️ 中歐治安還算好，但火車站和觀光區小心扒手，貴重物品藏好最安心！</div>
+      </div>
+    </div>
+
+    <!-- ===== 8. APP下載清單 ===== -->
+    <div class="pack-cat">
+      <div class="pack-cat-header cat-app">
+        <span class="pch-icon">📱</span>
+        8. APP 下載清單（出發前裝好！）
+      </div>
+      <div class="pack-cat-body">
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">Bolt（叫車，4國都能用，比 Uber 便宜）<span class="pi-tag pi-tag-urgent">必裝</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">Google Maps（離線地圖下載4國）<span class="pi-tag pi-tag-tip">先下載</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">Google 翻譯（下載匈牙利語 / 捷克語 / 波蘭語離線包）<span class="pi-tag pi-tag-tip">先下載</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">東方航空 APP（領貴賓室 QR Code）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">Booking.com / Airbnb APP</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">RegioJet APP（火車票）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">Apple Pay / Google Pay（感應支付）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">FlixBus APP（巴士票）</span></div>
+        <div class="pack-cat-note">📲 這些 APP 在台灣先裝好、綁好信用卡、下載好離線資料，到了歐洲馬上就能用！</div>
+      </div>
+    </div>
+
+    <!-- ===== 9. 行李箱建議 ===== -->
+    <div class="pack-cat">
+      <div class="pack-cat-header cat-luggage">
+        <span class="pch-icon">🧳</span>
+        9. 行李箱建議
+      </div>
+      <div class="pack-cat-body">
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">建議 24吋 ×3（不要29吋！巴士行李空間有限）<span class="pi-tag pi-tag-urgent">重要</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">每人1個24吋 + 1個背包</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">帶5-7天份衣服就好，每個公寓都有洗衣機</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">沐浴用品到當地超市買（不用從台灣帶）<span class="pi-tag pi-tag-note">到了再買</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">尿布到當地買（Pampers / Huggies 歐洲都有）<span class="pi-tag pi-tag-note">到了再買</span></span></div>
+        <div class="pack-cat-note">🎒 行李越輕越好！搬行李上下火車、走石板路，29吋會很痛苦。24吋剛剛好～</div>
+      </div>
+    </div>
+
+    <!-- ===== 10. 出發前確認清單 ===== -->
+    <div class="pack-cat">
+      <div class="pack-cat-header cat-final">
+        <span class="pch-icon">✅</span>
+        10. 出發前確認清單
+      </div>
+      <div class="pack-cat-body">
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">台胞證效期 OK？<span class="pi-tag pi-tag-urgent">確認</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">ETIAS 申請了？（2026下半年起需要）<span class="pi-tag pi-tag-urgent">確認</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">護照效期6個月以上？<span class="pi-tag pi-tag-urgent">確認</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">住宿全部訂好？</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">火車票訂好？（regiojet.com）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">鹽礦無障礙路線預約了？（email: rezerwacja@kopalnia.pl）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">東航 APP 下載 + 貴賓室 QR Code 領了？</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">旅平險買了？</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">信用卡海外提款開通？</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">Bolt APP 下載 + 綁卡？</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">Google Maps 離線地圖下載？</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">iPad 卡通下載好？</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">歐規轉接頭買了？</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">壓力襪買了？（長輩飛機用）<span class="pi-tag pi-tag-urgent">別忘了</span></span></div>
+        <div class="pack-cat-note">🎯 出發前一天晚上，全家一起對這份清單，確認每一項都打勾了就放心出發吧！</div>
+      </div>
+    </div>
+
+  </div><!-- end packing-grid -->
+
+  <div class="packing-counter">
+    <div class="pc-num" id="pack-counter">0 / <span id="pack-total">0</span></div>
+    <div class="pc-label">已打勾項目 — 全部打勾就準備好了！</div>
+  </div>
+
+</section>
+
+<script>
+(function(){
+  var section = document.getElementById('packing');
+  if(!section) return;
+  var checks = section.querySelectorAll('.pi-check');
+  var total = checks.length;
+  var counterEl = document.getElementById('pack-counter');
+  var totalEl = document.getElementById('pack-total');
+  if(totalEl) totalEl.textContent = total;
+  function updateCount(){
+    var checked = section.querySelectorAll('.pi-check.checked').length;
+    if(counterEl) counterEl.textContent = checked + ' / ' + total;
+  }
+  checks.forEach(function(c){
+    c.addEventListener('click', function(){ setTimeout(updateCount, 50); });
+  });
+  updateCount();
+})();
+</script>
 
 <!-- ===== FOOTER ===== -->
 <footer>
