@@ -712,6 +712,79 @@ footer strong{color:var(--earth)}
 .leaflet-popup-content h4{margin:0 0 .3rem;color:var(--earth)}
 .leaflet-popup-content .pop-nights{background:var(--gold);color:#fff;padding:.1rem .5rem;border-radius:1rem;font-size:.75rem}
 @media(max-width:768px){#trip-map{height:350px}}
+
+/* ===== TRAIN GUIDE ===== */
+.train-guide{padding:4rem 1.5rem;max-width:1100px;margin:0 auto}
+.train-hero-banner{background:linear-gradient(135deg,#1565C0 0%,#0D47A1 40%,#2E7D32 100%);color:#fff;border-radius:var(--card-radius);padding:3rem 2.5rem;text-align:center;margin-bottom:3rem;position:relative;overflow:hidden}
+.train-hero-banner::before{content:'🚂';position:absolute;right:2rem;bottom:-1rem;font-size:8rem;opacity:.1}
+.train-hero-banner h3{font-family:'Playfair Display',serif;font-size:2rem;margin-bottom:.5rem}
+.train-hero-banner p{font-size:1.05rem;opacity:.9;max-width:600px;margin:0 auto;line-height:1.7}
+.tg-overview-table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:var(--card-radius);overflow:hidden;box-shadow:var(--soft-shadow);margin:1.5rem 0}
+.tg-overview-table th{background:var(--forest);color:#fff;padding:.8rem 1rem;text-align:left;font-weight:500;font-size:.82rem}
+.tg-overview-table td{padding:.7rem 1rem;border-bottom:1px solid #f0f0f0;font-size:.88rem;vertical-align:middle}
+.tg-overview-table tr:nth-child(even) td{background:rgba(45,80,22,.03)}
+.tg-overview-table tr:hover td{background:rgba(45,80,22,.06)}
+.tg-overview-table tr:last-child td{border-bottom:none;font-weight:700;background:var(--warm)}
+.tg-overview-table .direct-yes{color:#2E7D32;font-weight:700}
+.tg-sub{font-family:'Playfair Display',serif;font-size:1.5rem;margin:3rem 0 1.5rem;color:var(--night);display:flex;align-items:center;gap:.6rem}
+.tg-compare-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin:1.5rem 0}
+.tg-compare-card{background:#fff;border-radius:var(--card-radius);padding:1.3rem 1.5rem;box-shadow:var(--soft-shadow);display:flex;align-items:flex-start;gap:.8rem;transition:transform .3s}
+.tg-compare-card:hover{transform:translateY(-3px)}
+.tg-compare-card .cmp-icon{font-size:1.8rem;flex-shrink:0;width:45px;text-align:center}
+.tg-compare-card .cmp-body h4{font-size:.92rem;margin-bottom:.3rem;color:var(--night)}
+.tg-compare-card .cmp-train{color:#2E7D32;font-size:.85rem;font-weight:600;margin-bottom:.15rem}
+.tg-compare-card .cmp-plane{color:#C62828;font-size:.82rem;opacity:.7}
+.tg-facility-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin:1.5rem 0}
+.tg-facility-card{background:#fff;border-radius:var(--card-radius);padding:1.3rem;box-shadow:var(--soft-shadow);text-align:center;transition:transform .3s;border-top:4px solid var(--sky)}
+.tg-facility-card:hover{transform:translateY(-4px)}
+.tg-facility-card .fac-icon{font-size:2.5rem;margin-bottom:.5rem}
+.tg-facility-card h4{font-size:.92rem;color:var(--night);margin-bottom:.3rem}
+.tg-facility-card p{font-size:.82rem;color:#666;line-height:1.5}
+.tg-scenery-section{margin:2rem 0}
+.tg-scenery-leg{background:#fff;border-radius:var(--card-radius);box-shadow:var(--soft-shadow);overflow:hidden;margin-bottom:2rem}
+.tg-scenery-header{padding:1.2rem 1.5rem;color:#fff;font-size:1.1rem;font-weight:700}
+.tg-scenery-header.leg1{background:linear-gradient(135deg,#C45B3A,#2D5016)}
+.tg-scenery-header.leg2{background:linear-gradient(135deg,#2D5016,#DC143C)}
+.tg-scenery-header.leg3{background:linear-gradient(135deg,#4A90B8,#C45B3A)}
+.tg-timeline{position:relative;padding:1.5rem 1.5rem 1rem 3rem;border-left:4px solid var(--gold);margin-left:2rem}
+.tg-timeline-item{position:relative;margin-bottom:1.2rem;padding-left:.5rem}
+.tg-timeline-item::before{content:'';position:absolute;left:-2.35rem;top:.4rem;width:14px;height:14px;background:var(--gold);border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px var(--gold)}
+.tg-timeline-item.highlight::before{background:#C45B3A;border-color:#fff;box-shadow:0 0 0 2px #C45B3A,0 0 12px rgba(196,91,58,.4)}
+.tg-timeline-item .tg-time{font-weight:700;color:var(--earth);font-size:.88rem}
+.tg-timeline-item .tg-desc{font-size:.88rem;color:#555;line-height:1.6;margin-top:.1rem}
+.tg-timeline-item.highlight .tg-desc{color:var(--brick);font-weight:600}
+.tg-season-note{background:linear-gradient(135deg,#FFF8E1,#FFF3E0);border:2px solid var(--gold);border-radius:var(--card-radius);padding:1.2rem 1.5rem;text-align:center;margin:1.5rem 0;font-size:.95rem;color:var(--earth);font-weight:600}
+.tg-day-plan{background:var(--warm);border-radius:var(--card-radius);padding:2rem;margin:2rem 0}
+.tg-day-plan h4{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:1.2rem;color:var(--night);text-align:center}
+.tg-day-timeline{position:relative;padding-left:2.5rem;border-left:3px solid var(--gold);margin:1rem 0}
+.tg-day-item{position:relative;margin-bottom:1rem}
+.tg-day-item::before{content:'';position:absolute;left:-2.1rem;top:.3rem;width:10px;height:10px;background:var(--gold);border-radius:50%}
+.tg-day-item .tg-day-time{font-weight:700;color:var(--earth);font-size:.9rem}
+.tg-day-item .tg-day-act{font-size:.88rem;color:#555;line-height:1.5}
+.tg-luggage-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem;margin:1.5rem 0}
+.tg-luggage-card{background:#fff;border-radius:var(--card-radius);padding:1.2rem;box-shadow:var(--soft-shadow);border-left:4px solid var(--sky);font-size:.88rem;color:#555;line-height:1.6}
+.tg-luggage-card strong{color:var(--night)}
+.tg-booking-steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin:1.5rem 0}
+.tg-step{background:#fff;border-radius:var(--card-radius);padding:1.3rem;box-shadow:var(--soft-shadow);display:flex;align-items:flex-start;gap:1rem;transition:transform .3s}
+.tg-step:hover{transform:translateY(-3px)}
+.tg-step .step-num{background:var(--forest);color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;flex-shrink:0}
+.tg-step .step-body{font-size:.88rem;color:#555;line-height:1.6}
+.tg-step .step-body strong{color:var(--night);display:block;margin-bottom:.2rem}
+.tg-booking-link{display:block;text-align:center;margin:1.5rem auto;padding:1rem 2.5rem;background:var(--forest);color:#fff;border-radius:2rem;font-size:1.1rem;font-weight:700;text-decoration:none;max-width:400px;transition:all .3s;box-shadow:0 4px 15px rgba(45,80,22,.3)}
+.tg-booking-link:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(45,80,22,.4)}
+.tg-booking-tip{text-align:center;font-size:.85rem;color:#999;margin-top:.5rem}
+.tg-quote-section{margin:2.5rem 0}
+.tg-quote{background:#fff;border-radius:var(--card-radius);padding:1.5rem 2rem;box-shadow:var(--soft-shadow);margin-bottom:1rem;border-left:5px solid var(--gold);font-size:.95rem;color:#555;line-height:1.8;font-style:italic;position:relative}
+.tg-quote::before{content:'"';position:absolute;left:.7rem;top:.2rem;font-size:3rem;color:var(--gold);opacity:.3;font-family:'Playfair Display',serif}
+@media(max-width:768px){
+  .train-hero-banner{padding:2rem 1.2rem}
+  .train-hero-banner h3{font-size:1.5rem}
+  .tg-compare-grid,.tg-facility-grid,.tg-luggage-grid,.tg-booking-steps{grid-template-columns:1fr}
+  .tg-timeline{margin-left:1rem;padding-left:1.5rem}
+  .tg-timeline-item::before{left:-1.85rem}
+  .tg-overview-table{font-size:.78rem}
+  .tg-overview-table th,.tg-overview-table td{padding:.4rem .5rem}
+}
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -753,6 +826,7 @@ footer strong{color:var(--earth)}
   <a href="#accommodation">住宿</a>
   <a href="#budget">費用</a>
   <a href="#transport">交通</a>
+  <a href="#train-guide">🚂 火車</a>
   <a href="#tickets">門票</a>
   <a href="#souvenirs">名產</a>
   <a href="#tips">提醒</a>
@@ -2203,6 +2277,407 @@ footer strong{color:var(--earth)}
       </ul>
     </div>
   </div>
+</section>
+
+<!-- ============================================================== -->
+<!--         TRAIN GUIDE: 火車旅行指南                               -->
+<!-- ============================================================== -->
+<section class="train-guide" id="train-guide">
+
+  <!-- Hero Banner -->
+  <div class="train-hero-banner">
+    <h3>🚂 火車旅行指南 — 全程零飛機！</h3>
+    <p>三段火車串起四個國家，車上免費咖啡、窗外向日葵田，帶老人小孩搭火車比搭飛機輕鬆一百倍！</p>
+  </div>
+
+  <!-- 1. 三段火車總覽 -->
+  <h3 class="tg-sub">🗺️ 三段火車總覽</h3>
+  <div style="overflow-x:auto">
+  <table class="tg-overview-table">
+    <tr>
+      <th>段</th>
+      <th>路線</th>
+      <th>火車公司</th>
+      <th>時間</th>
+      <th>每人票價</th>
+      <th>直達？</th>
+    </tr>
+    <tr>
+      <td><strong>第 1 段</strong></td>
+      <td>🇭🇺 布達佩斯 → 🇨🇿 布拉格</td>
+      <td>RegioJet</td>
+      <td>6.5 小時</td>
+      <td style="color:var(--brick);font-weight:600">NT$490 ~ 770</td>
+      <td class="direct-yes">✅ 直達</td>
+    </tr>
+    <tr>
+      <td><strong>第 2 段</strong></td>
+      <td>🇨🇿 布拉格 → 🇵🇱 克拉科夫</td>
+      <td>RegioJet / EuroCity</td>
+      <td>5.7 ~ 7 小時</td>
+      <td style="color:var(--brick);font-weight:600">NT$455 ~ 665</td>
+      <td class="direct-yes">✅ 直達（每天6班）</td>
+    </tr>
+    <tr>
+      <td><strong>第 3 段</strong></td>
+      <td>🇸🇰 高塔特拉 → 🇭🇺 布達佩斯</td>
+      <td>國鐵 ZSSK → MÁV</td>
+      <td>5 小時</td>
+      <td style="color:var(--brick);font-weight:600">NT$525 ~ 875</td>
+      <td class="direct-yes">✅ 直達</td>
+    </tr>
+    <tr>
+      <td colspan="3" style="text-align:right"><strong>7 人合計</strong></td>
+      <td colspan="3" style="color:var(--brick);font-size:1.1rem"><strong>NT$10,290 ~ 16,170</strong><br><span style="font-size:.8rem;color:#2E7D32">比廉航便宜！而且免費行李、免安檢</span></td>
+    </tr>
+  </table>
+  </div>
+
+  <!-- 2. 火車 vs 飛機 比較 -->
+  <h3 class="tg-sub">⚖️ 為什麼火車比飛機更適合帶老人小孩</h3>
+  <p style="font-size:.92rem;color:#666;margin-bottom:1rem">別擔心！搭歐洲火車就像搭台灣高鐵一樣簡單，而且比飛機舒服太多了：</p>
+
+  <div class="tg-compare-grid">
+    <div class="tg-compare-card">
+      <div class="cmp-icon">🧳</div>
+      <div class="cmp-body">
+        <h4>行李</h4>
+        <div class="cmp-train">✅ 火車：免費不限重，直接提上車</div>
+        <div class="cmp-plane">❌ 廉航：每件行李都要加錢買</div>
+      </div>
+    </div>
+    <div class="tg-compare-card">
+      <div class="cmp-icon">🔍</div>
+      <div class="cmp-body">
+        <h4>安檢</h4>
+        <div class="cmp-train">✅ 火車：沒有安檢，直接上車</div>
+        <div class="cmp-plane">❌ 飛機：排隊過 X 光、脫鞋脫外套</div>
+      </div>
+    </div>
+    <div class="tg-compare-card">
+      <div class="cmp-icon">💺</div>
+      <div class="cmp-body">
+        <h4>座位</h4>
+        <div class="cmp-train">✅ 火車：比飛機寬，隨時可以站起來走動</div>
+        <div class="cmp-plane">❌ 經濟艙：座位擠，老人家腳伸不直</div>
+      </div>
+    </div>
+    <div class="tg-compare-card">
+      <div class="cmp-icon">🚻</div>
+      <div class="cmp-body">
+        <h4>廁所</h4>
+        <div class="cmp-train">✅ 火車：隨時去，有尿布台換尿布</div>
+        <div class="cmp-plane">❌ 飛機：起飛降落不能去，廁所超小</div>
+      </div>
+    </div>
+    <div class="tg-compare-card">
+      <div class="cmp-icon">🍽️</div>
+      <div class="cmp-body">
+        <h4>吃東西</h4>
+        <div class="cmp-train">✅ 火車：車上有餐車，免費飲料喝到飽</div>
+        <div class="cmp-plane">❌ 廉航：什麼都沒有，連水都要買</div>
+      </div>
+    </div>
+    <div class="tg-compare-card">
+      <div class="cmp-icon">👶</div>
+      <div class="cmp-body">
+        <h4>推車</h4>
+        <div class="cmp-train">✅ 火車：直接推上車，不用折</div>
+        <div class="cmp-plane">❌ 飛機：要折起來託運，下飛機還要等</div>
+      </div>
+    </div>
+    <div class="tg-compare-card">
+      <div class="cmp-icon">🧒</div>
+      <div class="cmp-body">
+        <h4>2.5 歲小孩</h4>
+        <div class="cmp-train">✅ 火車：走來走去看窗外，開心探索</div>
+        <div class="cmp-plane">❌ 飛機：綁安全帶坐不住，哭鬧全機聽到</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. RegioJet 車上設施 -->
+  <h3 class="tg-sub">🌟 RegioJet 車上設施 — 比高鐵還舒服！</h3>
+  <p style="font-size:.92rem;color:#666;margin-bottom:1rem">RegioJet 是歐洲評價最高的火車公司之一，黃色車身超好認，車上設施比台灣高鐵還好：</p>
+
+  <div class="tg-facility-grid">
+    <div class="tg-facility-card">
+      <div class="fac-icon">☕</div>
+      <h4>免費飲料</h4>
+      <p>咖啡、茶、水、果汁<br><strong style="color:var(--forest)">無限喝到飽！</strong></p>
+    </div>
+    <div class="tg-facility-card">
+      <div class="fac-icon">🍽️</div>
+      <h4>車上餐廳</h4>
+      <p>三明治 NT$60 起<br>熱食 NT$100~150</p>
+    </div>
+    <div class="tg-facility-card">
+      <div class="fac-icon">📺</div>
+      <h4>每個座位螢幕</h4>
+      <p>可以看電影<br>小孩看卡通不無聊</p>
+    </div>
+    <div class="tg-facility-card">
+      <div class="fac-icon">🔌</div>
+      <h4>每個座位插座</h4>
+      <p>充 iPad、手機<br>不怕沒電</p>
+    </div>
+    <div class="tg-facility-card">
+      <div class="fac-icon">📶</div>
+      <h4>免費 WiFi</h4>
+      <p>可以上網<br>跟台灣報平安</p>
+    </div>
+    <div class="tg-facility-card">
+      <div class="fac-icon">🚻</div>
+      <h4>廁所有尿布台</h4>
+      <p>隨時可以去<br>換尿布很方便</p>
+    </div>
+    <div class="tg-facility-card">
+      <div class="fac-icon">💺</div>
+      <h4>超寬座位</h4>
+      <p>比高鐵還寬<br>可以斜躺休息</p>
+    </div>
+  </div>
+
+  <!-- 4. 沿途風景時間表 -->
+  <h3 class="tg-sub">🌻 沿途風景時間表 — 這是重點！</h3>
+  <p style="font-size:.92rem;color:#666;margin-bottom:1rem">搭火車最棒的就是窗外風景不斷變化！以下是每一段最值得看的時間點，記得坐靠窗喔：</p>
+
+  <div class="tg-scenery-section">
+
+    <!-- Leg 1 -->
+    <div class="tg-scenery-leg">
+      <div class="tg-scenery-header leg1">🇭🇺 → 🇨🇿 第一段：布達佩斯 → 布拉格（7 月）</div>
+      <div class="tg-timeline">
+        <div class="tg-timeline-item">
+          <div class="tg-time">0 ~ 1 小時</div>
+          <div class="tg-desc">匈牙利平原，廣闊的田野和金黃麥田</div>
+        </div>
+        <div class="tg-timeline-item highlight">
+          <div class="tg-time">1 ~ 2 小時 🌻</div>
+          <div class="tg-desc">向日葵田！7 月盛開，金黃色一整片，超美！趕快拍照！</div>
+        </div>
+        <div class="tg-timeline-item">
+          <div class="tg-time">2 ~ 3 小時</div>
+          <div class="tg-desc">多瑙河與摩拉瓦河交匯，開闊壯觀的河景</div>
+        </div>
+        <div class="tg-timeline-item highlight">
+          <div class="tg-time">3 ~ 4 小時 🍇</div>
+          <div class="tg-desc">南摩拉維亞葡萄園丘陵 — 最美的一段！一排排葡萄藤翻過綠色山丘，像明信片一樣！</div>
+        </div>
+        <div class="tg-timeline-item">
+          <div class="tg-time">4 ~ 5 小時</div>
+          <div class="tg-desc">波西米亞鄉村，可愛的小鎮、紅瓦屋頂教堂</div>
+        </div>
+        <div class="tg-timeline-item">
+          <div class="tg-time">5 ~ 6.5 小時</div>
+          <div class="tg-desc">接近布拉格！城堡天際線慢慢出現在遠方 🏰</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Leg 2 -->
+    <div class="tg-scenery-leg">
+      <div class="tg-scenery-header leg2">🇨🇿 → 🇵🇱 第二段：布拉格 → 克拉科夫</div>
+      <div class="tg-timeline">
+        <div class="tg-timeline-item">
+          <div class="tg-time">0 ~ 1 小時</div>
+          <div class="tg-desc">布拉格郊區，綠色田野慢慢展開</div>
+        </div>
+        <div class="tg-timeline-item">
+          <div class="tg-time">1 ~ 2 小時</div>
+          <div class="tg-desc">帕爾杜比采 (Pardubice)，波希米亞平原上蜿蜒的河流</div>
+        </div>
+        <div class="tg-timeline-item highlight">
+          <div class="tg-time">2 ~ 3 小時 🌻</div>
+          <div class="tg-desc">奧洛穆茨 (Olomouc)，摩拉維亞丘陵上又出現向日葵田！</div>
+        </div>
+        <div class="tg-timeline-item">
+          <div class="tg-time">3 ~ 4 小時 ⛪</div>
+          <div class="tg-desc">綠色田野配上小鎮教堂尖塔，寧靜的鄉村風光</div>
+        </div>
+        <div class="tg-timeline-item">
+          <div class="tg-time">4 ~ 5 小時</div>
+          <div class="tg-desc">俄斯特拉發 (Ostrava) — 跨境進入波蘭！注意看邊境標示</div>
+        </div>
+        <div class="tg-timeline-item">
+          <div class="tg-time">5 ~ 7 小時</div>
+          <div class="tg-desc">西里西亞平原 → 克拉科夫城堡漸漸出現在眼前 🏰</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Leg 3 -->
+    <div class="tg-scenery-leg">
+      <div class="tg-scenery-header leg3">🇸🇰 → 🇭🇺 第三段：高塔特拉 → 布達佩斯</div>
+      <div class="tg-timeline">
+        <div class="tg-timeline-item highlight">
+          <div class="tg-time">0 ~ 1 小時 ⛰️</div>
+          <div class="tg-desc">回望塔特拉雪山 — 最後一眼！壯觀的山峰慢慢遠去</div>
+        </div>
+        <div class="tg-timeline-item">
+          <div class="tg-time">1 ~ 3 小時</div>
+          <div class="tg-desc">斯洛伐克鄉村，教堂、農莊、牛羊，悠閒的田園風光</div>
+        </div>
+        <div class="tg-timeline-item">
+          <div class="tg-time">3 ~ 5 小時</div>
+          <div class="tg-desc">匈牙利北部平原 → 多瑙河出現 → 布達佩斯！回到起點 🎉</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tg-season-note">
+    🌻 7 月是最佳季節！向日葵田和葡萄園都在盛開期，窗外風景美到捨不得睡覺！
+  </div>
+
+  <!-- 5. 6.5 小時車上安排 -->
+  <h3 class="tg-sub">⏰ 6.5 小時車上怎麼安排 — 全家不無聊！</h3>
+  <p style="font-size:.92rem;color:#666;margin-bottom:1rem">別擔心 6.5 小時很長，其實一下子就過了！以下是建議的時間安排：</p>
+
+  <div class="tg-day-plan">
+    <h4>🚂 布達佩斯 → 布拉格 車上一日行程</h4>
+    <div class="tg-day-timeline">
+      <div class="tg-day-item">
+        <div class="tg-day-time">09:00 上車 🎒</div>
+        <div class="tg-day-act">全家找位子、放行李、拍照留念！第一次搭歐洲火車好興奮</div>
+      </div>
+      <div class="tg-day-item">
+        <div class="tg-day-time">09:30 早餐時間 ☕</div>
+        <div class="tg-day-act">去餐車買早餐，免費咖啡和茶先來一杯</div>
+      </div>
+      <div class="tg-day-item">
+        <div class="tg-day-time">10:00 小孩放電 🧸</div>
+        <div class="tg-day-act">2.5 歲玩玩具、看 iPad 卡通（記得帶耳機）</div>
+      </div>
+      <div class="tg-day-item">
+        <div class="tg-day-time">10:30 拍照時間 🌻</div>
+        <div class="tg-day-act">窗外出現向日葵田！全家趴在窗邊拍照，金黃一片超壯觀</div>
+      </div>
+      <div class="tg-day-item">
+        <div class="tg-day-time">11:00 看電影 📺</div>
+        <div class="tg-day-act">6 歲的用座位螢幕看電影，大人休息一下</div>
+      </div>
+      <div class="tg-day-item">
+        <div class="tg-day-time">12:00 午餐 🍽️</div>
+        <div class="tg-day-act">去餐車吃午餐！三明治、熱食都有，價格很便宜</div>
+      </div>
+      <div class="tg-day-item">
+        <div class="tg-day-time">12:30 午睡時間 💤</div>
+        <div class="tg-day-act">2.5 歲午睡、老人家也趁機休息，座位可以斜躺很舒服</div>
+      </div>
+      <div class="tg-day-item">
+        <div class="tg-day-time">14:00 醒來 🍇</div>
+        <div class="tg-day-act">醒來剛好看到南摩拉維亞葡萄園！最美的一段風景</div>
+      </div>
+      <div class="tg-day-item">
+        <div class="tg-day-time">15:00 快到了 🏰</div>
+        <div class="tg-day-act">遠方出現布拉格城堡的天際線！大家收拾東西準備下車</div>
+      </div>
+      <div class="tg-day-item">
+        <div class="tg-day-time">15:30 到站 🎉</div>
+        <div class="tg-day-act">抵達布拉格！6.5 小時一下子就過了，一點都不累</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. 行李指南 -->
+  <h3 class="tg-sub">🧳 行李指南</h3>
+  <p style="font-size:.92rem;color:#666;margin-bottom:1rem">搭火車最大的好處就是行李免費又不限重！不用像廉航斤斤計較：</p>
+
+  <div class="tg-luggage-grid">
+    <div class="tg-luggage-card">
+      <strong>📦 RegioJet 行李規定</strong><br>
+      每人 2 件免費託運，不限重量，29 吋行李箱完全 OK！
+    </div>
+    <div class="tg-luggage-card">
+      <strong>💡 建議帶 24 吋</strong><br>
+      雖然不限重，但 24 吋更方便搬上下火車，老人家也提得動
+    </div>
+    <div class="tg-luggage-card">
+      <strong>👶 推車免折</strong><br>
+      嬰兒推車直接推上車！不用折疊、不用託運，超方便
+    </div>
+    <div class="tg-luggage-card">
+      <strong>📍 車上放哪裡</strong><br>
+      車上有頭頂行李架 + 車廂末端大件行李區，放 29 吋也沒問題
+    </div>
+  </div>
+
+  <!-- 7. 訂票教學 -->
+  <h3 class="tg-sub">🎫 訂票教學 — 超簡單 7 步驟</h3>
+  <p style="font-size:.92rem;color:#666;margin-bottom:1rem">訂歐洲火車票跟訂高鐵一樣簡單！跟著以下步驟就好：</p>
+
+  <div class="tg-booking-steps">
+    <div class="tg-step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <strong>到 regiojet.com</strong>
+        打開 RegioJet 官網，有英文介面不用擔心
+      </div>
+    </div>
+    <div class="tg-step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <strong>選出發站和到達站</strong>
+        輸入 Budapest → Prague（布達佩斯 → 布拉格）
+      </div>
+    </div>
+    <div class="tg-step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <strong>選日期</strong>
+        選好出發日期，會列出當天所有班次
+      </div>
+    </div>
+    <div class="tg-step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <strong>選艙等</strong>
+        選「Standard」最划算，設施已經很好了！
+      </div>
+    </div>
+    <div class="tg-step">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <strong>選座位</strong>
+        建議選靠走道，方便帶小孩去廁所和餐車
+      </div>
+    </div>
+    <div class="tg-step">
+      <div class="step-num">6</div>
+      <div class="step-body">
+        <strong>信用卡付款</strong>
+        刷信用卡就好，跟訂台灣高鐵一樣
+      </div>
+    </div>
+    <div class="tg-step">
+      <div class="step-num">7</div>
+      <div class="step-body">
+        <strong>收到電子票</strong>
+        Email 會收到電子票，手機出示 QR Code 即可上車！
+      </div>
+    </div>
+  </div>
+
+  <a href="https://regiojet.com" target="_blank" class="tg-booking-link">👉 前往 RegioJet 官網訂票</a>
+  <p class="tg-booking-tip">💡 提前 2~4 週訂最便宜，最多可以省一半的錢！</p>
+
+  <!-- 8. 歐洲火車評價引用 -->
+  <h3 class="tg-sub">💬 歐洲火車旅行心得</h3>
+
+  <div class="tg-quote-section">
+    <div class="tg-quote">
+      RegioJet 是歐洲評價最高的火車公司之一，免費飲料、車上 WiFi、寬敞座位，價格卻比國鐵便宜一半。坐過一次就回不去了！
+    </div>
+    <div class="tg-quote">
+      帶小孩搭歐洲火車比搭飛機輕鬆 100 倍 — 不用安檢、不用折推車、隨時可以去廁所。小孩還可以走來走去看窗外，比困在飛機座位上開心太多了。
+    </div>
+    <div class="tg-quote">
+      7 月的摩拉維亞向日葵田是歐洲火車最美的風景之一。金黃色的花海一望無際，配上藍天白雲和遠方的葡萄園丘陵，美到讓人忘記呼吸。記得坐靠窗！
+    </div>
+  </div>
+
 </section>
 
 <!-- ============================================================== -->
