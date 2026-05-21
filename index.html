@@ -706,7 +706,15 @@ footer strong{color:var(--earth)}
 .map-leg{flex-direction:column}
 .map-transport{padding:.5rem 0}
 }
+#trip-map{width:100%;height:500px;border-radius:var(--card-radius);box-shadow:var(--soft-shadow);margin:2rem 0}
+.map-container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+.leaflet-popup-content{font-family:'Noto Sans TC',sans-serif;font-size:.9rem;line-height:1.5}
+.leaflet-popup-content h4{margin:0 0 .3rem;color:var(--earth)}
+.leaflet-popup-content .pop-nights{background:var(--gold);color:#fff;padding:.1rem .5rem;border-radius:1rem;font-size:.75rem}
+@media(max-width:768px){#trip-map{height:350px}}
 </style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
 
@@ -930,6 +938,11 @@ footer strong{color:var(--earth)}
       <div class="map-legend-item"><span class="leg-icon">🔵</span> 斯洛伐克</div>
       <div class="map-legend-item"><span class="leg-icon">🔴</span> 波蘭</div>
     </div>
+  </div>
+
+  <div class="map-container">
+    <h3 style="text-align:center;font-family:'Playfair Display',serif;font-size:1.6rem;margin:2rem 0 1rem;color:var(--night)">🗺️ 實際地理位置</h3>
+    <div id="trip-map"></div>
   </div>
 </div>
 
@@ -2744,6 +2757,125 @@ footer strong{color:var(--earth)}
   <p style="margin-top:.5rem;font-size:.82rem;opacity:.7">總費用 ~NT$362,000-391,000 · 每人每天 ~NT$1,900-2,100</p>
   <p style="margin-top:1rem;font-size:.75rem;opacity:.5">Made with Claude Code · Last updated 2026-05-21 · v6.0</p>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var map = L.map('trip-map').setView([48.5, 17.5], 6);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap',
+    maxZoom: 18
+  }).addTo(map);
+
+  // City markers with custom colors
+  var cities = [
+    {name: '布達佩斯 Budapest', lat: 47.4979, lng: 19.0402, nights: '5+2晚', color: '#C45B3A', order: '①⑥',
+     attractions: '布達城堡、漁人堡、國會大廈、塞切尼溫泉、中央市場、多瑙河遊船'},
+    {name: '布拉格 Prague', lat: 50.0755, lng: 14.4378, nights: '7晚', color: '#2D5016', order: '②',
+     attractions: '布拉格城堡、查理大橋、天文鐘、黃金巷、CK小鎮一日遊'},
+    {name: '克拉科夫 Kraków', lat: 50.0647, lng: 19.9450, nights: '7晚', color: '#DC143C', order: '③',
+     attractions: '瓦維爾城堡、噴火龍🐉、維利奇卡鹽礦、主廣場'},
+    {name: 'Zakopane 扎科帕內', lat: 49.2992, lng: 19.9496, nights: '3晚', color: '#DC143C', order: '④',
+     attractions: '海洋之眼、Gubałówka纜車、Krupówki大街、Niedzica城堡'},
+    {name: '高塔特拉山 High Tatras', lat: 49.1214, lng: 20.0649, nights: '3晚', color: '#4A90B8', order: '⑤',
+     attractions: '齒軌列車、Štrbské Pleso湖、AquaCity溫泉、斯皮什城堡'}
+  ];
+
+  // Day trip / attraction markers
+  var attractions = [
+    {name: 'CK小鎮 Český Krumlov', lat: 48.8127, lng: 14.3175, type: 'daytrip'},
+    {name: '卡爾什特因城堡 Karlštejn', lat: 49.9392, lng: 14.1883, type: 'daytrip'},
+    {name: '維利奇卡鹽礦 Wieliczka', lat: 49.9836, lng: 20.0556, type: 'attraction'},
+    {name: '海洋之眼 Morskie Oko', lat: 49.2015, lng: 20.0713, type: 'attraction'},
+    {name: '斯皮什城堡 Spiš Castle', lat: 48.9983, lng: 20.7683, type: 'attraction'},
+    {name: 'Niedzica 城堡', lat: 49.4069, lng: 20.3181, type: 'attraction'},
+    {name: 'Ojców 國家公園', lat: 50.2167, lng: 19.8333, type: 'daytrip'},
+    {name: 'AquaCity Poprad', lat: 49.0617, lng: 20.2967, type: 'attraction'},
+    {name: '上海浦東（轉機）', lat: 31.1443, lng: 121.8083, type: 'transit'}
+  ];
+
+  // Add city markers with numbered circles
+  cities.forEach(function(city) {
+    var icon = L.divIcon({
+      className: 'custom-marker',
+      html: '<div style="background:' + city.color + ';color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:14px;box-shadow:0 3px 10px rgba(0,0,0,.3);border:3px solid #fff">' + city.order.charAt(0) + '</div>',
+      iconSize: [36, 36],
+      iconAnchor: [18, 18]
+    });
+
+    L.marker([city.lat, city.lng], {icon: icon}).addTo(map)
+      .bindPopup('<h4>' + city.name + '</h4><span class="pop-nights">' + city.nights + '</span><br><br><strong>必看景點：</strong><br>' + city.attractions);
+  });
+
+  // Add attraction markers (smaller, gold)
+  attractions.forEach(function(a) {
+    if (a.type === 'transit') return; // skip Shanghai on Europe map
+    var icon = L.divIcon({
+      className: 'custom-marker',
+      html: '<div style="background:#D4A844;color:#fff;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;box-shadow:0 2px 6px rgba(0,0,0,.2);border:2px solid #fff">★</div>',
+      iconSize: [24, 24],
+      iconAnchor: [12, 12]
+    });
+    L.marker([a.lat, a.lng], {icon: icon}).addTo(map)
+      .bindPopup('<h4>' + a.name + '</h4><span style="font-size:.8rem;color:#888">' + (a.type === 'daytrip' ? '一日遊景點' : '必訪景點') + '</span>');
+  });
+
+  // Draw route lines between cities
+  var routeCoords = [
+    [47.4979, 19.0402], // Budapest
+    [50.0755, 14.4378], // Prague
+    [50.0647, 19.9450], // Krakow
+    [49.2992, 19.9496], // Zakopane
+    [49.1214, 20.0649], // High Tatras
+    [47.4979, 19.0402]  // Budapest (return)
+  ];
+
+  L.polyline(routeCoords, {
+    color: '#D4A844',
+    weight: 3,
+    opacity: 0.8,
+    dashArray: '10, 8'
+  }).addTo(map);
+
+  // Transport labels on route lines
+  var transports = [
+    {from: [47.4979, 19.0402], to: [50.0755, 14.4378], label: '🚂 火車 6.5hr'},
+    {from: [50.0755, 14.4378], to: [50.0647, 19.9450], label: '✈️ 廉航 1hr'},
+    {from: [50.0647, 19.9450], to: [49.2992, 19.9496], label: '🚌 巴士 2hr'},
+    {from: [49.2992, 19.9496], to: [49.1214, 20.0649], label: '🚌 翻山 1.5hr'},
+    {from: [49.1214, 20.0649], to: [47.4979, 19.0402], label: '🚂 火車 5hr'}
+  ];
+
+  transports.forEach(function(t) {
+    var midLat = (t.from[0] + t.to[0]) / 2;
+    var midLng = (t.from[1] + t.to[1]) / 2;
+    var icon = L.divIcon({
+      className: 'transport-label',
+      html: '<div style="background:#fff;padding:3px 8px;border-radius:12px;font-size:11px;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,.15);font-weight:500;color:#8B6914">' + t.label + '</div>',
+      iconSize: [100, 24],
+      iconAnchor: [50, 12]
+    });
+    L.marker([midLat, midLng], {icon: icon, interactive: false}).addTo(map);
+  });
+
+  // Day trip route lines (dotted, lighter)
+  var dayTrips = [
+    {from: [50.0755, 14.4378], to: [48.8127, 14.3175], label: 'CK小鎮一日遊'},
+    {from: [50.0755, 14.4378], to: [49.9392, 14.1883], label: '卡爾什特因城堡'},
+    {from: [50.0647, 19.9450], to: [50.2167, 19.8333], label: 'Ojców公園'},
+    {from: [49.1214, 20.0649], to: [48.9983, 20.7683], label: '斯皮什城堡'}
+  ];
+
+  dayTrips.forEach(function(dt) {
+    L.polyline([dt.from, dt.to], {
+      color: '#999',
+      weight: 2,
+      opacity: 0.5,
+      dashArray: '5, 5'
+    }).addTo(map);
+  });
+});
+</script>
 
 </body>
 </html>
