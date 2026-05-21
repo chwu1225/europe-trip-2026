@@ -453,6 +453,19 @@ footer strong{color:var(--earth)}
 .tt-card p,.tt-card li{font-size:.83rem;color:#555;line-height:1.6}
 .tt-card ul{margin:.3rem 0 0 1.2rem}
 
+
+/* ===== CITY TRANSPORT GUIDE ===== */
+.city-guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.2rem;margin:1.5rem 0}
+.city-guide-card{background:#fff;border-radius:var(--card-radius);padding:1.3rem 1.5rem;box-shadow:var(--soft-shadow);border-top:4px solid var(--forest);transition:transform .3s}
+.city-guide-card:hover{transform:translateY(-3px)}
+.city-guide-card h4{font-family:'Playfair Display',serif;font-size:1.05rem;margin-bottom:.6rem;color:var(--night)}
+.city-guide-card ul{list-style:none;padding:0;margin:0}
+.city-guide-card li{font-size:.85rem;color:#555;line-height:1.7;padding:.15rem 0}
+.free-days-box{background:linear-gradient(135deg,#FFF8E1,#FFFDE7);border:2px solid var(--gold);border-radius:var(--card-radius);padding:1.5rem 2rem;margin:2rem 0;box-shadow:var(--soft-shadow)}
+.free-days-box h4{font-size:1.1rem;color:var(--earth);margin-bottom:.8rem}
+.free-days-box ul{list-style:none;padding:0;margin:0}
+.free-days-box li{font-size:.88rem;color:#555;line-height:1.8;padding:.1rem 0}
+.free-days-box .free-total{font-size:1rem;font-weight:700;color:var(--brick);margin-top:.8rem;padding-top:.6rem;border-top:1px dashed var(--gold)}
 /* ===== TICKETS ===== */
 .ticket-section{margin-bottom:2rem}
 .ticket-hdr{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem;padding:.6rem 1rem;border-radius:.7rem;color:#fff;font-size:1rem;font-weight:700}
@@ -547,6 +560,8 @@ footer strong{color:var(--earth)}
   .budget-per-person{grid-template-columns:1fr}
   .safety-tips-grid{grid-template-columns:1fr}
   .safety-gear-grid{grid-template-columns:1fr}
+  .city-guide-grid{grid-template-columns:1fr}
+  .free-days-box{padding:1rem 1.2rem}
 }
 
 /* ===== SAFETY SECTION ===== */
@@ -1275,8 +1290,8 @@ footer strong{color:var(--earth)}
     <div class="itin-body">
       <div class="day-card"><div class="day-num"><div class="date">7/11</div><div class="day">Day 14</div></div><div class="day-content"><div class="activity">🚂 移動日 — 布拉格→克拉科夫（搭火車）→ 抵達散步主廣場 (Main Market Square) + 噴火龍 (Wawel Dragon)</div><span class="type type-move">移動日</span> <a href="https://likymichelle.pixnet.net/blog/post/19608143" target="_blank" class="blog-link">📖 看網友遊記</a></div></div>
       <div class="day-card"><div class="day-num"><div class="date">7/12</div><div class="day">Day 15</div></div><div class="day-content"><div class="activity">⛪ 上午：皇家大道教堂巡禮（瓦維爾大教堂 → 聖安德烈 → 方濟各會 → 道明會 → 聖母聖殿，聽整點號角！）<br>🛍️ 下午：主廣場紡織會館 (Cloth Hall) + Obwarzanek 麵包圈</div><span class="type type-sight">觀光日</span></div></div>
-      <div class="day-card"><div class="day-num"><div class="date">7/13</div><div class="day">Day 16</div></div><div class="day-content"><div class="activity">🏰 上午：瓦維爾城堡（✨週一免費！國王寢室+寶冠室+30顆人頭天花板）<br>🐉 下午：龍洞 (Dragon's Den) → 河邊看噴火龍</div><span class="type type-sight">觀光日（免費！）</span></div></div>
-      <div class="day-card"><div class="day-num"><div class="date">7/14</div><div class="day">Day 17</div></div><div class="day-content"><div class="activity">✈️ 上午：波蘭航空博物館（✨週二免費！250架飛機+飛行模擬器，6歲可操控！）<br>🏘️ 下午：Kazimierz 猶太區散步 + Plac Nowy 吃 Zapiekanka</div><span class="type type-sight">博物館+散步</span> <a href="https://bishdream.com/kazimierz-krakow-poland/" target="_blank" class="blog-link">📖 看網友遊記</a></div></div>
+      <div class="day-card"><div class="day-num"><div class="date">7/13</div><div class="day">Day 16</div></div><div class="day-content"><div class="activity">🏰 上午：瓦維爾城堡（✨週一免費！國王寢室+寶冠室+30顆人頭天花板）→ 龍洞<br>🏭 下午：辛德勒工廠 (Schindler's Factory)（✨週一免費！10:00-14:00 限量票）</div><span class="type type-sight">觀光日（免費！）</span></div></div>
+      <div class="day-card"><div class="day-num"><div class="date">7/14</div><div class="day">Day 17</div></div><div class="day-content"><div class="activity">✈️ 上午：波蘭航空博物館（✨週二免費！250架飛機+飛行模擬器）<br>🏛️ 下午：Rynek 地下博物館（✨週二免費！限量票）+ Kazimierz 猶太區散步</div><span class="type type-sight">博物館+散步（免費！）</span> <a href="https://bishdream.com/kazimierz-krakow-poland/" target="_blank" class="blog-link">📖 看網友遊記</a></div></div>
       <div class="day-card"><div class="day-num"><div class="date">7/15</div><div class="day">Day 18</div></div><div class="day-content"><div class="activity">⛏️ 上午：Wieliczka 鹽礦半日遊（地下教堂超壯觀）<br>🦙 下午：回程順路 — 維利奇卡羊駝農場散步（Alpaca Walk，牽羊駝在田野散步+餵食）</div><span class="type type-sight">觀光日</span></div></div>
       <div class="day-card"><div class="day-num"><div class="date">7/16</div><div class="day">Day 19</div></div><div class="day-content"><div class="activity">🏰 上午：Niepołomice 皇家城堡 + 歐洲野牛保護區（Bolt 30min）<br>🎨 下午：Zalipie 彩繪村 — 整個村莊畫滿花！小孩彩繪工作坊（再 30min）</div><span class="type type-move">郊遊日</span></div></div>
       <div class="day-card"><div class="day-num"><div class="date">7/17</div><div class="day">Day 20</div></div><div class="day-content"><div class="activity">🌲 上午：Ojców 國家公園（大力士棒岩柱 + 鷹巢城堡 + 蝙蝠洞）<br>🐑 下午：回程順路 Uszate Ranczo 農場（20+ 種動物、小馬騎乘、2.5 歲免費）→ Pod Wawelem 晚餐</div><span class="type type-nature">自然日</span></div></div>
@@ -1831,7 +1846,7 @@ footer strong{color:var(--earth)}
         <p>深入地底 135 公尺的鹽礦世界，最震撼的是聖金加地下教堂 — 長 54 公尺、高 12 公尺的巨大空間全部用鹽雕刻而成！鹽做的吊燈、鹽做的聖壇、鹽做的最後的晚餐浮雕，在燈光照射下閃爍著水晶般的光芒。整個導覽路線約 3.5 公里，會經過地底湖泊和各種鹽雕展廳，像在地球內部探險。</p>
         <div class="card-tip">
           <span class="tip-icon">💡</span>
-          <span>門票約 NT$300/人（含導覽），需預約。有無障礙路線（電梯），適合推娃娃車。從克拉科夫搭火車 20 分鐘。</span>
+          <span>旺季（7月）英文導覽：PLN 169/成人、PLN 131/優待、4歲以下免費。Family 2+1 ticket: PLN 417。需預約。有無障礙路線（電梯），適合推娃娃車。從克拉科夫搭火車 20 分鐘。</span>
         </div>
         <span class="card-elder elder-easy">有電梯無障礙路線</span>
         <span class="card-elder elder-kids">地底探險超刺激</span>
@@ -2908,6 +2923,89 @@ footer strong{color:var(--earth)}
       </ul>
     </div>
   </div>
+
+  <!-- City Transport Guide -->
+  <h2 class="section-title" style="margin-top:3rem">🚇 各城市交通指南</h2>
+  <p class="section-sub">市區怎麼搭？哪裡需要叫車？一城一卡搞定</p>
+
+  <div class="city-guide-grid">
+    <div class="city-guide-card">
+      <h4>🇭🇺 Budapest 布達佩斯</h4>
+      <ul>
+        <li>🚇 地鐵 M1-M4（M1 是歐洲最古老地鐵！）+ 電車 + 公車</li>
+        <li>💡 2 號電車沿多瑙河走，被評為「世界最美電車路線」</li>
+        <li>🎫 24 小時票 ~HUF 2,500（NT$257），無限搭</li>
+        <li>🆓 6 歲以下免費</li>
+        <li>🚗 Bolt：機場接送、行李多時</li>
+      </ul>
+    </div>
+    <div class="city-guide-card">
+      <h4>🇦🇹 Vienna 維也納</h4>
+      <ul>
+        <li>🚇 地鐵 U1-U6（5 條線）+ 電車 + 公車</li>
+        <li>💡 內城區走路 20 分鐘全到</li>
+        <li>🎫 24 小時票 EUR 9.70（數位票）</li>
+        <li>🆓 6 歲以下免費</li>
+        <li>🚗 Bolt：幾乎不需要</li>
+      </ul>
+    </div>
+    <div class="city-guide-card">
+      <h4>🇨🇿 Prague 布拉格</h4>
+      <ul>
+        <li>🚇 地鐵 A/B/C（3 條線）+ 電車 30+ 條</li>
+        <li>💡 電車是布拉格的靈魂！復古電車 42 號可體驗</li>
+        <li>🎫 24 小時票 CZK 120</li>
+        <li>🆓 6 歲以下免費</li>
+        <li>⚠️ 22 號電車城堡站 3/21-7/17 停駛</li>
+        <li>🚗 Bolt：幾乎不需要</li>
+      </ul>
+    </div>
+    <div class="city-guide-card">
+      <h4>🇵🇱 Krakow 克拉科夫</h4>
+      <ul>
+        <li>🚋 電車（沒有地鐵）+ 走路為主</li>
+        <li>💡 老城區直徑 1.5km，全部走路可到</li>
+        <li>🎫 15 分鐘票 PLN 4 / 60 分鐘票 PLN 8</li>
+        <li>🆓 4 歲以下免費、70 歲以上免費（任何國籍！）</li>
+        <li>🚗 Bolt：去鹽礦、農場、Ojców 等郊區景點</li>
+      </ul>
+    </div>
+    <div class="city-guide-card">
+      <h4>🇵🇱 Zakopane 扎科帕內</h4>
+      <ul>
+        <li>🚶 鎮上全部走路</li>
+        <li>🚗 Bolt：去海洋之眼、Dunajec 漂流、冰洞等</li>
+        <li>🚌 私人小巴：Zakopane↔Palenica（海洋之眼入口）PLN 15/人</li>
+      </ul>
+    </div>
+    <div class="city-guide-card">
+      <h4>🇸🇰 High Tatras 高塔特拉</h4>
+      <ul>
+        <li>🚋 TEŽ Tatra 電車（歐洲最高電車路線！）連接各度假村</li>
+        <li>🚡 纜車上山</li>
+      </ul>
+    </div>
+    <div class="city-guide-card">
+      <h4>🇭🇺 Eger 埃格爾</h4>
+      <ul>
+        <li>🚶 全部走路！整座老城 15 分鐘就能走完</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Free Days Summary Box -->
+  <div class="free-days-box">
+    <h4>💰 免費日省錢攻略（克拉科夫最划算！）</h4>
+    <ul>
+      <li>📅 7/13 週一：瓦維爾城堡 + 辛德勒工廠 — 省 ~NT$5,800</li>
+      <li>📅 7/14 週二：航空博物館 + Rynek 地下博物館 — 省 ~NT$3,700</li>
+      <li>🏛️ 維也納 Belvedere + 皇家寶庫：19 歲以下永遠免費</li>
+      <li>🏰 布拉格城堡庭院、聖維特前殿、天文鐘表演：永遠免費</li>
+      <li>⛪ 瓦維爾大教堂大殿、CK 小鎮城堡花園：永遠免費</li>
+    </ul>
+    <div class="free-total">排好免費日，全家省下約 NT$12,000！</div>
+  </div>
+
 </section>
 
 <!-- ============================================================== -->
@@ -3477,8 +3575,9 @@ footer strong{color:var(--earth)}
     <div class="ticket-grid">
       <div class="tk-card">
         <h4>⛏️ 維利奇卡鹽礦</h4>
-        <div class="tk-price">NT$350 / 人</div>
+        <div class="tk-price">PLN 169 / 成人（旺季7月）</div>
         <span class="tk-badge bfree">4 歲以下免費</span>
+        <span class="tk-badge bdisc">優待 PLN 131 · Family 2+1 PLN 417</span>
         <span class="tk-badge baccess">有無障礙路線！</span>
         <div class="tk-note">世界文化遺產！地下 135 公尺的鹽雕教堂。<strong>務必 Email 預約無障礙路線</strong>（有電梯，免走 800 階）：rezerwacja@kopalnia.pl</div>
         <a href="https://benic360.com/wieliczka-salt-mine/" target="_blank" class="blog-link">📖 看網友遊記</a>
