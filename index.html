@@ -808,6 +808,50 @@ footer strong{color:var(--earth)}
   .tg-overview-table{font-size:.78rem}
   .tg-overview-table th,.tg-overview-table td{padding:.4rem .5rem}
 }
+
+/* ===== MONEY / EXCHANGE ===== */
+.money-section{padding:4rem 1.5rem;max-width:1100px;margin:0 auto}
+.money-currency-table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:var(--card-radius);overflow:hidden;box-shadow:var(--soft-shadow);margin:1.5rem 0}
+.money-currency-table th{background:var(--night);color:#fff;padding:.7rem .8rem;text-align:left;font-weight:500;font-size:.82rem}
+.money-currency-table td{padding:.6rem .8rem;border-bottom:1px solid #f0f0f0;font-size:.88rem;vertical-align:middle}
+.money-currency-table tr:last-child td{border-bottom:none}
+.money-currency-table tr:hover td{background:rgba(212,168,68,.05)}
+.money-currency-table .flag-sm{width:28px;vertical-align:middle;margin-right:.4rem;border-radius:2px}
+.money-note{background:linear-gradient(135deg,#E3F2FD,#E8EAF6);border-radius:var(--card-radius);padding:1.2rem 1.5rem;margin:1rem 0 2rem;font-size:.9rem;color:#1A237E;line-height:1.7;border-left:4px solid var(--sky)}
+.money-cc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin:1.5rem 0}
+.money-cc-card{background:#fff;border-radius:var(--card-radius);padding:1.2rem 1.4rem;box-shadow:var(--soft-shadow);transition:transform .3s}
+.money-cc-card:hover{transform:translateY(-3px)}
+.money-cc-card .cc-country{font-weight:700;font-size:1rem;margin-bottom:.3rem}
+.money-cc-card .cc-stars{font-size:1.1rem;margin-bottom:.3rem}
+.money-cc-card .cc-desc{font-size:.85rem;color:#555;line-height:1.6}
+.money-cash-table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:var(--card-radius);overflow:hidden;box-shadow:var(--soft-shadow);margin:1.5rem 0}
+.money-cash-table th{background:var(--earth);color:#fff;padding:.7rem .8rem;text-align:left;font-weight:500;font-size:.82rem}
+.money-cash-table td{padding:.6rem .8rem;border-bottom:1px solid #f0f0f0;font-size:.88rem}
+.money-cash-table tr:last-child td{border-bottom:none;font-weight:700;background:var(--warm)}
+.money-cash-table tr:hover td{background:rgba(212,168,68,.05)}
+.money-warn-grid{display:grid;grid-template-columns:1fr;gap:1.2rem;margin:1.5rem 0}
+.money-warn-card{background:#fff;border-radius:var(--card-radius);padding:1.5rem 2rem;box-shadow:var(--soft-shadow);border-left:6px solid #C62828;font-size:1rem;line-height:1.8;transition:transform .3s}
+.money-warn-card:hover{transform:translateY(-3px)}
+.money-warn-card .warn-num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#C62828;color:#fff;font-weight:700;font-size:1rem;margin-right:.6rem;flex-shrink:0}
+.money-warn-card .warn-title{font-weight:700;font-size:1.1rem;color:#C62828;display:flex;align-items:center;gap:.4rem;margin-bottom:.4rem}
+.money-warn-card .warn-desc{font-size:.9rem;color:#555;margin-left:2.6rem}
+.money-atm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:1.5rem 0}
+.money-atm-card{background:#fff;border-radius:var(--card-radius);padding:1.2rem;box-shadow:var(--soft-shadow);border-top:4px solid var(--forest);transition:transform .3s}
+.money-atm-card:hover{transform:translateY(-3px)}
+.money-atm-card .atm-country{font-weight:700;font-size:.95rem;margin-bottom:.3rem}
+.money-atm-card .atm-bank{font-size:.88rem;color:var(--forest);font-weight:600}
+.money-atm-avoid{background:linear-gradient(135deg,#FFF5F5,#FCE4EC);border-radius:var(--card-radius);padding:1.2rem 1.5rem;margin-top:1rem;font-size:.9rem;color:#C62828;font-weight:600;border-left:4px solid #C62828;line-height:1.7}
+.money-checklist{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.6rem;margin:1.5rem 0}
+.money-check-item{display:flex;align-items:center;gap:.6rem;background:#fff;border-radius:.8rem;padding:.7rem 1rem;box-shadow:var(--soft-shadow);font-size:.88rem;transition:transform .2s}
+.money-check-item:hover{transform:translateX(4px)}
+.money-check-item .mc-icon{font-size:1.2rem;flex-shrink:0}
+@media(max-width:768px){
+  .money-cc-grid{grid-template-columns:1fr}
+  .money-atm-grid{grid-template-columns:1fr}
+  .money-checklist{grid-template-columns:1fr}
+  .money-warn-card{padding:1.2rem}
+  .money-warn-card .warn-title{font-size:1rem}
+}
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -852,6 +896,7 @@ footer strong{color:var(--earth)}
   <a href="#train-guide">🚂 火車</a>
   <a href="#tickets">門票</a>
   <a href="#souvenirs">名產</a>
+  <a href="#money">💱 換匯</a>
   <a href="#tips">提醒</a>
   <a href="#safety">🔒 安全</a>
   <a href="#shanghai">轉機</a>
@@ -3102,6 +3147,175 @@ footer strong{color:var(--earth)}
 </div>
 
 <!-- ============================================================== -->
+<!--         SECTION: 換匯指南 CURRENCY EXCHANGE                     -->
+<!-- ============================================================== -->
+<section class="money-section" id="money">
+  <h2 class="section-title">💱 換匯指南</h2>
+  <p class="section-sub">4 國 3 種貨幣 — 搞懂換匯省下幾千塊</p>
+
+  <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:1rem;color:var(--night)">各國貨幣一覽</h3>
+  <table class="money-currency-table">
+    <tr>
+      <th>國家</th>
+      <th>貨幣</th>
+      <th>代碼</th>
+      <th>匯率（≈ 台幣）</th>
+    </tr>
+    <tr>
+      <td><img src="https://flagcdn.com/w40/hu.png" alt="匈牙利" class="flag-sm"> 匈牙利</td>
+      <td>福林 Forint</td>
+      <td>HUF</td>
+      <td>1 HUF ≈ 0.10 TWD</td>
+    </tr>
+    <tr>
+      <td><img src="https://flagcdn.com/w40/cz.png" alt="捷克" class="flag-sm"> 捷克</td>
+      <td>克朗 Koruna</td>
+      <td>CZK</td>
+      <td>1 CZK ≈ 1.5 TWD</td>
+    </tr>
+    <tr>
+      <td><img src="https://flagcdn.com/w40/pl.png" alt="波蘭" class="flag-sm"> 波蘭</td>
+      <td>茲羅提 Zloty</td>
+      <td>PLN</td>
+      <td>1 PLN ≈ 8.7 TWD</td>
+    </tr>
+    <tr>
+      <td><img src="https://flagcdn.com/w40/sk.png" alt="斯洛伐克" class="flag-sm"> 斯洛伐克</td>
+      <td>歐元 Euro</td>
+      <td>EUR</td>
+      <td>1 EUR ≈ 35 TWD</td>
+    </tr>
+  </table>
+  <div class="money-note">
+    <strong>📌 記住：</strong>只有斯洛伐克用歐元，其他 3 國用自己的貨幣。不要帶一堆歐元去匈牙利、捷克、波蘭！
+  </div>
+
+  <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:1rem;color:var(--night)">信用卡普及度</h3>
+  <div class="money-cc-grid">
+    <div class="money-cc-card" style="border-left:5px solid #2E7D32">
+      <div class="cc-country"><img src="https://flagcdn.com/w40/pl.png" alt="波蘭" class="flag-sm" style="width:24px"> 波蘭</div>
+      <div class="cc-stars">⭐⭐⭐⭐⭐</div>
+      <div class="cc-desc">最方便！Apple Pay / Google Pay 幾乎到處能用，連路邊攤都能刷</div>
+    </div>
+    <div class="money-cc-card" style="border-left:5px solid #4A90B8">
+      <div class="cc-country"><img src="https://flagcdn.com/w40/hu.png" alt="匈牙利" class="flag-sm" style="width:24px"> 匈牙利</div>
+      <div class="cc-stars">⭐⭐⭐⭐</div>
+      <div class="cc-desc">觀光區 OK，小攤和市集要現金</div>
+    </div>
+    <div class="money-cc-card" style="border-left:5px solid #2D5016">
+      <div class="cc-country"><img src="https://flagcdn.com/w40/cz.png" alt="捷克" class="flag-sm" style="width:24px"> 捷克</div>
+      <div class="cc-stars">⭐⭐⭐⭐</div>
+      <div class="cc-desc">布拉格 90% 能刷，CK 小鎮部分要現金</div>
+    </div>
+    <div class="money-cc-card" style="border-left:5px solid #6B3A5E">
+      <div class="cc-country"><img src="https://flagcdn.com/w40/sk.png" alt="斯洛伐克" class="flag-sm" style="width:24px"> 斯洛伐克</div>
+      <div class="cc-stars">⭐⭐⭐⭐</div>
+      <div class="cc-desc">大部分 OK，山區小店要現金</div>
+    </div>
+  </div>
+
+  <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin:2rem 0 1rem;color:var(--night)">建議帶多少現金</h3>
+  <table class="money-cash-table">
+    <tr>
+      <th>國家</th>
+      <th>建議金額</th>
+      <th>約台幣</th>
+    </tr>
+    <tr>
+      <td><img src="https://flagcdn.com/w40/hu.png" alt="匈牙利" class="flag-sm" style="width:24px"> 匈牙利</td>
+      <td>HUF 50,000</td>
+      <td>NT$5,000</td>
+    </tr>
+    <tr>
+      <td><img src="https://flagcdn.com/w40/cz.png" alt="捷克" class="flag-sm" style="width:24px"> 捷克</td>
+      <td>CZK 3,000</td>
+      <td>NT$4,500</td>
+    </tr>
+    <tr>
+      <td><img src="https://flagcdn.com/w40/pl.png" alt="波蘭" class="flag-sm" style="width:24px"> 波蘭</td>
+      <td>PLN 500</td>
+      <td>NT$4,350</td>
+    </tr>
+    <tr>
+      <td><img src="https://flagcdn.com/w40/sk.png" alt="斯洛伐克" class="flag-sm" style="width:24px"> 斯洛伐克</td>
+      <td>EUR 100</td>
+      <td>NT$3,500</td>
+    </tr>
+    <tr>
+      <td><strong>合計</strong></td>
+      <td></td>
+      <td><strong>~NT$17,350</strong></td>
+    </tr>
+  </table>
+  <div class="money-note" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9);color:#2E7D32;border-left-color:#2E7D32">
+    💳 <strong>其他全刷卡！</strong>能刷卡就刷卡，現金只是備用。信用卡海外回饋還能賺回來。
+  </div>
+
+  <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin:2rem 0 1rem;color:var(--night)">3 個換匯原則</h3>
+  <div class="money-warn-grid">
+    <div class="money-warn-card">
+      <div class="warn-title"><span class="warn-num">1</span> ❌ 不要在台灣先換</div>
+      <div class="warn-desc">台灣銀行換東歐貨幣匯率超差！到當地 ATM 用金融卡領最划算，匯率好、手續費低。</div>
+    </div>
+    <div class="money-warn-card">
+      <div class="warn-title"><span class="warn-num">2</span> ❌ 不要用 Euronet ATM</div>
+      <div class="warn-desc">Euronet 是觀光區最常見的黃色 ATM，匯率最差！找銀行附設的 ATM（OTP Bank、CSOB、PKO）。</div>
+    </div>
+    <div class="money-warn-card">
+      <div class="warn-title"><span class="warn-num">3</span> ❌ 刷卡時選「當地貨幣」不選台幣</div>
+      <div class="warn-desc">刷卡機問你要不要轉換成台幣（DCC），一定按「No」！選台幣會被多收 3-5% 手續費。</div>
+    </div>
+  </div>
+
+  <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin:2rem 0 1rem;color:var(--night)">推薦 ATM（各國銀行）</h3>
+  <div class="money-atm-grid">
+    <div class="money-atm-card">
+      <div class="atm-country"><img src="https://flagcdn.com/w40/hu.png" alt="匈牙利" class="flag-sm" style="width:24px"> 匈牙利</div>
+      <div class="atm-bank">🏦 OTP Bank</div>
+    </div>
+    <div class="money-atm-card">
+      <div class="atm-country"><img src="https://flagcdn.com/w40/cz.png" alt="捷克" class="flag-sm" style="width:24px"> 捷克</div>
+      <div class="atm-bank">🏦 CSOB 或 KB</div>
+    </div>
+    <div class="money-atm-card">
+      <div class="atm-country"><img src="https://flagcdn.com/w40/pl.png" alt="波蘭" class="flag-sm" style="width:24px"> 波蘭</div>
+      <div class="atm-bank">🏦 PKO 或 mBank</div>
+    </div>
+    <div class="money-atm-card">
+      <div class="atm-country"><img src="https://flagcdn.com/w40/sk.png" alt="斯洛伐克" class="flag-sm" style="width:24px"> 斯洛伐克</div>
+      <div class="atm-bank">🏦 VUB 或 Tatra Banka</div>
+    </div>
+  </div>
+  <div class="money-atm-avoid">
+    ⚠️ 全部避開 <strong>Euronet</strong>（黃色 ATM）— 匯率最差，會被多收 10-15%！看到黃色機器就走開。
+  </div>
+
+  <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin:2rem 0 1rem;color:var(--night)">出發前準備</h3>
+  <div class="money-checklist">
+    <div class="money-check-item">
+      <span class="mc-icon">💳</span>
+      <span>帶 2 張信用卡（Visa + Mastercard 各一）</span>
+    </div>
+    <div class="money-check-item">
+      <span class="mc-icon">🎁</span>
+      <span>確認海外刷卡是否有回饋（歐盟區部分已取消）</span>
+    </div>
+    <div class="money-check-item">
+      <span class="mc-icon">🏧</span>
+      <span>開通金融卡海外提款功能</span>
+    </div>
+    <div class="money-check-item">
+      <span class="mc-icon">🔢</span>
+      <span>設定 4 位數 PIN 碼（歐洲 ATM 只吃 4 碼）</span>
+    </div>
+    <div class="money-check-item">
+      <span class="mc-icon">📱</span>
+      <span>下載 Apple Pay / Google Pay 並綁定信用卡</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================== -->
 <!--         SECTION 6: 注意事項 IMPORTANT REMINDERS                 -->
 <!-- ============================================================== -->
 <section id="tips">
@@ -3287,6 +3501,7 @@ footer strong{color:var(--earth)}
     <p>顧小孩時容易分心被偷 — 這是扒手最愛的下手時機</p>
     <p>一人顧小孩一人顧行李 — 分工合作最安全</p>
     <p>陌生人逗小孩時手按住包包 — 可能是調虎離山</p>
+    <p>火車站人多時大人先上車佔位，再接行李和小孩 — 別落單</p>
   </div>
 
   <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin:2rem 0 1rem;color:var(--night)">必帶防盜裝備</h3>
