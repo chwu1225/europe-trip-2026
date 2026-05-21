@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026 中歐家庭旅行 v6.0 | 4國27晚</title>
+<title>2026 中歐家庭旅行 v7.0 | 4國27晚</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
@@ -544,7 +544,30 @@ footer strong{color:var(--earth)}
   .sh-inner{padding:1.5rem 1.2rem}
   .cook-tips{grid-template-columns:1fr}
   .budget-per-person{grid-template-columns:1fr}
+  .safety-tips-grid{grid-template-columns:1fr}
+  .safety-gear-grid{grid-template-columns:1fr}
 }
+
+/* ===== SAFETY SECTION ===== */
+.safety-section{padding:4rem 1.5rem;max-width:1100px;margin:0 auto}
+.safety-table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:var(--card-radius);overflow:hidden;box-shadow:var(--soft-shadow);margin:1.5rem 0}
+.safety-table th{background:var(--night);color:#fff;padding:.7rem .8rem;text-align:left;font-weight:500;font-size:.82rem}
+.safety-table td{padding:.55rem .8rem;border-bottom:1px solid #f0f0f0;font-size:.85rem}
+.safety-table tr:last-child td{border-bottom:none}
+.safety-tips-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin:1.5rem 0}
+.safety-tip-card{background:#fff;border-radius:var(--card-radius);padding:1rem 1.2rem;box-shadow:var(--soft-shadow);transition:transform .3s;display:flex;align-items:flex-start;gap:.6rem}
+.safety-tip-card:hover{transform:translateY(-3px)}
+.safety-tip-num{background:var(--forest);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;flex-shrink:0}
+.safety-tip-text{font-size:.88rem;color:#555;line-height:1.6}
+.safety-gear-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:1.5rem 0}
+.safety-gear-card{background:#fff;border-radius:var(--card-radius);padding:1rem;box-shadow:var(--soft-shadow);border-left:4px solid var(--sky);font-size:.88rem;color:#555;line-height:1.6}
+.safety-gear-card strong{color:var(--night)}
+.safety-kids-box{background:linear-gradient(135deg,#FFF3E0,#FFECB3);border-radius:var(--card-radius);padding:1.5rem;margin:1.5rem 0;box-shadow:var(--soft-shadow);border-left:5px solid #F9A825}
+.safety-kids-box h4{color:#E65100;margin-bottom:.6rem;font-size:1rem}
+.safety-kids-box p{font-size:.85rem;color:#555;line-height:1.7;margin-bottom:.3rem}
+.safety-good-news{background:linear-gradient(135deg,#E8F5E9,#C8E6C9);border-radius:var(--card-radius);padding:1.5rem 2rem;margin-bottom:2rem;box-shadow:var(--soft-shadow);text-align:center}
+.safety-good-news h3{color:#2E7D32;font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:.5rem}
+.safety-good-news p{font-size:.9rem;color:#2E7D32;line-height:1.7}
 
 /* ===== BUDGET BAR CHART ===== */
 .budget-chart{max-width:850px;margin:2.5rem auto 0}
@@ -795,7 +818,7 @@ footer strong{color:var(--earth)}
 <div class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <div class="hero-version">v6.0 Full Activities</div>
+    <div class="hero-version">v7.0 All-Train</div>
     <h1>中歐家庭旅行<span>Central Europe 2026</span></h1>
     <div class="hero-flags"><img src="https://flagcdn.com/w80/hu.png" alt="匈牙利" class="flag-img"> <img src="https://flagcdn.com/w80/cz.png" alt="捷克" class="flag-img"> <img src="https://flagcdn.com/w80/pl.png" alt="波蘭" class="flag-img"> <img src="https://flagcdn.com/w80/sk.png" alt="斯洛伐克" class="flag-img"></div>
     <div class="hero-stats">
@@ -805,7 +828,7 @@ footer strong{color:var(--earth)}
       <div class="hero-stat"><strong>7</strong><span>人</span></div>
       <div class="hero-stat"><strong>27</strong><span>晚</span></div>
     </div>
-    <p style="opacity:.8;font-size:.95rem">5 大人 + 2 小孩 | 每天上午＋下午都有活動 | 零純休息日</p>
+    <p style="opacity:.8;font-size:.95rem">全程火車🚂零飛機 | 每天都有活動 | 28天4國</p>
     <p style="margin-top:1rem;font-size:1.1rem;font-weight:500">6/27 出發 → 7/26 回家</p>
   </div>
   <div class="scroll-hint" style="font-size:2rem">↓</div>
@@ -830,6 +853,7 @@ footer strong{color:var(--earth)}
   <a href="#tickets">門票</a>
   <a href="#souvenirs">名產</a>
   <a href="#tips">提醒</a>
+  <a href="#safety">🔒 安全</a>
   <a href="#shanghai">轉機</a>
 </nav>
 <!-- ===== ROUTE ===== -->
@@ -927,9 +951,9 @@ footer strong{color:var(--earth)}
         <div class="mc-nights">7 晚</div>
       </div>
       <div class="map-transport">
-        <div class="transport-icon">✈️</div>
-        <div class="transport-info">Wizz Air 廉航 1hr</div>
-        <div class="transport-tip">布拉格 → 克拉科夫唯一需要搭飛機的一段</div>
+        <div class="transport-icon">🚂</div>
+        <div class="transport-info">RegioJet 直達火車 6hr</div>
+        <div class="transport-tip">全程零飛機！直達火車穿越摩拉維亞向日葵田🌻</div>
       </div>
     </div>
 
@@ -1023,7 +1047,7 @@ footer strong{color:var(--earth)}
 <!-- ===== ITINERARY ===== -->
 <section id="itinerary">
   <h2 class="section-title">每日行程</h2>
-  <p class="section-sub">零純休息日 — 每天上午＋下午都有活動，輕重交替</p>
+  <p class="section-sub">全程火車零飛機 — 每天上午＋下午都有活動，輕重交替</p>
 
   <!-- Budapest I -->
   <img class="city-hero" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Parliament_Building_Budapest_Hungary.jpg" alt="Budapest Parliament along the Danube" loading="lazy">
@@ -2120,13 +2144,14 @@ footer strong{color:var(--earth)}
 
   <!-- Grid Cards -->
   <div class="budget-grid">
-    <div class="budget-item"><span class="label">✈️ 國際機票 6 人</span><span class="amount">NT$137,580</span></div>
-    <div class="budget-item"><span class="label">🚂 內陸交通（火車+廉航+巴士）</span><span class="amount">NT$14,600~21,900</span></div>
-    <div class="budget-item"><span class="label">🏠 住宿 27 晚（2 間房）</span><span class="amount">NT$83,000~105,000</span></div>
-    <div class="budget-item"><span class="label">🍽️ 餐飲 28 天（自煮為主）</span><span class="amount">NT$65,000</span></div>
-    <div class="budget-item"><span class="label">🎫 門票景點</span><span class="amount">NT$40,000</span></div>
-    <div class="budget-item"><span class="label">🚇 市區交通（地鐵+Bolt）</span><span class="amount">NT$12,000</span></div>
-    <div class="budget-item"><span class="label">📱 雜費+旅平險</span><span class="amount">NT$10,000</span></div>
+    <div class="budget-item"><span class="label">✈️ 機票 6 人</span><span class="amount">NT$137,580</span></div>
+    <div class="budget-item"><span class="label">🚂 城際火車（3段直達）</span><span class="amount">NT$7,545</span></div>
+    <div class="budget-item"><span class="label">🚌 巴士/Bolt 2段</span><span class="amount">NT$3,500</span></div>
+    <div class="budget-item"><span class="label">🏠 住宿 27 晚</span><span class="amount">NT$83,000</span></div>
+    <div class="budget-item"><span class="label">🚇 市區交通</span><span class="amount">NT$12,000</span></div>
+    <div class="budget-item"><span class="label">🍽️ 餐飲 28 天</span><span class="amount">NT$65,000</span></div>
+    <div class="budget-item"><span class="label">🎫 門票</span><span class="amount">NT$40,000</span></div>
+    <div class="budget-item"><span class="label">📱 雜費+保險</span><span class="amount">NT$10,000</span></div>
   </div>
 
   <!-- Bar Chart -->
@@ -2138,7 +2163,7 @@ footer strong{color:var(--earth)}
     </div>
     <div class="bar-row">
       <div class="bar-label">🏠 住宿</div>
-      <div class="bar-track"><div class="bar-fill b3" style="width:68%">NT$83,000~105,000</div></div>
+      <div class="bar-track"><div class="bar-fill b3" style="width:60%">NT$83,000</div></div>
     </div>
     <div class="bar-row">
       <div class="bar-label">🍽️ 餐飲</div>
@@ -2149,36 +2174,40 @@ footer strong{color:var(--earth)}
       <div class="bar-track"><div class="bar-fill b5" style="width:29%">NT$40,000</div></div>
     </div>
     <div class="bar-row">
-      <div class="bar-label">🚂 內陸交通</div>
-      <div class="bar-track"><div class="bar-fill b2" style="width:14%">NT$14,600~21,900</div></div>
-    </div>
-    <div class="bar-row">
       <div class="bar-label">🚇 市區交通</div>
       <div class="bar-track"><div class="bar-fill b6" style="width:9%">NT$12,000</div></div>
     </div>
     <div class="bar-row">
+      <div class="bar-label">🚂 城際火車</div>
+      <div class="bar-track"><div class="bar-fill b2" style="width:5%">NT$7,545</div></div>
+    </div>
+    <div class="bar-row">
       <div class="bar-label">📱 雜費+保險</div>
       <div class="bar-track"><div class="bar-fill b8" style="width:7%">NT$10,000</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">🚌 巴士/Bolt</div>
+      <div class="bar-track"><div class="bar-fill b7" style="width:3%">NT$3,500</div></div>
     </div>
   </div>
 
   <!-- Total -->
   <div class="budget-total">
     <div style="font-size:.9rem;opacity:.7;margin-bottom:.5rem">全家 28 天總費用</div>
-    <div class="big">~NT$362,000 - 391,000</div>
-    <div class="per">機票佔了 35%，是最大開銷！</div>
+    <div class="big">~NT$358,625</div>
+    <div class="per">全程零飛機！火車省下的機票錢讓總費用大降！</div>
   </div>
 
   <!-- Per Person Breakdown -->
   <div class="budget-per-person">
     <div class="budget-pp-card">
       <div class="pp-label">每位大人</div>
-      <div class="pp-amount">~NT$65,000-70,000</div>
+      <div class="pp-amount">~NT$65,000</div>
       <div class="pp-note">28 天 4 國！比旅行社 10 天團便宜一半</div>
     </div>
     <div class="budget-pp-card">
       <div class="pp-label">每人每天</div>
-      <div class="pp-amount">~NT$1,900-2,100</div>
+      <div class="pp-amount">~NT$1,880</div>
       <div class="pp-note">含吃住交通門票所有開銷</div>
     </div>
     <div class="budget-pp-card">
@@ -2216,10 +2245,10 @@ footer strong{color:var(--earth)}
     </tr>
     <tr>
       <td><strong>布拉格 → 克拉科夫</strong><br><span style="font-size:.75rem;color:#999">PRG → KRK</span></td>
-      <td><span class="t-tag t-flight">✈️ 廉航</span><br><span style="font-size:.75rem">Wizz Air / Ryanair</span></td>
-      <td>1 小時<br><span style="font-size:.75rem;color:#999">飛行時間短</span></td>
-      <td style="color:var(--brick);font-weight:600">NT$5,200~10,400</td>
-      <td><a href="https://www.kiwi.com" target="_blank" style="color:var(--sky)">kiwi.com</a><br><span style="font-size:.72rem;color:#999">只帶手提行李最省</span></td>
+      <td><span class="t-tag t-train">🚂 火車</span><br><span style="font-size:.75rem">RegioJet</span></td>
+      <td>6 小時<br><span style="font-size:.75rem;color:#999">直達，穿越摩拉維亞🌻</span></td>
+      <td style="color:var(--brick);font-weight:600">NT$2,545~4,200</td>
+      <td><a href="https://www.regiojet.com" target="_blank" style="color:var(--sky)">regiojet.com</a><br><span style="font-size:.72rem;color:#999">提早訂便宜50%</span></td>
     </tr>
     <tr>
       <td><strong>克拉科夫 → Zakopane</strong><br><span style="font-size:.75rem;color:#999">KRK → Zakopane</span></td>
@@ -2245,7 +2274,7 @@ footer strong{color:var(--earth)}
   </table>
   </div>
 
-  <p style="text-align:center;margin-top:1rem;font-size:.9rem;color:var(--earth);font-weight:600">5 段交通合計：約 NT$14,600 ~ 21,900（7 人）</p>
+  <p style="text-align:center;margin-top:1rem;font-size:.9rem;color:var(--earth);font-weight:600">5 段交通合計：約 NT$11,045（7 人）— 全程零飛機！</p>
 
   <!-- Tips for elderly and kids -->
   <div class="transport-tips">
@@ -2263,15 +2292,15 @@ footer strong{color:var(--earth)}
       <ul>
         <li>火車上可以帶推車，放在車廂連接處</li>
         <li>帶小零食、平板和耳機（看卡通）</li>
-        <li>廉航座位不劃位，大人先上搶前排</li>
-        <li>2 歲以下免機票，但沒座位（坐大人腿上）</li>
+        <li>2.5 歲搭火車免費！不用買票</li>
+        <li>可以自由走動看窗外，比飛機輕鬆</li>
       </ul>
     </div>
     <div class="tt-card">
       <h4>💡 訂票省錢秘訣</h4>
       <ul>
         <li>RegioJet 越早訂越便宜（最多省 50%！）</li>
-        <li>廉航只帶小背包登機 = 最便宜</li>
+        <li>訂票時選 Senior 65+ 享 75% off（捷克段）</li>
         <li>FlixBus 用 APP 訂有時比官網便宜</li>
         <li>歐洲火車 6 歲以下通常免費</li>
       </ul>
@@ -2328,7 +2357,7 @@ footer strong{color:var(--earth)}
     </tr>
     <tr>
       <td colspan="3" style="text-align:right"><strong>7 人合計</strong></td>
-      <td colspan="3" style="color:var(--brick);font-size:1.1rem"><strong>NT$10,290 ~ 16,170</strong><br><span style="font-size:.8rem;color:#2E7D32">比廉航便宜！而且免費行李、免安檢</span></td>
+      <td colspan="3" style="color:var(--brick);font-size:1.1rem"><strong>NT$7,545</strong><br><span style="font-size:.8rem;color:#2E7D32">含老人兒童折扣！免費行李、免安檢</span></td>
     </tr>
   </table>
   </div>
@@ -2343,7 +2372,7 @@ footer strong{color:var(--earth)}
       <div class="cmp-body">
         <h4>行李</h4>
         <div class="cmp-train">✅ 火車：免費不限重，直接提上車</div>
-        <div class="cmp-plane">❌ 廉航：每件行李都要加錢買</div>
+        <div class="cmp-plane">❌ 飛機：每件行李都要加錢買</div>
       </div>
     </div>
     <div class="tg-compare-card">
@@ -2375,7 +2404,7 @@ footer strong{color:var(--earth)}
       <div class="cmp-body">
         <h4>吃東西</h4>
         <div class="cmp-train">✅ 火車：車上有餐車，免費飲料喝到飽</div>
-        <div class="cmp-plane">❌ 廉航：什麼都沒有，連水都要買</div>
+        <div class="cmp-plane">❌ 飛機：什麼都沒有，連水都要買</div>
       </div>
     </div>
     <div class="tg-compare-card">
@@ -2583,16 +2612,16 @@ footer strong{color:var(--earth)}
 
   <!-- 6. 行李指南 -->
   <h3 class="tg-sub">🧳 行李指南</h3>
-  <p style="font-size:.92rem;color:#666;margin-bottom:1rem">搭火車最大的好處就是行李免費又不限重！不用像廉航斤斤計較：</p>
+  <p style="font-size:.92rem;color:#666;margin-bottom:1rem">搭火車最大的好處就是行李免費又不限重！</p>
 
   <div class="tg-luggage-grid">
     <div class="tg-luggage-card">
       <strong>📦 RegioJet 行李規定</strong><br>
-      每人 2 件免費託運，不限重量，29 吋行李箱完全 OK！
+      每人 2 件免費託運，不限重量！
     </div>
-    <div class="tg-luggage-card">
-      <strong>💡 建議帶 24 吋</strong><br>
-      雖然不限重，但 24 吋更方便搬上下火車，老人家也提得動
+    <div class="tg-luggage-card" style="border-left-color:#C62828">
+      <strong>🔴 建議帶 24 吋行李箱（不要 29 吋）</strong><br>
+      24 吋更方便搬上下火車，老人家也提得動。歐洲月台、樓梯、石板路都不適合大箱子！
     </div>
     <div class="tg-luggage-card">
       <strong>👶 推車免折</strong><br>
@@ -2600,7 +2629,15 @@ footer strong{color:var(--earth)}
     </div>
     <div class="tg-luggage-card">
       <strong>📍 車上放哪裡</strong><br>
-      車上有頭頂行李架 + 車廂末端大件行李區，放 29 吋也沒問題
+      車上有頭頂行李架 + 車廂末端大件行李區
+    </div>
+    <div class="tg-luggage-card">
+      <strong>🚌 巴士 FlixBus 限制</strong><br>
+      每人限 1 件 20kg 行李！超重要加錢。山區段建議 Bolt 包車（行李隨便放）
+    </div>
+    <div class="tg-luggage-card" style="border-left-color:var(--forest)">
+      <strong>🏔️ 山區段建議 Bolt 包車</strong><br>
+      Zakopane/高塔特拉的巴士行李空間有限，Bolt 包車行李隨便放，價格也很便宜
     </div>
   </div>
 
@@ -2662,6 +2699,53 @@ footer strong{color:var(--earth)}
 
   <a href="https://regiojet.com" target="_blank" class="tg-booking-link">👉 前往 RegioJet 官網訂票</a>
   <p class="tg-booking-tip">💡 提前 2~4 週訂最便宜，最多可以省一半的錢！</p>
+
+  <!-- RegioJet 票價折扣說明 -->
+  <h3 class="tg-sub">💰 火車票價折扣（含老人兒童優惠）</h3>
+  <p style="font-size:.92rem;color:#666;margin-bottom:1rem">RegioJet 和歐洲國鐵都有年齡折扣，我們家能省不少：</p>
+
+  <table class="tg-overview-table">
+    <tr>
+      <th>乘客類型</th>
+      <th>票價範圍</th>
+      <th>折扣</th>
+      <th>說明</th>
+    </tr>
+    <tr>
+      <td><strong>大人（一般）</strong></td>
+      <td style="color:var(--brick);font-weight:600">NT$455 ~ 770 / 段</td>
+      <td>原價</td>
+      <td>提早訂可享早鳥價</td>
+    </tr>
+    <tr>
+      <td><strong>60 歲長輩</strong></td>
+      <td style="color:var(--brick);font-weight:600">約 75 折</td>
+      <td><span style="background:#FFF3E0;color:#E65100;padding:.15rem .4rem;border-radius:.3rem;font-size:.75rem;font-weight:600">75 折</span></td>
+      <td>選「Senior」乘客類型</td>
+    </tr>
+    <tr>
+      <td><strong>65 歲以上（捷克段）</strong></td>
+      <td style="color:var(--brick);font-weight:600">約 25 折！</td>
+      <td><span style="background:#E8F5E9;color:#2E7D32;padding:.15rem .4rem;border-radius:.3rem;font-size:.75rem;font-weight:600">75% off！</span></td>
+      <td>捷克法律規定 65+ 享超優惠</td>
+    </tr>
+    <tr>
+      <td><strong>6 歲兒童</strong></td>
+      <td style="color:var(--brick);font-weight:600">半價</td>
+      <td><span style="background:#E3F2FD;color:#1565C0;padding:.15rem .4rem;border-radius:.3rem;font-size:.75rem;font-weight:600">50% off</span></td>
+      <td>選「Child」乘客類型</td>
+    </tr>
+    <tr>
+      <td><strong>2.5 歲幼兒</strong></td>
+      <td style="color:#2E7D32;font-weight:700">免費！</td>
+      <td><span style="background:#E8F5E9;color:#2E7D32;padding:.15rem .4rem;border-radius:.3rem;font-size:.75rem;font-weight:600">免費</span></td>
+      <td>不佔位免費，坐大人腿上</td>
+    </tr>
+  </table>
+
+  <div style="background:linear-gradient(135deg,#E3F2FD,#E8F5E9);border-radius:var(--card-radius);padding:1.2rem 1.5rem;margin-top:1rem;box-shadow:var(--soft-shadow)">
+    <p style="font-size:.9rem;color:#1A237E;line-height:1.7;margin:0"><strong>💡 訂票小技巧：</strong>在 <a href="https://regiojet.com" target="_blank" style="color:var(--sky)">regiojet.com</a> 訂票時，乘客類型選「Senior 65+」和「Child」，系統會自動套用折扣價！</p>
+  </div>
 
   <!-- 8. 歐洲火車評價引用 -->
   <h3 class="tg-sub">💬 歐洲火車旅行心得</h3>
@@ -3081,11 +3165,19 @@ footer strong{color:var(--earth)}
     <!-- APP -->
     <div class="rem-card rc-app">
       <h4>📱 必裝 APP</h4>
-      <p><strong>Bolt</strong> — 東歐版 Uber，比計程車便宜一半。搬行李到車站/機場門到門服務。4 國都能用！</p>
-      <p style="margin-top:.3rem"><strong>Google Maps</strong> — 離線地圖提前下載匈牙利、捷克、波蘭、斯洛伐克地圖。</p>
+      <p><strong>Google Maps</strong> — 離線地圖提前下載匈牙利、捷克、波蘭、斯洛伐克地圖。</p>
       <p style="margin-top:.3rem"><strong>Google Translate</strong> — 下載離線翻譯包（波蘭文、捷克文、匈牙利文）。</p>
       <p style="margin-top:.3rem"><strong>東方航空 APP</strong> — 轉機時領取貴賓室 QR Code。</p>
       <div class="rem-action">📋 出發前全部下載好 + 離線資料</div>
+    </div>
+
+    <div class="rem-card rc-app" style="border-left:4px solid var(--forest)">
+      <h4>🚗 Bolt APP — 全程叫車神器</h4>
+      <p><strong>東歐版 Uber</strong>，比台灣計程車便宜 30-60%！搬行李到車站門到門服務。</p>
+      <p style="margin-top:.3rem"><strong>4 國都能用：</strong>匈牙利、捷克、波蘭、斯洛伐克全部支援。</p>
+      <p style="margin-top:.3rem"><strong>出發前準備：</strong>下載 Bolt APP → 註冊帳號 → 綁定信用卡 → 到當地直接叫車。</p>
+      <p style="margin-top:.3rem"><strong>山區推薦：</strong>Zakopane/高塔特拉段巴士行李空間有限，Bolt 包車更方便（行李隨便放）。</p>
+      <div class="rem-action">📋 出發前下載 Bolt + 綁信用卡，到當地直接用</div>
     </div>
 
     <div class="rem-card rc-info">
@@ -3099,14 +3191,127 @@ footer strong{color:var(--earth)}
     <div class="rem-card rc-info">
       <h4>ℹ️ 旅平險 + 不便險</h4>
       <p>28 天長途旅行，一定要保旅平險和不便險。建議海外醫療額度至少 300 萬。</p>
-      <p style="margin-top:.3rem">廉航延誤機率較高，不便險可理賠延誤餐費和住宿。刷信用卡買機票通常有附贈基本保險。</p>
+      <p style="margin-top:.3rem">火車全程直達不怕延誤，但不便險仍可理賠行李遺失等。刷信用卡買機票通常有附贈基本保險。</p>
       <div class="rem-action">📋 出發前確認：信用卡保險 + 額外旅平險</div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================== -->
-<!--         SECTION 7: 上海轉機攻略 SHANGHAI LAYOVER                -->
+<!--         SECTION 7: 火車與旅行安全 SAFETY                        -->
+<!-- ============================================================== -->
+<section class="safety-section" id="safety">
+  <h2 class="section-title">🔒 火車與旅行安全</h2>
+  <p class="section-sub">中東歐比西歐安全很多 — 掌握基本技巧就能放心玩</p>
+
+  <div class="safety-good-news">
+    <h3>好消息：中東歐比西歐安全很多</h3>
+    <p>不像巴黎、巴塞隆納扒手猖獗，我們去的 4 個國家治安都很好。只要注意基本防範就能安心旅行！</p>
+  </div>
+
+  <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:1rem;color:var(--night)">各國安全等級</h3>
+  <table class="safety-table">
+    <tr>
+      <th>國家</th>
+      <th>安全等級</th>
+      <th>說明</th>
+    </tr>
+    <tr>
+      <td><img src="https://flagcdn.com/w80/hu.png" alt="匈牙利" class="flag-img" style="width:24px;vertical-align:middle"> 匈牙利</td>
+      <td><span style="background:#FFF3E0;color:#E65100;padding:.2rem .6rem;border-radius:1rem;font-size:.8rem;font-weight:600">中低風險</span></td>
+      <td>布達佩斯地鐵和觀光區偶有扒手，整體安全</td>
+    </tr>
+    <tr>
+      <td><img src="https://flagcdn.com/w80/cz.png" alt="捷克" class="flag-img" style="width:24px;vertical-align:middle"> 捷克</td>
+      <td><span style="background:#FFF3E0;color:#E65100;padding:.2rem .6rem;border-radius:1rem;font-size:.8rem;font-weight:600">中低（布拉格觀光區注意）</span></td>
+      <td>查理大橋、天文鐘周邊是扒手熱點，其他地方很安全</td>
+    </tr>
+    <tr>
+      <td><img src="https://flagcdn.com/w80/pl.png" alt="波蘭" class="flag-img" style="width:24px;vertical-align:middle"> 波蘭</td>
+      <td><span style="background:#E8F5E9;color:#2E7D32;padding:.2rem .6rem;border-radius:1rem;font-size:.8rem;font-weight:600">低風險（歐洲最安全之一）</span></td>
+      <td>波蘭治安非常好，克拉科夫是歐洲最安全的旅遊城市之一</td>
+    </tr>
+    <tr>
+      <td><img src="https://flagcdn.com/w80/sk.png" alt="斯洛伐克" class="flag-img" style="width:24px;vertical-align:middle"> 斯洛伐克</td>
+      <td><span style="background:#E8F5E9;color:#2E7D32;padding:.2rem .6rem;border-radius:1rem;font-size:.8rem;font-weight:600">很低</span></td>
+      <td>高塔特拉山區幾乎零犯罪，非常安全</td>
+    </tr>
+  </table>
+
+  <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin:2rem 0 1rem;color:var(--night)">10 個防扒手技巧</h3>
+  <div class="safety-tips-grid">
+    <div class="safety-tip-card">
+      <div class="safety-tip-num">1</div>
+      <div class="safety-tip-text">護照+大鈔放隱形腰包</div>
+    </div>
+    <div class="safety-tip-card">
+      <div class="safety-tip-num">2</div>
+      <div class="safety-tip-text">每天只帶少量現金</div>
+    </div>
+    <div class="safety-tip-card">
+      <div class="safety-tip-num">3</div>
+      <div class="safety-tip-text">手機掛繩斜背</div>
+    </div>
+    <div class="safety-tip-card">
+      <div class="safety-tip-num">4</div>
+      <div class="safety-tip-text">人多時背包背前面</div>
+    </div>
+    <div class="safety-tip-card">
+      <div class="safety-tip-num">5</div>
+      <div class="safety-tip-text">行李箱用鋼絲鎖</div>
+    </div>
+    <div class="safety-tip-card">
+      <div class="safety-tip-num">6</div>
+      <div class="safety-tip-text">不穿名牌不戴金飾</div>
+    </div>
+    <div class="safety-tip-card">
+      <div class="safety-tip-num">7</div>
+      <div class="safety-tip-text">陌生人主動幫忙=警覺</div>
+    </div>
+    <div class="safety-tip-card">
+      <div class="safety-tip-num">8</div>
+      <div class="safety-tip-text">上下車時最危險，全家一起</div>
+    </div>
+    <div class="safety-tip-card">
+      <div class="safety-tip-num">9</div>
+      <div class="safety-tip-text">用 Apple Pay / Google Pay</div>
+    </div>
+    <div class="safety-tip-card">
+      <div class="safety-tip-num">10</div>
+      <div class="safety-tip-text">信用卡現金分散放</div>
+    </div>
+  </div>
+
+  <div class="safety-kids-box">
+    <h4>👶 帶小孩特別注意</h4>
+    <p>顧小孩時容易分心被偷 — 這是扒手最愛的下手時機</p>
+    <p>一人顧小孩一人顧行李 — 分工合作最安全</p>
+    <p>陌生人逗小孩時手按住包包 — 可能是調虎離山</p>
+  </div>
+
+  <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin:2rem 0 1rem;color:var(--night)">必帶防盜裝備</h3>
+  <div class="safety-gear-grid">
+    <div class="safety-gear-card">
+      <strong>🔐 隱形腰包</strong><br>
+      NT$200-500 · 放護照和大鈔，貼身不外露
+    </div>
+    <div class="safety-gear-card">
+      <strong>📱 手機掛繩</strong><br>
+      NT$100-300 · 斜背在身上，防搶防掉
+    </div>
+    <div class="safety-gear-card">
+      <strong>🔒 行李鋼絲鎖</strong><br>
+      NT$150-300 · 火車上鎖住行李架，安心睡覺
+    </div>
+    <div class="safety-gear-card">
+      <strong>🛡️ RFID 防盜護照套</strong><br>
+      NT$100-200 · 防止無線盜刷，多一層保障
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================== -->
+<!--         SECTION 8: 上海轉機攻略 SHANGHAI LAYOVER                -->
 <!-- ============================================================== -->
 <div class="sh-section" id="shanghai">
   <h2 class="section-title"><img src="https://flagcdn.com/w80/cn.png" alt="中國" class="flag-img"> 上海轉機攻略</h2>
@@ -3227,10 +3432,10 @@ footer strong{color:var(--earth)}
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  <p><img src="https://flagcdn.com/w80/hu.png" alt="匈牙利" class="flag-img"><img src="https://flagcdn.com/w80/cz.png" alt="捷克" class="flag-img"><img src="https://flagcdn.com/w80/pl.png" alt="波蘭" class="flag-img"><img src="https://flagcdn.com/w80/sk.png" alt="斯洛伐克" class="flag-img"> <strong>2026 中歐家庭旅行 v6.0</strong> — 28 天 4 國 6 城</p>
-  <p style="margin-top:.5rem">5 大人 + 2 小孩 · 慢旅行 · 每位大人 ~NT$65,000-70,000</p>
-  <p style="margin-top:.5rem;font-size:.82rem;opacity:.7">總費用 ~NT$362,000-391,000 · 每人每天 ~NT$1,900-2,100</p>
-  <p style="margin-top:1rem;font-size:.75rem;opacity:.5">Made with Claude Code · Last updated 2026-05-21 · v6.0</p>
+  <p><img src="https://flagcdn.com/w80/hu.png" alt="匈牙利" class="flag-img"><img src="https://flagcdn.com/w80/cz.png" alt="捷克" class="flag-img"><img src="https://flagcdn.com/w80/pl.png" alt="波蘭" class="flag-img"><img src="https://flagcdn.com/w80/sk.png" alt="斯洛伐克" class="flag-img"> <strong>2026 中歐家庭旅行 v7.0</strong> — 28 天 4 國 6 城 · 全程零飛機🚂</p>
+  <p style="margin-top:.5rem">5 大人 + 2 小孩 · 慢旅行 · 每位大人 ~NT$65,000</p>
+  <p style="margin-top:.5rem;font-size:.82rem;opacity:.7">總費用 ~NT$358,625 · 每人每天 ~NT$1,880</p>
+  <p style="margin-top:1rem;font-size:.75rem;opacity:.5">Made with Claude Code · Last updated 2026-05-21 · v7.0</p>
 </footer>
 
 <script>
@@ -3315,7 +3520,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Transport labels on route lines
   var transports = [
     {from: [47.4979, 19.0402], to: [50.0755, 14.4378], label: '🚂 火車 6.5hr'},
-    {from: [50.0755, 14.4378], to: [50.0647, 19.9450], label: '✈️ 廉航 1hr'},
+    {from: [50.0755, 14.4378], to: [50.0647, 19.9450], label: '🚂 火車 6hr'},
     {from: [50.0647, 19.9450], to: [49.2992, 19.9496], label: '🚌 巴士 2hr'},
     {from: [49.2992, 19.9496], to: [49.1214, 20.0649], label: '🚌 翻山 1.5hr'},
     {from: [49.1214, 20.0649], to: [47.4979, 19.0402], label: '🚂 火車 5hr'}
