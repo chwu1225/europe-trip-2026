@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026 中歐家庭旅行 v10.0 | 4國27晚</title>
+<title>2026 中歐家庭旅行 v10.3 | 4國27晚</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
@@ -204,6 +204,52 @@ section{padding:4rem 1.5rem;max-width:1100px;margin:0 auto}
 .weather-card .temp{font-size:1.8rem;font-weight:700;color:var(--brick)}
 .weather-card .city-name{font-size:.8rem;color:#888;margin-bottom:.3rem}
 .weather-card .desc{font-size:.75rem;color:#aaa}
+
+/* Enhanced weather grid */
+.weather-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.2rem;margin:2rem 0}
+.weather-detail-card{background:#fff;border-radius:var(--card-radius);padding:1.5rem;box-shadow:var(--soft-shadow);transition:transform .3s;position:relative;overflow:hidden}
+.weather-detail-card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,.12)}
+.weather-detail-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.weather-detail-card.hot::before{background:linear-gradient(90deg,#C62828,#FF6F00)}
+.weather-detail-card.warm::before{background:linear-gradient(90deg,#FF6F00,#FFA000)}
+.weather-detail-card.comfy::before{background:linear-gradient(90deg,#4CAF50,#8BC34A)}
+.weather-detail-card.cool::before{background:linear-gradient(90deg,#42A5F5,#90CAF9)}
+.weather-detail-card .wd-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.8rem}
+.weather-detail-card .wd-city{font-weight:700;font-size:1.05rem;color:var(--night)}
+.weather-detail-card .wd-city .wd-en{font-size:.78rem;color:#999;font-weight:400;display:block}
+.weather-detail-card .wd-feel{font-size:1.2rem;padding:.2rem .6rem;border-radius:2rem;display:inline-block;font-weight:600}
+.wd-feel.hot{background:#FCE4EC;color:#C62828}
+.wd-feel.warm{background:#FFF3E0;color:#E65100}
+.wd-feel.comfy{background:#E8F5E9;color:#2E7D32}
+.wd-feel.cool{background:#E3F2FD;color:#1565C0}
+.weather-detail-card .wd-temps{display:flex;gap:1.2rem;margin-bottom:.6rem}
+.weather-detail-card .wd-hi,.weather-detail-card .wd-lo{font-size:.9rem;color:#555}
+.weather-detail-card .wd-hi strong{color:var(--brick);font-size:1.3rem}
+.weather-detail-card .wd-lo strong{color:var(--sky);font-size:1.3rem}
+.weather-detail-card .wd-sun{font-size:.85rem;color:#666;line-height:1.6;background:var(--cream);padding:.5rem .8rem;border-radius:.6rem}
+.weather-tip-box{background:linear-gradient(135deg,#FFF8E1,#FFFDE7);border:2px solid var(--gold);border-radius:var(--card-radius);padding:1.5rem 2rem;margin-top:1.5rem;box-shadow:var(--soft-shadow)}
+.weather-tip-box p{font-size:.95rem;color:var(--earth);line-height:1.7}
+
+/* Daily essentials box */
+.daily-essentials{background:linear-gradient(135deg,#E8F5E9,#F1F8E9);border:2px solid var(--forest);border-radius:var(--card-radius);padding:2rem;margin-top:2rem;box-shadow:var(--soft-shadow)}
+.daily-essentials h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--forest);margin-bottom:1rem}
+.daily-essentials .de-items{display:flex;flex-wrap:wrap;gap:.6rem}
+.daily-essentials .de-item{background:#fff;padding:.4rem .9rem;border-radius:2rem;font-size:.88rem;color:#444;box-shadow:0 2px 8px rgba(0,0,0,.06);border:1px solid rgba(45,80,22,.15)}
+
+/* Layering strategy box */
+.layering-box{background:linear-gradient(135deg,#FFF8F0,#F5E6D3);border:2px solid var(--gold);border-radius:var(--card-radius);padding:2rem;margin:2rem 0;box-shadow:var(--soft-shadow)}
+.layering-box h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--earth);margin-bottom:1rem}
+.layering-layers{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.layer-card{background:#fff;border-radius:.8rem;padding:1rem 1.2rem;box-shadow:var(--soft-shadow)}
+.layer-card .layer-name{font-weight:700;color:var(--earth);font-size:.95rem;margin-bottom:.3rem}
+.layer-card .layer-desc{font-size:.85rem;color:#555;line-height:1.5}
+.layering-reason{margin-top:1rem;padding:1rem;background:rgba(196,91,58,.08);border-radius:.6rem;font-size:.88rem;color:var(--brick);font-weight:600;text-align:center}
+
+@media(max-width:768px){
+  .weather-grid{grid-template-columns:1fr}
+  .layering-layers{grid-template-columns:1fr}
+  .daily-essentials .de-items{gap:.4rem}
+}
 
 /* ===== SHANGHAI ===== */
 .shanghai{background:linear-gradient(135deg,#1a1a2e,#0f3460);color:#fff;padding:4rem 1.5rem;border-radius:2rem;margin:2rem auto;max-width:1100px}
@@ -2320,15 +2366,111 @@ footer strong{color:var(--earth)}
 </div>
 
 <!-- ===== WEATHER ===== -->
-<section>
-  <h2 class="section-title">7 月天氣預報</h2>
-  <p class="section-sub">城市溫暖舒適，山區涼爽避暑</p>
-  <div class="weather-bar">
-    <div class="weather-card"><div class="city-name"><img src="https://flagcdn.com/w80/hu.png" alt="匈牙利" class="flag-img"> 布達佩斯</div><div class="temp">29°C</div><div class="desc">最熱 ☀️ 下午避戶外</div></div>
-    <div class="weather-card"><div class="city-name"><img src="https://flagcdn.com/w80/cz.png" alt="捷克" class="flag-img"> 布拉格</div><div class="temp">25°C</div><div class="desc">舒適 🌤️ 像秋天</div></div>
-    <div class="weather-card"><div class="city-name"><img src="https://flagcdn.com/w80/pl.png" alt="波蘭" class="flag-img"> 克拉科夫</div><div class="temp">26°C</div><div class="desc">舒適 🌤️</div></div>
-    <div class="weather-card"><div class="city-name"><img src="https://flagcdn.com/w80/pl.png" alt="波蘭" class="flag-img"> Zakopane</div><div class="temp">21°C</div><div class="desc">涼爽 🌧️ 帶雨衣</div></div>
+<section id="weather">
+  <h2 class="section-title">☀️ 7月天氣 & 日照時間</h2>
+  <p class="section-sub">城市溫暖舒適，山區涼爽避暑 — 白天超長，可以玩到晚上 9 點！</p>
+
+  <div class="weather-grid">
+
+    <!-- Budapest -->
+    <div class="weather-detail-card hot">
+      <div class="wd-header">
+        <div class="wd-city"><img src="https://flagcdn.com/w80/hu.png" alt="匈牙利" class="flag-img"> 布達佩斯<span class="wd-en">Budapest</span></div>
+        <span class="wd-feel hot">🔥最熱！</span>
+      </div>
+      <div class="wd-temps">
+        <div class="wd-hi">高溫 <strong>30°C</strong></div>
+        <div class="wd-lo">低溫 <strong>18°C</strong></div>
+      </div>
+      <div class="wd-sun">🌅 日出 05:00 / 日落 20:45<br>☀️ 白天 <strong>15.5 小時</strong></div>
+    </div>
+
+    <!-- Vienna -->
+    <div class="weather-detail-card warm">
+      <div class="wd-header">
+        <div class="wd-city"><img src="https://flagcdn.com/w80/at.png" alt="奧地利" class="flag-img"> 維也納<span class="wd-en">Vienna</span></div>
+        <span class="wd-feel warm">☀️熱</span>
+      </div>
+      <div class="wd-temps">
+        <div class="wd-hi">高溫 <strong>28°C</strong></div>
+        <div class="wd-lo">低溫 <strong>17°C</strong></div>
+      </div>
+      <div class="wd-sun">🌅 日出 05:15 / 日落 20:55<br>☀️ 白天 <strong>15.5 小時</strong></div>
+    </div>
+
+    <!-- Prague -->
+    <div class="weather-detail-card comfy">
+      <div class="wd-header">
+        <div class="wd-city"><img src="https://flagcdn.com/w80/cz.png" alt="捷克" class="flag-img"> 布拉格<span class="wd-en">Prague</span></div>
+        <span class="wd-feel comfy">😊舒服</span>
+      </div>
+      <div class="wd-temps">
+        <div class="wd-hi">高溫 <strong>26°C</strong></div>
+        <div class="wd-lo">低溫 <strong>15°C</strong></div>
+      </div>
+      <div class="wd-sun">🌅 日出 05:00 / 日落 21:15<br>☀️ 白天 <strong>16 小時</strong></div>
+    </div>
+
+    <!-- CK -->
+    <div class="weather-detail-card comfy">
+      <div class="wd-header">
+        <div class="wd-city"><img src="https://flagcdn.com/w80/cz.png" alt="捷克" class="flag-img"> CK小鎮<span class="wd-en">Cesky Krumlov</span></div>
+        <span class="wd-feel comfy">😊舒服</span>
+      </div>
+      <div class="wd-temps">
+        <div class="wd-hi">高溫 <strong>25°C</strong></div>
+        <div class="wd-lo">低溫 <strong>13°C</strong></div>
+      </div>
+      <div class="wd-sun">🌅 同布拉格<br>☀️ 白天 <strong>16 小時</strong></div>
+    </div>
+
+    <!-- Krakow -->
+    <div class="weather-detail-card comfy">
+      <div class="wd-header">
+        <div class="wd-city"><img src="https://flagcdn.com/w80/pl.png" alt="波蘭" class="flag-img"> 克拉科夫<span class="wd-en">Krakow</span></div>
+        <span class="wd-feel comfy">😊舒服</span>
+      </div>
+      <div class="wd-temps">
+        <div class="wd-hi">高溫 <strong>25°C</strong></div>
+        <div class="wd-lo">低溫 <strong>14°C</strong></div>
+      </div>
+      <div class="wd-sun">🌅 日出 04:45 / 日落 20:50<br>☀️ 白天 <strong>16 小時</strong></div>
+    </div>
+
+    <!-- Zakopane -->
+    <div class="weather-detail-card cool">
+      <div class="wd-header">
+        <div class="wd-city"><img src="https://flagcdn.com/w80/pl.png" alt="波蘭" class="flag-img"> Zakopane<span class="wd-en">扎科帕內</span></div>
+        <span class="wd-feel cool">🧥涼！帶外套</span>
+      </div>
+      <div class="wd-temps">
+        <div class="wd-hi">高溫 <strong>21°C</strong></div>
+        <div class="wd-lo">低溫 <strong>10°C</strong></div>
+      </div>
+      <div class="wd-sun">🌅 同克拉科夫<br>☀️ 白天 <strong>16 小時</strong></div>
+    </div>
+
   </div>
+
+  <div class="weather-tip-box">
+    <p>💡 <strong>晚上 9 點天還亮著！</strong>歐洲夏天白天超長，可以逛到 20:30 都不覺得天黑。善用超長白天，早上不用趕，傍晚慢慢逛，拍照光線最美的「黃金時段」在晚上 7-8 點！</p>
+  </div>
+
+  <!-- Daily Essentials -->
+  <div class="daily-essentials">
+    <h3>🎒 每天出門必帶</h3>
+    <div class="de-items">
+      <span class="de-item">📋 護照影本</span>
+      <span class="de-item">💳 信用卡+現金（分開放）</span>
+      <span class="de-item">💧 水壺</span>
+      <span class="de-item">🧴 防曬乳</span>
+      <span class="de-item">🧥 薄外套</span>
+      <span class="de-item">🌧️ 輕便雨衣</span>
+      <span class="de-item">📱 手機+行動電源</span>
+      <span class="de-item">🍪 2.5歲零食袋</span>
+    </div>
+  </div>
+
 </section>
 
 <!-- ===== FOOD ===== -->
@@ -4071,28 +4213,38 @@ footer strong{color:var(--earth)}
       </div>
     </div>
 
-    <!-- ===== 3. 衣物 ===== -->
+    <!-- ===== 3. 衣物（洋蔥式穿法） ===== -->
     <div class="pack-cat">
       <div class="pack-cat-header cat-cloth">
         <span class="pch-icon">👕</span>
-        3. 衣物（28天只帶5-7天份！）
+        3. 衣物 — 🧅 洋蔥式穿法（28天只帶5-7天份！）
       </div>
       <div class="pack-cat-body">
-        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">短袖 ×5-7（城市段 25-31°C）</span></div>
-        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">薄長袖 ×2（山區晚上 15-19°C）</span></div>
-        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">薄羽絨外套或刷毛外套 ×1（Zakopane 山區夜間 10°C）<span class="pi-tag pi-tag-tip">山區必帶</span></span></div>
-        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">雨衣 / 防水外套 ×1（山區7月多午後雷雨！不要帶傘，帶雨衣）<span class="pi-tag pi-tag-tip">帶雨衣</span></span></div>
-        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">長褲 ×2（進教堂需要）</span></div>
-        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">短褲 ×3</span></div>
+        <div style="background:linear-gradient(135deg,#FFF8F0,#F5E6D3);border:2px solid var(--gold);border-radius:.8rem;padding:1rem 1.2rem;margin-bottom:1rem">
+          <div style="font-weight:700;color:var(--earth);font-size:.95rem;margin-bottom:.5rem">🧅 洋蔥式穿法策略</div>
+          <div style="font-size:.85rem;color:#555;line-height:1.7">從布達佩斯 30°C 到 Zakopane 10°C，溫差高達 <strong style="color:var(--brick)">25 度</strong>！用「內層+中層+外層」三層穿法靈活應對。克拉科夫+Zakopane 公寓有洗衣機，衣服不用帶 28 天份！</div>
+        </div>
+        <div style="font-size:.82rem;color:var(--forest);font-weight:600;margin-bottom:.3rem">【內層】貼身吸汗</div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">短袖 T-shirt ×5-6（每人）— 城市段 25-30°C 主力</span></div>
+        <div style="font-size:.82rem;color:var(--forest);font-weight:600;margin:.5rem 0 .3rem">【中層】保暖調節</div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">薄長袖 / 薄針織衫 ×2（每人）— 山區早晚 13-17°C<span class="pi-tag pi-tag-tip">山區必帶</span></span></div>
+        <div style="font-size:.82rem;color:var(--forest);font-weight:600;margin:.5rem 0 .3rem">【外層】防風防雨</div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">輕薄防風外套 ×1（每人，可摺小塞包包）— Zakopane 夜間 10°C<span class="pi-tag pi-tag-urgent">必帶</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">輕便雨衣 ×1（山區7月多午後雷雨！不要帶傘，帶雨衣）<span class="pi-tag pi-tag-tip">帶雨衣</span></span></div>
+        <div style="font-size:.82rem;color:var(--forest);font-weight:600;margin:.5rem 0 .3rem">【下身】</div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">短褲 ×2-3（城市段主力）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">長褲 ×2-3（進教堂需要 + 山區穿）</span></div>
         <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">內衣褲 ×5-7天份</span></div>
         <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">襪子 ×5-7雙</span></div>
-        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">好走的平底鞋 / 運動鞋 ×1（石板路多！不要穿高跟鞋）<span class="pi-tag pi-tag-urgent">重要</span></span></div>
-        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">涼鞋 / 拖鞋 ×1（溫泉 / 公寓用）</span></div>
+        <div style="font-size:.82rem;color:var(--forest);font-weight:600;margin:.5rem 0 .3rem">【鞋子】</div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">好走的運動鞋 ×1（石板路多！不要穿高跟鞋）<span class="pi-tag pi-tag-urgent">重要</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">涼鞋 ×1（溫泉 / 公寓 / 輕鬆日穿）</span></div>
+        <div style="font-size:.82rem;color:var(--forest);font-weight:600;margin:.5rem 0 .3rem">【配件】</div>
         <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">泳衣 ×1（溫泉 + 水上樂園必備）</span></div>
         <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">帽子（防曬）</span></div>
         <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">太陽眼鏡</span></div>
         <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">洗衣粉 / 洗衣片（小包裝，公寓洗衣機用）</span></div>
-        <div class="pack-cat-note">👚 每個公寓都有洗衣機，帶5-7天份衣服就好，到了再洗！行李輕鬆很多～</div>
+        <div class="pack-cat-note">👚 克拉科夫+Zakopane 有洗衣機，衣服不用帶 28 天份！帶 5-7 天份到了再洗，行李輕鬆很多～</div>
       </div>
     </div>
 
@@ -4204,12 +4356,14 @@ footer strong{color:var(--earth)}
         9. 行李箱建議
       </div>
       <div class="pack-cat-body">
-        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">建議 24吋 ×3（不要29吋！巴士行李空間有限）<span class="pi-tag pi-tag-urgent">重要</span></span></div>
-        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">每人1個24吋 + 1個背包</span></div>
-        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">帶5-7天份衣服就好，每個公寓都有洗衣機</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">24 吋行李箱 ×3（託運）— 不要29吋！巴士行李空間有限<span class="pi-tag pi-tag-urgent">重要</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">隨身背包 每人 1 個（裝每日必帶物品）</span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">嬰兒推車 1 台（可折疊，大輪比小輪好推石板路）<span class="pi-tag pi-tag-urgent">必帶</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">出發時行李箱留 1/3 空間（回程買紀念品！波蘭陶器很重）<span class="pi-tag pi-tag-tip">重要提醒</span></span></div>
+        <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">克拉科夫+Zakopane 有洗衣機，衣服不用帶 28 天份！<span class="pi-tag pi-tag-tip">省空間</span></span></div>
         <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">沐浴用品到當地超市買（不用從台灣帶）<span class="pi-tag pi-tag-note">到了再買</span></span></div>
         <div class="pack-item"><span class="pi-check" onclick="this.classList.toggle('checked')">✓</span><span class="pi-text">尿布到當地買（Pampers / Huggies 歐洲都有）<span class="pi-tag pi-tag-note">到了再買</span></span></div>
-        <div class="pack-cat-note">🎒 行李越輕越好！搬行李上下火車、走石板路，29吋會很痛苦。24吋剛剛好～</div>
+        <div class="pack-cat-note">🎒 行李越輕越好！搬行李上下火車、走石板路，29吋會很痛苦。3 個 24 吋 + 背包 + 推車 = 剛剛好！</div>
       </div>
     </div>
 
