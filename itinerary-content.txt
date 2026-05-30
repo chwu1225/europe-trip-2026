@@ -1,143 +1,153 @@
 ===================================================================
-2026 歐洲家族旅行 完整每日行程表 v10.0
-四國七站 28天27夜
-Budapest(4) → Vienna(3) → Prague(5) → CK小鎮(1) → Krakow(8) → Zakopane(5) → Budapest(1)
+2026 歐洲家族旅行 完整每日行程表 v16.0
+五國八站 28天27夜
+Budapest(4) → Vienna(3) → Prague(5) → Wrocław(1) → Kraków(8) → Zakopane(6) → Budapest(1)
 ===================================================================
 
 【第一站：布達佩斯 Budapest】4晚 (6/28-7/1)
-住宿區域：第七區猶太區 (District VII) — 周邊滿是咖啡館、教堂、廢墟酒吧
+住宿區域：第七區猶太區 (District VII) — 咖啡館、教堂、廢墟酒吧環繞
+住宿：Palace Quarter Suite（Booking 8.0分）NT$3,095/晚
 -------------------------------------------------------------------
 
-DAY_1|6/28|布達佩斯|抵達(08:05) → 入住公寓 → 猶太區周邊散步（咖啡館、特色小店）|多瑙河畔 (Danube Promenade) 散步 → 多瑙河之鞋 (Shoes on the Danube) 紀念碑|arrive
+DAY_1|6/28|布達佩斯|🛬 08:05抵達 → Bolt機場→住處(30min) → 寄行李(16:00才能入住) → 咖啡提神 → 多瑙河畔散步 → 多瑙河之鞋 → 國會外觀|16:00入住 → 傍晚散步看日落(20:44) → 撐到21:00才睡（調時差）|arrive
 
-DAY_2|6/29|布達佩斯|城堡山 (Castle Hill) → 漁人堡 (Fisherman's Bastion) 童話塔樓拍照|馬加什教堂 (Matthias Church) 參觀 → 城堡山步道散步|sightseeing
+DAY_2|6/29|布達佩斯|布達城堡 (Buda Castle) 搭纜車上山 → 漁人堡 (Fisherman's Bastion) 童話塔樓拍照（⚠️纜車6/29可能停駛，改搭16號公車）|馬提亞斯教堂 (Matthias Church) 參觀 → 城堡山步道走下來到多瑙河河岸散步|sightseeing
 
-DAY_3|6/30|布達佩斯|中央市場 (Central Market Hall) 逛吃逛吃|聖伊什特萬聖殿 (St. Stephen's Basilica) 登頂看全景 → 安德拉什大道 (Andrássy Avenue) 漫步|sightseeing
+DAY_3|6/30|布達佩斯|中央市場 (Central Market Hall) 逛吃逛吃 → 瓦茨街 (Váci Street) 購物散步|聖伊什特萬聖殿 (St. Stephen's Basilica) 登頂看全景 → 安德拉什大道 (Andrássy Avenue) 漫步|sightseeing
 
-DAY_4|7/1|布達佩斯|兒童鐵路 (Children's Railway) 搭乘小火車穿越布達山丘|鐵道博物館 (Hungarian Railway Museum) 火車頭體驗＋兒童遊樂區|family
+DAY_4|7/1|布達佩斯|分組：小孩→兒童鐵路 (Children's Railway) + 鐵道博物館 / 長輩搭HÉV H5線到聖安德烈 (Szentendre) 半日遊|傍晚一起晚餐 → 整理行李|sightseeing
 
 
 【第二站：維也納 Vienna】3晚 (7/2-7/4)
-住宿區域：內城區周邊 — 皇家建築、咖啡文化、音樂之都
+住宿區域：內城區周邊 — 皇宮、教堂、咖啡館文化的發源地
+住宿：克里姆特酒店（Booking 8.5分）NT$6,555/晚
 -------------------------------------------------------------------
 
-DAY_5|7/2|維也納|移動日。🚂 RegioJet 火車 2.5hr 布達佩斯→維也納|聖斯德望大教堂 (St. Stephen's Cathedral) → Cafe Central 維也納咖啡體驗|arrive
+DAY_5|7/2|維也納|🚂 退房 → Bolt到Keleti車站 → Railjet 11:40 布達佩斯→14:20 維也納 → 地鐵到Klimt Hotel → 15:00入住|聖史蒂芬大教堂 (St. Stephen's Cathedral) → 格拉本大街 (Graben) → 中央咖啡館 (Café Central) 下午茶|arrive
 
-DAY_6|7/3|維也納|美泉宮花園 (Schönbrunn Palace Gardens) 免費花園散步 → 迷宮 (Maze)|兒童博物館 (ZOOM Children's Museum) 互動體驗|sightseeing
+DAY_6|7/3|維也納|🚂 哈修塔特一日遊！IC 1118 Wien Westbahnhof 07:45直達出發 → 10:54抵達 → 搭渡輪到小鎮 → 湖邊散步午餐拍照|17:03 IC 1119 直達回程 → 20:15回到維也納|daytrip
 
-DAY_7|7/4|維也納|美景宮 (Belvedere Palace) 克林姆「吻」名畫|普拉特遊樂園 (Prater) 搭摩天輪 (Riesenrad) → 遊樂場|sightseeing
+DAY_7|7/4|維也納|美泉宮 (Schönbrunn) 花園散步＋迷宮＋宮殿外觀（花園免費）→ 納許市場 (Naschmarkt) 午餐|美景宮 (Belvedere Palace) 法式花園＋倒影拍照 → 晚上選項：卡爾教堂韋瓦第《四季》音樂會|sightseeing
 
 
 【第三站：布拉格 Prague】5晚 (7/5-7/9)
 住宿區域：老城區周邊 — 石板街道、哥德式教堂、特色商店林立
+住宿：安德爾中心公寓（Booking 8.7分）NT$5,573/晚
 -------------------------------------------------------------------
 
-DAY_8|7/5|布拉格|移動日。🚂 CD火車 4hr 維也納→布拉格|老城廣場 (Old Town Square) → 天文鐘 (Astronomical Clock) 整點表演|arrive
+DAY_8|7/5|布拉格|🚂 Railjet 09:10 維也納→13:23 布拉格（直達4hr）→ 地鐵B線到Anděl入住（14:00 check-in）|瓦茨拉夫廣場 → 火藥塔（外觀）→ 老城廣場＋天文鐘 → 泰恩教堂 → 哈維爾市集|arrive
 
-DAY_9|7/6|布拉格|查理大橋 (Charles Bridge) 清晨早去人少 → 小城區 (Malá Strana) 巴洛克教堂群|列儂牆 (Lennon Wall) 拍照 → 坎帕島 (Kampa Island) 河畔公園|sightseeing
+DAY_9|7/6|布拉格|查理大橋 (Charles Bridge) 早起人少 → 老城橋塔 → 小城區廣場 → 聖尼古拉教堂 → 勝利聖母堂 → 列儂牆 (Lennon Wall)|坎帕島遊樂場（查理大橋正下方，免費）→ 國家劇院（外觀）|sightseeing
 
-DAY_10|7/7|布拉格|布拉格城堡 (Prague Castle) → 聖維特大教堂 (St. Vitus Cathedral) → 黃金巷 (Golden Lane)|⚠️電車22號停駛，需步行或搭替代交通下山|sightseeing
+DAY_10|7/7|布拉格|搭電車22號從Anděl到Pohořelec → 城堡庭院（免費）→ 聖維特大教堂 (St. Vitus Cathedral) 前殿（免費）→ 城堡花園|17:00再搭電車上山 → 黃金巷 (Golden Lane) 免費開放！省NT$2,310|sightseeing
 
-DAY_11|7/8|布拉格|卡爾什特因城堡 (Karlštejn Castle) 半日遊（火車40分鐘）→ 哥德式皇家城堡|返回布拉格 → 老城區自由活動|daytrip
+DAY_11|7/8|布拉格|🚌 CK小鎮一日遊！RegioJet Na Knížecí站 08:00出發 → 10:30到CK → 城堡看熊（免費）→ 城堡塔全景 → 午餐 → Trdelník煙囪捲|16:30巴士回布拉格19:00|daytrip
 
-DAY_12|7/9|布拉格|維謝赫拉德 (Vyšehrad) 古堡（最古老城堡遺跡、遊客少、絕美河景）|猶太區 (Jewish Quarter) → 舊猶太墓園 (Old Jewish Cemetery) → 猶太會堂群|sightseeing
+DAY_12|7/9|布拉格|猶太區散步 → 大猶太會堂（外觀）→ 跳舞的房子 (Dancing House) 拍照|斯拉夫島遊樂場＋兒童小火車 → 長輩在旁邊啤酒花園喝啤酒看河景|sightseeing
 
 
-【第四站：CK小鎮 Český Krumlov】1晚 (7/10)
-住宿區域：舊城區內 — 童話般的中世紀小鎮，住一晚體驗日落與清晨
+【第四站：弗羅茨瓦夫 Wrocław】1晚 (7/10)
+住宿區域：火車站附近
+住宿：瓦特拉旅館（Booking 8.3分）NT$6,755/晚
 -------------------------------------------------------------------
 
-DAY_13|7/10|CK小鎮|🚌 巴士 3hr 布拉格→CK小鎮 → 城堡區看熊 (Castle Bears)|日落散步 → 伏爾塔瓦河 (Vltava River) 河邊晚餐|arrive
+DAY_13|7/10|弗羅茨瓦夫|🚂 退房 → 地鐵到Praha hl.n.(15min) → EC 262 Baltic Express 10:49出發→14:47弗羅茨瓦夫 → 火車站附近Kantor換錢（EUR→PLN）|入住 → 老城廣場 → 小矮人銅像尋寶 → 座堂島散步＋煤氣燈點燈儀式 → 波蘭餃子pierogi晚餐|arrive
 
 
 【第五站：克拉科夫 Kraków】8晚 (7/11-7/18)
-住宿區域：舊城區 (Stare Miasto) 周邊 — 中世紀城牆、教堂鐘聲、Planty環城公園環繞
+住宿區域：舊城區 (Stare Miasto) 周邊 — 中世紀城牆、Planty環城公園環繞
+住宿：Old Town Rakowicka（Booking 9.0分）NT$5,722/晚
 -------------------------------------------------------------------
 
-DAY_14|7/11|克拉科夫|移動日。CK早晨散步 → 🚌 巴士回布拉格 → 🚂 Leo Express 火車 6-7hr|抵達克拉科夫 → 入住 → 主廣場 (Main Market Square) 周邊散步|arrive
+DAY_14|7/11|克拉科夫|弗羅茨瓦夫再找幾個小矮人＋悠閒早餐 → 🚂 IC直達火車弗羅茨瓦夫→克拉科夫（約3hr）→ 14:00抵達|主廣場散步＋噴火龍🐉（每5分鐘噴火一次！）|arrive
 
-DAY_15|7/12|克拉科夫|皇家大道 (Royal Road) 教堂巡禮 6 間|聖母聖殿 (St. Mary's Basilica) 整點聽號角 → 紡織會館 (Cloth Hall)|sightseeing
+DAY_15|7/12|克拉科夫|Planty環城公園散步 → Żabka便利店買早餐零食（⚠️週日超市不開，只有Żabka有開！）|Kazimierz猶太區散步 → 猶太廣場咖啡 → 瓦維爾河邊看噴火龍🐉|sightseeing
 
-DAY_16|7/13|克拉科夫|★週一免費：瓦維爾城堡 (Wawel Castle) → 瓦維爾大教堂 (Wawel Cathedral)|辛德勒工廠博物館 (Schindler's Factory Museum)|sightseeing
+DAY_16|7/13|克拉科夫|全家一起 → 瓦維爾城堡 (Wawel Castle)（✨週一免費！9:00排隊）→ 龍洞 → 順路Kantor Grodzka 46換舊版瑞郎|分組：長輩→辛德勒工廠 (Schindler's Factory)（✨週一免費！）/ 爸媽帶小孩→Good Lood冰淇淋🍦|sightseeing
 
-DAY_17|7/14|克拉科夫|★週二免費：航空博物館 (Polish Aviation Museum)|Rynek 地下博物館 (Rynek Underground Museum) 主廣場地底中世紀遺跡|sightseeing
+DAY_17|7/14|克拉科夫|搭電車到Czyżyny區 → ✈️ 波蘭航空博物館 (Polish Aviation Museum)（✨週二免費！250架飛機+飛行模擬器）|Lem科學體驗花園（110個戶外互動站）→ Rynek地下博物館（✨週二免費）|sightseeing
 
-DAY_18|7/15|克拉科夫|維利奇卡鹽礦 (Wieliczka Salt Mine) 半日遊（預約無障礙路線！地下教堂超壯觀）|羊駝農場 (Alpaca Farm) 親子互動體驗|sightseeing
+DAY_18|7/15|克拉科夫|Bolt 30min → Wieliczka鹽礦 (Wieliczka Salt Mine) 半日遊（地下鹽雕教堂！）|回程順路 → Kopytkowo動物園（30種動物含袋鼠和鴯鶓！蜂蜜採收體驗）|sightseeing
 
-DAY_19|7/16|克拉科夫|野牛城堡一日遊|Zalipie 彩繪村 (Zalipie Painted Village) 波蘭彩繪民俗藝術|daytrip
+DAY_19|7/16|克拉科夫|皇家大道教堂巡禮（瓦維爾大教堂→聖安德烈→方濟各會→道明會→聖母聖殿，聽整點號角！）|主廣場紡織會館 (Cloth Hall) + Obwarzanek麵包圈|sightseeing
 
-DAY_20|7/17|克拉科夫|奧伊楚夫國家公園 (Ojców National Park) → 峽谷步道|Uszate 農場體驗|daytrip
+DAY_20|7/17|克拉科夫|📞包車 → Niepołomice皇家城堡 + 歐洲野牛保護區|Zalipie彩繪村 — 整個村莊畫滿花！小孩彩繪工作坊（⚠️鄉下Bolt叫不到車，建議包車整天）|daytrip
 
-DAY_21|7/18|克拉科夫→Zakopane|Tyniec 修道院 (Tyniec Abbey) 河畔修道院|🚂 Chabówka 蒸汽火車體驗 → 抵達 Zakopane|transit
+DAY_21|7/18|克拉科夫→Zakopane|Tyniec修道院 (Tyniec Abbey) — 維斯瓦河畔最美修道院（免費參觀）|🚂 IC KAZIMIERZ 11:15出發 → 12:38 Chabówka Stadion → 直達Zakopane 13:31 → 入住|transit
 
 
-【第六站：扎科帕內 Zakopane】5晚 (7/19-7/23)
+【第六站：扎科帕內 Zakopane】6晚 (7/18-7/23)
 住宿區域：Krupówki主街附近 — 木造建築、起司攤、登山用品店，小鎮風情濃厚
+住宿：Noclegi Zakopane（Booking 9.4分）NT$4,290/晚
+📞叫車：Taxi Bus Zakopane +48 504 401 505（8人座小巴，門到門）
 -------------------------------------------------------------------
 
-DAY_22|7/19|扎科帕內|古巴烏夫卡纜車 (Gubałówka Cable Car) 2分鐘到山頂 → 山頂觀景台|騎小馬體驗 → 克魯普夫基主街 (Krupówki Street) 品嘗烤起司|nature
+DAY_22|7/19|扎科帕內|抵達Zakopane + Krupówki街烤起司 → Gubałówka纜車 (Gubałówka Cable Car) 3分鐘上山看塔特拉全景|山頂稜線散步40min → 傍晚Stajnia Jędruś騎小馬🐴|nature
 
-DAY_23|7/20|扎科帕內|馬車前往霍霍沃夫斯卡山谷 (Chochołowska Valley)|看高山放牧 → 山谷野餐 → 傍晚返回|nature
+DAY_23|7/20|扎科帕內|馬車去Chochołowska山谷 (Chochołowska Valley) 看放牧|回程漫步Krupówki街 + 烤起司下午茶|nature
 
-DAY_24|7/21|扎科帕內|馬車前往海洋之眼 (Morskie Oko) 高山湖泊|起司體驗 (Oscypek Making) → 品嘗現做烤起司|nature
+DAY_24|7/21|扎科帕內|馬車去海洋之眼 Morskie Oko（波蘭最美冰河湖！）（或搭電動巴士）|Dom Oscypka起司製作體驗（Krupówki主街上，親手做oscypek）|nature
 
-DAY_25|7/22|扎科帕內|杜納耶茨河漂流 (Dunajec River Rafting) 木筏穿越峽谷|涅傑茨城堡 (Niedzica Castle) 外觀拍照 → 湖光山色|nature
+DAY_25|7/22|扎科帕內|🚣 Dunajec河木筏漂流 (Dunajec River Rafting) 2.5hr 穿越Pieniny峽谷（2.5歲免費，超平穩）|回Krupówki街最後採買紀念品|nature
 
-DAY_26|7/23|扎科帕內|科希切利斯卡冰洞 (Kościeliska Ice Cave) 探索|買紀念品 → 整理行李 → 最後一餐山區料理|nature
+DAY_26|7/23|扎科帕內|🛌 休息日：睡飽＋整理行李＋Krupówki街最後散步＋買紀念品＋最後一餐山區料理|整理行李準備明天出發|nature
 
 
 【第七站：布達佩斯 Budapest 回程】1晚 (7/24)
-住宿區域：市中心 — 最後一晚，多瑙河遊船告別
+住宿：Gajó Kisduna Magánház（郊區Dunavarsány）（Booking 9.5分）NT$8,750/晚
+⚠️ 郊區，離市中心29km，附近有Penny超市
 -------------------------------------------------------------------
 
-DAY_27|7/24|布達佩斯|🚌 巴士 2hr 回克拉科夫 → ✈️ Wizz Air 廉航 1hr 飛布達佩斯|多瑙河遊船 (Danube Cruise) 告別夜航|arrive
+DAY_27|7/24|布達佩斯|🚐 公路旅行日！08:30 Zakopane出發（EuroBusWays 9人座包車）→ 09:30 Strbske Pleso🇸🇰冰河湖散步 → 11:00 Orava Castle🇸🇰懸崖城堡 → 13:00 Banska Bystrica🇸🇰午餐|14:30 Esztergom🇭🇺大教堂（看狀態決定）→ 15:45抵達布達佩斯 → 入住 → 多瑙河遊船告別夜航|arrive
 
-DAY_28|7/25|回程|06:30出發前往機場 → 12:30起飛 MU8640|上海轉機：外灘 (The Bund) 散步＋小籠包。7/26 14:25抵達台灣|farewell
+DAY_28|7/25|回程|✈️ 09:00出門（包車直送機場，約30min）→ BUD機場 → MU8640 12:30起飛|7/26抵達上海浦東05:35 → 轉機6hr45min → 逛外灘吃小籠包 → MU5007 12:20 → 14:25回到台北桃園|farewell
 
 
 ===================================================================
 行程總覽表（純資料格式）
 ===================================================================
 
-DAY_1|6/28|布達佩斯|抵達(08:05)→入住→猶太區散步|多瑙河畔散步→多瑙河之鞋|arrive
-DAY_2|6/29|布達佩斯|城堡山→漁人堡|馬加什教堂→城堡山散步|sightseeing
-DAY_3|6/30|布達佩斯|中央市場|聖殿登頂→安德拉什大道|sightseeing
-DAY_4|7/1|布達佩斯|兒童鐵路|鐵道博物館|family
-DAY_5|7/2|維也納|🚂火車2.5hr→抵達|聖斯德望大教堂→Cafe Central|arrive
-DAY_6|7/3|維也納|美泉宮花園→迷宮|兒童博物館|sightseeing
-DAY_7|7/4|維也納|美景宮|普拉特遊樂園摩天輪|sightseeing
-DAY_8|7/5|布拉格|🚂火車4hr→抵達|老城廣場→天文鐘|arrive
-DAY_9|7/6|布拉格|查理大橋→小城區|列儂牆→坎帕島|sightseeing
-DAY_10|7/7|布拉格|布拉格城堡→聖維特→黃金巷|⚠️電車22號停駛|sightseeing
-DAY_11|7/8|布拉格|Karlštejn城堡半日遊|返回布拉格自由活動|daytrip
-DAY_12|7/9|布拉格|Vyšehrad古堡|猶太區→舊猶太墓園|sightseeing
-DAY_13|7/10|CK小鎮|🚌巴士3hr→城堡看熊|日落→河邊晚餐|arrive
-DAY_14|7/11|克拉科夫|CK早晨→🚌回布拉格→🚂火車6-7hr|抵達→主廣場散步|arrive
-DAY_15|7/12|克拉科夫|皇家大道教堂巡禮6間|聖母聖殿(號角)→紡織會館|sightseeing
-DAY_16|7/13|克拉科夫|★週一免費:瓦維爾城堡|辛德勒工廠博物館|sightseeing
-DAY_17|7/14|克拉科夫|★週二免費:航空博物館|Rynek地下博物館|sightseeing
-DAY_18|7/15|克拉科夫|鹽礦Wieliczka|羊駝農場|sightseeing
-DAY_19|7/16|克拉科夫|野牛城堡|Zalipie彩繪村|daytrip
-DAY_20|7/17|克拉科夫|Ojców國家公園|Uszate農場|daytrip
-DAY_21|7/18|克拉科夫→Zakopane|Tyniec修道院|Chabówka蒸汽火車→Zakopane|transit
-DAY_22|7/19|扎科帕內|Gubałówka纜車→山頂|騎小馬→Krupówki街|nature
-DAY_23|7/20|扎科帕內|馬車→Chochołowska山谷|看放牧→山谷野餐|nature
-DAY_24|7/21|扎科帕內|馬車→海洋之眼|起司體驗|nature
-DAY_25|7/22|扎科帕內|Dunajec漂流|Niedzica城堡(外觀)|nature
-DAY_26|7/23|扎科帕內|Kościeliska冰洞|買紀念品→打包|nature
-DAY_27|7/24|布達佩斯|🚌巴士2hr→克拉科夫→✈️廉航1hr|多瑙河遊船告別夜航|arrive
-DAY_28|7/25|回程|06:30出發→12:30起飛|上海轉機(外灘+小籠包)→7/26回台灣|farewell
+DAY_1|6/28|布達佩斯|08:05抵達→寄行李→多瑙河畔散步→多瑙河之鞋|16:00入住→日落散步→調時差|arrive
+DAY_2|6/29|布達佩斯|布達城堡→漁人堡|馬提亞斯教堂→城堡山散步|sightseeing
+DAY_3|6/30|布達佩斯|中央市場→瓦茨街|聖殿登頂→安德拉什大道|sightseeing
+DAY_4|7/1|布達佩斯|分組：兒童鐵路/聖安德烈半日遊|晚餐→整理行李|sightseeing
+DAY_5|7/2|維也納|🚂Railjet 11:40→14:20→入住|聖史蒂芬大教堂→Café Central|arrive
+DAY_6|7/3|維也納|🚂哈修塔特一日遊 IC 1118 07:45→10:54|IC 1119 17:03→20:15回維也納|daytrip
+DAY_7|7/4|維也納|美泉宮花園→迷宮→納許市場|美景宮→（選）卡爾教堂音樂會|sightseeing
+DAY_8|7/5|布拉格|🚂Railjet 09:10→13:23→入住|老城廣場→天文鐘→哈維爾市集|arrive
+DAY_9|7/6|布拉格|查理大橋→小城區→列儂牆|坎帕島遊樂場→國家劇院|sightseeing
+DAY_10|7/7|布拉格|電車22號→布拉格城堡→聖維特→城堡花園|17:00黃金巷免費開放|sightseeing
+DAY_11|7/8|布拉格|🚌CK小鎮一日遊08:00出發→城堡看熊→城堡塔|16:30巴士回布拉格19:00|daytrip
+DAY_12|7/9|布拉格|猶太區→跳舞的房子|斯拉夫島遊樂場→啤酒花園|sightseeing
+DAY_13|7/10|弗羅茨瓦夫|🚂EC 262 10:49→14:47→換錢|老城廣場→小矮人尋寶→座堂島→pierogi|arrive
+DAY_14|7/11|克拉科夫|弗羅茨瓦夫早餐→🚂IC直達3hr→14:00到|主廣場→噴火龍🐉|arrive
+DAY_15|7/12|克拉科夫|Planty公園→Żabka買零食|Kazimierz猶太區→噴火龍|sightseeing
+DAY_16|7/13|克拉科夫|★週一免費：瓦維爾城堡→龍洞→換瑞郎|辛德勒工廠(免費)/冰淇淋|sightseeing
+DAY_17|7/14|克拉科夫|★週二免費：航空博物館(250架)|Lem科學花園→Rynek地下博物館(免費)|sightseeing
+DAY_18|7/15|克拉科夫|鹽礦Wieliczka半日遊|Kopytkowo動物園|sightseeing
+DAY_19|7/16|克拉科夫|皇家大道教堂巡禮→聖母聖殿(號角)|紡織會館→Obwarzanek麵包圈|sightseeing
+DAY_20|7/17|克拉科夫|包車→Niepołomice野牛城堡|Zalipie彩繪村|daytrip
+DAY_21|7/18|克拉科夫→Zakopane|Tyniec修道院|🚂IC KAZIMIERZ 11:15→13:31 Zakopane|transit
+DAY_22|7/19|扎科帕內|Gubałówka纜車→山頂全景|騎小馬→Krupówki街烤起司|nature
+DAY_23|7/20|扎科帕內|馬車→Chochołowska山谷看放牧|Krupówki街烤起司下午茶|nature
+DAY_24|7/21|扎科帕內|馬車→海洋之眼Morskie Oko|起司製作體驗Dom Oscypka|nature
+DAY_25|7/22|扎科帕內|Dunajec漂流2.5hr|Krupówki街最後採買|nature
+DAY_26|7/23|扎科帕內|休息日：睡飽＋最後散步|整理行李＋最後一餐山區料理|nature
+DAY_27|7/24|布達佩斯|🚐包車7hr經斯洛伐克🇸🇰3站（冰河湖→懸崖城堡→午餐）|抵達布達佩斯→多瑙河遊船告別夜航|arrive
+DAY_28|7/25|回程|09:00出門→12:30起飛MU8640|上海轉機(外灘+小籠包)→7/26 14:25回台灣|farewell
 
 
 ===================================================================
 行程設計原則
 ===================================================================
 
-1. 四國七站：匈牙利→奧地利→捷克→波蘭，環形路線回布達佩斯
+1. 五國八站：匈牙利→奧地利→捷克→波蘭（弗羅茨瓦夫→克拉科夫→Zakopane）→經斯洛伐克→回匈牙利
 2. 住宿選址：皆在教堂、歷史建築、商店密集區，自由活動=散步精彩街道
 3. 分組彈性：標註「大人/小孩」「健行組/長輩組」方便家人各取所需
 4. 移動日不浪費：抵達當天下午都安排附近景點散步
 5. 中文優先：所有景點名稱「中文名 (英文名)」格式
 6. 善用免費日：克拉科夫週一/週二博物館免費，已對齊行程
-7. CK住一晚：不趕來回，享受日落清晨的童話小鎮
-8. Zakopane五日深度：馬車、漂流、冰洞、纜車，山區慢活
+7. CK改一日遊：從布拉格當日來回，不住宿
+8. Zakopane六日深度：馬車、漂流、纜車、起司體驗、休息日，山區慢活
+9. Day 27公路旅行：經斯洛伐克3站（Strbske Pleso冰河湖、Orava Castle、Banska Bystrica），順遊第五國
+10. 交通票逐天買最省：不買通票，善用65+免費、15歲以下免費等優惠
